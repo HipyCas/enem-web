@@ -9,7 +9,7 @@ import metaTags from "astro-meta-tags";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://prueba.anem.es",
+  site: "https://enem.anem.es",
   base: "/2025",
   prefetch: {
     prefetchAll: true,
