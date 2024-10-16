@@ -1,5 +1,5 @@
 <template>
-  <section :class="thisClass">
+  <section class="sm:hidden">
     <div
       v-for="o of objects"
       :key="o[0]"
@@ -55,6 +55,8 @@ const { class: thisClass } = defineProps<{
   ][];
   class: string;
 }>();
+
+console.info("clas", thisClass);
 </script>
 
 <style scoped>
