@@ -1,0 +1,50 @@
+---
+import TableRow from './LevelsTableRow.astro'
+import LevelsTableMobile from './LevelsTableMobile.vue'
+
+const objects: [string, [string | boolean, string | boolean, string | boolean, string | boolean, string | boolean]][] = [
+  ['Logo en la web y en la app del evento',                                                                                 ['Grande', 'Grande',  'Mediano', 'Pequeño', 'Pequeño']],
+  ['Posibilidad de usar el logo del congreso en su propia publicidad hasta el 31 de diciembre de 2025',                     [true,     true,      true,      true,      true     ]],
+  ['Posibilidad de realizar concursos y sorteos entre los asistentes',                                                      [true,     true,      true,      true,      false    ]],
+  ['Posibilidad de proveer material promocional para el kit de bienvenida',                                                 [true,     true,      true,      true,      false    ]],
+  ['Aparición en las pantallas de las salas durante los descansos',                                                         ['Grande', 'Grande',  'Mediana', 'Pequeña', false    ]],
+  ['Logo en el X-banner del evento',                                                                                        ['Grande', 'Mediano', 'Pequeño', 'Pequeño', false    ]],
+  ['Logo en el cartel del evento',                                                                                          ['Grande', 'Mediano', 'Pequeño', 'Pequeño', false    ]],
+  ['Publicaciones en redes sociales sobre el colaborador',                                                                  [true,     true,      true,      true,      false    ]],
+  ['Presencia en el Foro de Empresas y Emprendimiento',                                                                     [true,     true,      true,      true,      false    ]],
+  ['Posibilidad de dar un taller a 30 asistentes aproximadamente',                                                          [true,     true,      true,      false,     false    ]],
+  ['Entrega de currículums de los asistentes y organización de entrevistas a los candidatos seleccionados por la entidad',  [true,     true,      true,      false,     false    ]],
+  ['Apartado / Noticia propia en la web con información sobre el mecenas aportada por el mismo',                            [true,     true,      true,      false,     false    ]],
+  ['Posibilidad de realizar uno de los retos diarios con un premio a elección, limitado a cuatro',                          [true,     true,      true,      false,     false    ]],
+  ['Logo en la página principal del evento',                                                                                [true,     true,      false,     false,     false    ]],
+  ['Logo en el Photocall del evento',                                                                                       [true,     true,      false,     false,     false    ]],
+  ['Posibilidad de colocar material de visibilidad de marca en el congreso, previa aprobación de la localización por parte de la organización', [true,     true,      false,     false,     false    ]],
+  ['X-banner con el logo de los mecenas en zona de paso cada día',                                                          [true,     true,      false,     false,     false    ]],
+  ['Posibilidad de hacer una Pechakucha (una presentación de 20 diapositivas con 20 segundos cada una)',                    [true,     true,      false,     false,     false    ]],
+  ['Mención en todos los anuncios relativos al evento',                                                                     [true,     false,     false,     false,     false    ]],
+  ['Mención en los vídeos del evento',                                                                                      [true,     false,     false,     false,     false    ]],
+  ['Nombre de una de las salas de workshops y posibilidad de decorarla internamente como se desee, con su repercusión posterior en fotos, vídeos, etc', [true,     false,     false,     false,     false    ]],
+  ['Presencia en el mailing del congreso',                                                                                  [true,     false,     false,     false,     false    ]],
+  ['Posibilidad de dar una charla de 40 minutos con contenido relativo al congreso a todos los asistentes',                 [true,     false,     false,     false,     false    ]],
+]
+---
+
+<table class="hidden sm:block">
+  <thead>
+    <th></th>
+    <th class=" w-14">Platino</th>
+    <th class=" w-14">Oro</th>
+    <th class=" w-14">Plata</th>
+    <th class=" w-14">Bronce</th>
+    <th class=" w-14">Colaborador</th>
+  </thead>
+  <tbody>
+    {
+      objects.map(o => <TableRow lvl={o} />)
+    }
+  </tbody>
+</table>
+
+
+<LevelsTableMobile {objects} class="sm:hidden" />
+<!-- <LevelsTableMobile {objects} class="sm:hidden" client:visible /> -->

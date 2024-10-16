@@ -1,0 +1,122 @@
+---
+interface Props {
+  headings: { depth: number; slug: string; text: string }[]
+}
+
+const { headings } = Astro.props;
+console.info(headings)
+// // const headers = (/<(h[123]).*>(.+)<\/h[123]>/gm).exec(pageHTML);
+type Header = {level: 'h1' | 'h2' | 'h3', text: string, id: string}
+let headers = headings.map((h) => ({text: h.text, id: h.slug, level: `h${h.depth}`})).filter(h => ['h1', 'h2', 'h3'].includes(h.level)) as Header[]
+
+// // https://regex101.com/r/qJHNkV/1
+// const regex = /<(h[123]) (id="([\w\s\-\_áéíóú]+)")?.*>(.+)<\/h[123]>/gm;
+// let m;
+
+// while ((m = regex.exec(pageHTML)) !== null) {
+//     // This is necessary to avoid infinite loops with zero-width matches
+//     if (m.index === regex.lastIndex) {
+//         regex.lastIndex++;
+//     }
+
+//     // console.info(m)
+
+//     const h: Header = {
+//       level: m[1],
+//       text: m[4],
+//       id: m[3]
+//     } as Header
+    
+//     // The result can be accessed through the `m`-variable.
+//     headers.push(h)
+// }
+
+// console.info(headers)
+---
+<div
+  class="sticky w-full flex flex-row justify-end bottom-4 left-auto mt-4"
+  class:list={[headers.length === 0 ? 'hidden' : '']}
+>
+  <div class="w-full md:w-max max-w-full bg-clear dark:bg-dark rounded-lg pt-5">
+    <div 
+      data-collapsed
+      id="tocContents"
+      class="bottom-16 p-5 py-0 toc overflow-y-hidden transition-[max-height] duration-1000"
+    >
+      <ol
+        style={'--header-count: ' + headers.length}>
+        {
+          headers.map(h =>
+            h.level === 'h3' ?
+              <li class:list={['toc-header', h.level]}>
+                <span class="i-tabler-arrow-forward mr-0.5"></span>
+                <a href={'#' + h.id}>{h.text}</a>
+              </li> :
+              <li class:list={['toc-header', h.level]}>
+                <a href={'#' + h.id}>{h.text}</a>
+              </li>
+            )
+        }
+      </ol>
+      <div class="h-3"></div>
+    </div>
+    
+    <button id="tocToggle" data-collapsed class="w-full p-5 pt-0 text-left">
+      <span class="h-6 w-6 -mb-1.5 i-tabler-chevron-up mr-1.5 shadow"></span>
+      Contenidos
+    </button>
+  </div>
+</div>
+
+<!-- <p class=" hidden" aria-hidden="true" set:html={headers}></p> -->
+
+<style scoped>
+  #tocToggle span {
+    @apply rotate-180 transition-transform duration-500;
+  }
+  #tocToggle[data-collapsed] span {
+    @apply rotate-0;
+  }
+
+  /* ol::after {
+    content: var(--header-count);
+  } */
+  .toc {
+    /* transform: scaleY(1);
+
+    transform-origin: bottom; */
+    max-height: 20rem;
+  }
+
+  .toc[data-collapsed] {
+    max-height: 0
+    /* transform: scaleY(0); */
+  }
+
+  .toc-header {
+    @apply mb-1;
+  }
+
+  .toc-header.h2 {
+    font-size: 0.95rem;
+  }
+
+  .toc-header.h3, .toc-header.toc-header.h3 a {
+    @apply !text-secondary hover:!text-tertiary;
+    font-size: 0.85rem;
+  }
+
+  .toc-header span {
+    @apply -mb-0.5
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('tocToggle')
+    const contents = document.getElementById('tocContents')
+
+    toggle.onclick = () => {contents.toggleAttribute('data-collapsed'); toggle.toggleAttribute('data-collapsed')}
+    // TODO Move data-collapsed to wrapper
+  })
+</script>

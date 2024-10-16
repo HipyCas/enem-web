@@ -1,0 +1,41 @@
+{
+  "name": "web",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^3.1.8",
+    "@astrojs/sitemap": "^3.2.0",
+    "@astrojs/tailwind": "^5.1.2",
+    "@astrojs/vue": "^4.5.2",
+    "@fontsource-variable/lexend-deca": "^5.0.13",
+    "@fontsource-variable/montserrat": "^5.0.19",
+    "astro": "^4.16.0",
+    "astro-meta-tags": "^0.2.2",
+    "countup.js": "^2.8.0",
+    "date-fns": "^4.1.0",
+    "radash": "^12.1.0",
+    "sharp": "^0.33.3",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5",
+    "uniqolor": "^1.1.1",
+    "vue": "^3.4.25",
+    "walkway.js": "^0.0.9"
+  },
+  "devDependencies": {
+    "@egoist/tailwindcss-icons": "^1.7.4",
+    "@iconify-json/tabler": "^1.1.110",
+    "@iconify/json": "^2.2.204",
+    "@tailwindcss/typography": "^0.5.13",
+    "extract-md-headings": "^0.2.7",
+    "unlighthouse": "^0.12.0",
+    "zod": "^3.23.8"
+  }
+}

@@ -1,0 +1,30 @@
+---
+import PageContents from '../components/PageContents.astro';
+import MainLayout from '../layouts/Main.astro'
+
+interface Props {
+  frontmatter: {
+    title: string;
+    tabTitle?: string
+  }
+  headings: {depth: number, slug: string, text: string}[]
+}
+
+const { frontmatter, headings } = Astro.props
+---
+
+<MainLayout title={frontmatter.tabTitle ?? frontmatter.title}>
+  <div class="px-10 py-10 w-screen">
+    <main class="relative max-w-7xl mx-auto">
+      <h1 class="text-4xl pt-10 font-semibold">{ frontmatter.title }</h1>
+
+      <slot name="below" />
+
+      <article class="pt-2.5 prose prose-zinc dark:prose-invert prose-a:text-primary prose-a:cursor-pointer prose-img:mx-auto">
+        <slot />
+
+      </article>
+    </main>
+    <PageContents {headings} />
+  </div>
+</MainLayout>

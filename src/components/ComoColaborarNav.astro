@@ -1,0 +1,36 @@
+---
+import UIButton from "./ui/Button.vue"
+---
+
+<section class=" grid grid-cols-1 md:grid-cols-2 gap-5 text-clear *:bg-clear *:dark:bg-dark *:rounded-lg">
+  <a href="#empresas" class="not-prose group">
+    <span>¿Eres una <span>empresa</span>?</span>
+    <!-- <p>Descubre cómo puedes aportar al evento y cómo te puedes beneficiar de participar</p> -->
+    <p>Descubre la amplia cantidad de beneficios que te puede aportar participar en nuestro evento y las diferentes posibilidades de colaborar de participación en él</p>
+    <UIButton as="span" group>Descubrelo <i class="i-tabler-arrow-down size-5 -mb-[0.3rem]"></i></UIButton>
+  </a>
+  <a href="#entidades" class="not-prose group">
+    <span>¿Eres una <span>entidad</span>?</span>
+    <p>Si eres una entidad pública (UGR inclusive) o sociedad matemática o sin ánimo de lucro, infórmate de cómo colaborar y ayudar a potenciar tu imagen y el evento</p>
+    <UIButton as="span" group>Infórmate <i class="i-tabler-arrow-down size-5 -mb-[0.3rem]"></i></UIButton>
+  </a>
+</section>
+
+<style scoped>
+  a {
+    @apply p-5 flex flex-col;
+    text-align: center;
+  }
+
+  a > span:first-of-type {
+    @apply text-2xl font-semibold;
+  }
+
+  a > span:first-of-type > span {
+    @apply font-extrabold;
+  }
+
+  a > p {
+    @apply text-dark dark:text-clear flex-grow mt-0.5 mb-1;
+  }
+</style>

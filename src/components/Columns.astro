@@ -1,0 +1,40 @@
+---
+interface Props {
+  columns: [string, string][]
+}
+
+const { columns } = Astro.props
+---
+
+<div class="flex flex-row justify-evenly flex-wrap md:[flex-wrap:unset]">
+  <div class="mr-0 sm:mr-5">
+    <strong class="from-primary-700 to-primary-500">{columns[0][0]}</strong>
+    <p>{columns[0][1]}</p>
+  </div>
+
+  <div class="mr-0 sm:mr-5">
+    <strong class="from-secondary-700 to-secondary-500">{columns[1][0]}</strong>
+    <p>{columns[1][1]}</p>
+  </div>
+
+  <div>
+    <strong class="from-tertiary-700 to-tertiary-500">{columns[2][0]}</strong>
+    <p set:html={columns[2][1]}></p>
+  </div>
+</div>
+
+<style scoped>
+strong {
+  @apply tracking-wider text-xl md:text-2xl text-center bg-gradient-to-tr bg-clip-text text-transparent;
+
+  font-weight: 700;
+}
+
+div > div {
+  @apply w-full sm:w-[33%];
+
+  /* min-width: min-content;
+  width: 33%; */
+  text-align: center;
+}
+</style>

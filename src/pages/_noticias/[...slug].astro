@@ -1,0 +1,35 @@
+---
+import PageLayout from "../../layouts/Page.astro";
+import { getCollection } from "astro:content";
+import { format } from 'date-fns';
+import uniqolor from 'uniqolor'
+import {map as amap} from 'radash'
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return await amap(posts, async post => ({
+    params: { slug: post.slug },
+    props: { post, headings: (await post.render()).headings }
+  }));
+}
+
+const { post, headings } = Astro.props;
+const { Content } = await post.render();
+---
+
+<PageLayout frontmatter={post.data} headings={headings}>
+  <p slot="below">
+    <span><i class="i-tabler-calendar -mb-0.5" /> { format(post.data.publishedDate, "dd/MM/yyyy") }</span>
+    {
+      post.data.tags && <>
+        | <i class="i-tabler-tag -mb-0.5" /> {
+          post.data.tags.map(tag => (
+            <span class="px-1.5 py-0.5 rounded-full mr-1 cursor-pointer" style={{'backgroundColor': uniqolor(tag).color + 'aa'}}> { tag }</span>
+          ))
+        }
+      </>
+    }
+  </p>
+
+  <Content /> 
+</div>

@@ -1,0 +1,36 @@
+---
+interface Props {
+  type: 'primary' | 'secondary' | 'tertiary',
+  text?: string
+}
+
+const { type, text } = Astro.props
+
+const textClasses = {
+  primary: 'from-primary-700 to-primary-500',
+  secondary: 'from-secondary-700 to-secondary-500',
+  tertiary: 'from-tertiary-700 to-tertiary-500'
+}[type]
+
+const id = text ?
+              text.toLowerCase()
+                .replace(/\s/g, '-')
+                .replace(/á/, 'a')
+                .replace(/é/, 'e')
+                .replace(/í/, 'i')
+                .replace(/ó/, 'o')
+                .replace(/ú/, 'u')
+            : (await Astro.slots.render('default')).toLowerCase()
+                .replace(/\s/g, '-')
+                .replace(/á/, 'a')
+                .replace(/é/, 'e')
+                .replace(/í/, 'i')
+                .replace(/ó/, 'o')
+                .replace(/ú/, 'u')
+---
+
+<h3 id={id} class:list={['bg-gradient-to-tr bg-clip-text text-transparent', textClasses]}> {
+  text ? text : <slot />
+} </h2>
+
+

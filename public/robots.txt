@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enem.anem.es/2025/sitemap-index.xml

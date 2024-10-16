@@ -1,0 +1,28 @@
+---
+import MainLayout from "../../layouts/Main.astro";
+import NewCard from "../../components/pages/noticias/NewCard.vue";
+import { getCollection } from "astro:content";
+
+const blog = await getCollection("blog");
+const posts = blog.filter((post) =>
+  import.meta.env.DEV ||
+  (post.data.draft !== true && post.data.publishedDate <= new Date())
+);
+---
+
+<MainLayout title="Noticias">
+  <div class="px-10 py-10 w-screen">
+    <main class="relative max-w-7xl mx-auto">
+      <h1 class="text-4xl pt-10 pb-2.5 font-semibold">Noticias</h1>
+      
+
+      <div class="grid grid-cols-2 gap-4">
+        <NewCard class="w-full" item={posts[0]} emphasize />
+
+        {
+          posts.slice(1).map(post => <NewCard item={post} />)
+        }
+      </div>
+    </main>
+  </div>
+</MainLayout>

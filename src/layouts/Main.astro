@@ -1,0 +1,261 @@
+---
+import '@fontsource-variable/montserrat';
+import '@fontsource-variable/lexend-deca';
+import '../assets/css/main.css'
+
+import headerImageDark from '../assets/img/g164.png'
+import headerImageLight from '../assets/img/g10.png'
+
+import MobileMenu from '../components/MobileMenu.astro'
+import Links from '../components/DesktopLinks.vue';
+
+import type { Link } from '../types'
+import { Image } from 'astro:assets';
+
+interface Props {
+  title?: string;
+	og?: {
+		image?: string;
+		description?: string;
+	}
+}
+
+const { title, og } = Astro.props
+
+const getLn = (ln: string = '/') => import.meta.env.BASE_URL + ln
+
+const IN_PRODUCTION = process.env.NODE_ENV === 'production'
+
+// TODO [string, string, Link[]?]
+const LINKS: [string, string | Link[]][] = [
+  ['Inicio', getLn()],
+  // ['Noticias', getLn('/noticias/')],
+  // ['Inscripción', getLn('/inscripcion/')],
+  ['El Evento', [
+    ["El ENEM", '/2025/evento/enem'],
+    ['Organización', '/2025/evento/organizacion'],
+    // ['Su historia', '/2025/evento/historia']
+  ]],
+  ['Colaboración', [
+    ['Cómo colaborar', '/2025/colaboracion/como-colaborar'],
+    ['Mecenazgos', '/2025/colaboracion/mecenazgos'],
+  ]],
+  // ['Medios', [
+  //   ['Sala de prensa', '/2025/prensa/sala-de-prensa'],
+  //   ['Notas de prensa', '/2025/prensa/notas-de-prensa'],
+  //   ['Identidad visual', '/2025/prensa/identidad-visual'],
+  //   ['Apariciones en medios', '/2025/prensa/apariciones'],
+  // ]]
+  // ['Participa', '/2025/participa']
+]
+
+const isIndex = Astro.url.pathname === import.meta.env.BASE_URL
+
+const SITE_TITLE = 'ENEM 2025'
+const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE
+const pageDescription = og?.description ?? '25 aniversario del Encuentro Nacional de Estudiantes de MAtemáticas, un congreso nacional de matemáticas, estadística y ciencia de datos, por y para estudiantes'
+
+const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.url.pathname.replace(/^\/2025/, '')}.jpg`)
+---
+
+<!-- TODO https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/?utm_source=lighthouse&utm_medium=devtools -->
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="sitemap" href="/2025/sitemap-index.xml" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<title>{ pageTitle }</title>
+		<meta name="description" content={pageDescription}>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/2025/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/2025/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/2025/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/2025/favicon-16x16.png">
+    <link rel="manifest" href="/2025/site.webmanifest">
+    <link rel="mask-icon" href="/2025/safari-pinned-tab.svg" color="#ff6b6b">
+    <meta name="msapplication-TileColor" content="#ff6b6b">
+    <meta name="theme-color" content="#ff6b6b">
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content={Astro.site + Astro.url.pathname}>
+		<meta property="og:type" content="website">
+		<meta property="og:title" content={pageTitle}>
+		<meta property="og:description" content={pageDescription}>
+		<meta property="og:image" content={pageImage}>
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content={Astro.site?.hostname}>
+		<meta property="twitter:url" content={Astro.site + Astro.url.pathname}>
+		<meta name="twitter:title" content={pageTitle}>
+		<meta name="twitter:description" content={pageDescription}>
+		<meta name="twitter:image" content={pageImage}>
+
+    <!-- TODO https://web.dev/articles/defer-non-critical-css or maybe use somthing like Astro Icons or even Vue Tabler so it gets bundled only the ones you use -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.2.0/dist/tabler-icons.min.css">
+
+		<script defer src="https://cdn.jsdelivr.net/npm/walkway.js/src/walkway.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/countup.js/dist/countUp.umd.js" integrity="sha256-aF8VUqJ5xB9GVYPGv9/x7rGzyRa/VgmO19lbDn91X8U=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.7.1/countUp.min.js"></script> -->
+    <!-- <script src="../assets/js/countUp.js" /> -->
+
+    { IN_PRODUCTION ?
+        <script defer src="https://analytics.wupp.dev/script.js" data-website-id="20e6b808-c30e-4d59-a9f7-215bd031f4d5"></script>
+        : <></> }
+	</head>
+	<body class="dark:bg-[#1c1c1c] dark:text-clear relative">
+		<!-- Needed because on mobile the menu was overflowing and the x-hidden on body did not work properly -->
+		<div class="max-w-screen">
+			<header class="dark:bg-dark/75 bg-clear/60 backdrop-blur flex items-center justify-between">
+        <a href="/2025/" class="text-2xl font-bold font-lexend text-primary ml-6 h-full w-fit overflow-y-hidden p-2">
+          <Image src={headerImageDark} alt="ENEM 2025 GRX" width={200} class="hidden dark:block h-[90%] object-contain w-36 rounded" />
+          <Image src={headerImageLight} alt="ENEM 2025 GRX" width={200} class="block dark:hidden h-[90%] object-contain w-36 rounded" />
+        </a>
+				<nav class="hidden lg:block mr-4">
+          <!-- <ul>
+						{
+              LINKS.map(ln =>
+                typeof ln[1] === "string" ?
+                <li>
+                  <a href={ln[1]} class:list={[Astro.url.pathname.replace(/\//, '').replace('index.html', '') === ln[1].replace(/\//, '') ? 'active' : '', 'navlink']}>{ln[0]}</a>
+                </li>
+                : <li class="navdropwdown group relative">
+                    {ln[0]} <span class=" i-tabler-chevron-down inline-block"></span>
+                    <ul class="absolute top-9 hidden w-max group-hover:block bg-clear dark:bg-dark rounded p-2 shadow-xl border dark:border-zinc-700">
+                      {ln[1].map(l2 => <li><a href={l2[1]} class:list={[Astro.url.pathname.replace(/\//, '').replace('index.html', '') === l2[1].replace(/\//, '') ? 'active' : '', 'navlink']}>{l2[0]}</a></li>)}
+                    </ul>
+                  </li>
+              )
+						}
+						<a href="mailto:enem2025@anem.es" aria-label="Correo electrónico"><i class="ti ti-mail text-lg inline-block"></i></a>
+					</ul> -->
+          <ul>
+            <Links links={LINKS} Astro={Astro} />
+          </ul>
+				</nav>
+				<MobileMenu toggleClass="lg:hidden" links={LINKS} />
+			</header>
+			<slot />
+			<footer>
+				<div class="mx-auto w-fit h-full flex flex-col justify-center items-center *:text-sm">
+						<p class="w-fit mb-0.5 text-center">El ENEM es un evento organizado por la <a href="https://anem.es/web">Asociación Nacional de Estudiantes de Matemáticas (ANEM)</a></p>
+						<!-- @ts-ignore -->
+						<p class="w-fit" >Licenciado bajo <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0
+							<img class="h-4 w-4 inline ml-0.5" alt="Creative Commons" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+							<img class="h-4 w-4 inline" alt="Attribution" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+							<img class="h-4 w-4 inline" alt="Share-Alike" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg"></a>
+						</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--header-height: 5rem;
+		--footer-height: 5.5rem;
+
+		scroll-behavior: smooth;
+		scroll-padding-top: calc(var(--header-height) + 2rem);
+	}
+
+	::selection {
+		@apply bg-primary bg-opacity-15;
+	}
+
+  /* ::-webkit-scrollbar {
+    @apply w-2 h-2;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+     @apply w-2 rounded-lg bg-zinc-900 dark:bg-zinc-100 bg-opacity-90 px-1;
+  }
+
+  ::-webkit-scrollbar-button {
+    @apply bg-zinc-900 dark:bg-zinc-100 text-zinc-900 dark:text-zinc-100;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent
+  } */
+
+	body {
+		min-height: 100vh;
+		min-height: 100svh;
+
+		padding-top: var(--header-height);
+	}
+	
+	body[data-overlay-open] {
+		overflow-y: hidden
+	}
+
+	header {
+		box-sizing: border-box;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9;
+
+		height: var(--header-height);
+	}
+
+	footer {
+		@apply bg-clear dark:bg-dark;
+
+		padding: 1em 0.5em;
+
+		height: var(--footer-height);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero {
+		height: calc(100vh - var(--header-height));
+		height: calc(100svh - var(--header-height));
+	}
+
+	.hero-lonely {
+		height: calc(100vh - var(--header-height) - var(--footer-height));
+		height: calc(100svh - var(--header-height) - var(--footer-height));
+	}
+</style>
+
+<style scoped>
+	nav li, .navlink, .navdropwdown {
+		@apply inline-block;
+	}
+
+  nav a {
+    @apply ml-3 px-2.5 py-2;
+  }
+
+	.navlink {
+    @apply text-dark dark:text-clear rounded-lg hover:bg-primary focus:bg-primary hover:text-dark transition-colors;
+	}
+
+	.navlink.active, .navdropwdown:has(.navlink.active) {
+		@apply bg-secondary text-dark no-underline;
+	}
+
+  .navdropwdown {
+    @apply ml-3 px-2.5 py-2 text-dark dark:text-clear rounded-lg underline decoration-2 decoration-transparent hover:decoration-primary focus:bg-primary transition-all cursor-pointer;
+  }
+
+  .navdropwdown .navlink {
+    @apply ml-0 rounded-sm;
+  }
+
+  nav i {
+    @apply text-dark dark:text-clear hover:text-primary transition-colors;
+  }
+</style>
