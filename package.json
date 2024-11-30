@@ -7,7 +7,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "tsx scripts/deploy.ts",
+    "deploy:prod": "astro build && tsx scripts/deploy.ts prod"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -34,7 +36,12 @@
     "@iconify-json/tabler": "^1.1.110",
     "@iconify/json": "^2.2.204",
     "@tailwindcss/typography": "^0.5.13",
+    "@types/node": "^22.10.1",
+    "basic-ftp": "^5.0.5",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.5",
     "extract-md-headings": "^0.2.7",
+    "tsx": "^4.19.2",
     "unlighthouse": "^0.12.0",
     "zod": "^3.23.8"
   }
