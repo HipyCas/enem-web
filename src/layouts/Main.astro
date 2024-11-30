@@ -151,6 +151,12 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
 				</div>
 			</footer>
 		</div>
+
+    <script is:inline>
+      const urlParams = new URLSearchParams(window.location.search);
+      const entity = urlParams.get('entity');
+      if (entity) setTimeout(() => {umami.identify({ entity }); console.info('registered entity:', entity)}, 1000);
+    </script>
 	</body>
 </html>
 
