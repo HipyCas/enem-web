@@ -5,6 +5,8 @@ import AlhambraSiloutte from '../components/AlhambraSiloutte.astro'
 import IndexStats from '../components/IndexStats.astro'
 import IndexPatrons from '../components/IndexPatrons.vue'
 import UIButton from '../components/ui/Button.vue'
+
+import { Image } from 'astro:assets';
 ---
 
 <MainLayout>
@@ -40,6 +42,12 @@ import UIButton from '../components/ui/Button.vue'
       <!-- TOOD Icon hover color -->
       <i class="group-hover:text-secondary i-tabler-chevron-down text-dark dark:text-clear size-10 animate-[bounce_2s_infinite]"></i>
     </a>
+	</section>
+	
+	<section class="mx-auto px-10 w-fit text-2xl my-4 text-center">
+    Con la colaboración y apoyo de
+    <Image src="/2025/img/entities/AIgranada_color_horizontal.png..png" width={450} height={125} class="dark:hidden inline-block w-auto max-h-[80px] sm:ml-1 -mt-1" alt="IA Granada" />
+    <Image src="/2025/img/entities/AIgranada_blanco_horizontal.png.png" width={450} height={125} class="hidden dark:inline-block w-auto max-h-[80px] sm:ml-1 -mt-1" alt="IA Granada" />
 	</section>
   
   <IndexStats />
