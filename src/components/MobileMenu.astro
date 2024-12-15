@@ -107,6 +107,7 @@ const { toggleClass, links } = Astro.props;
   document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("mobileMenuToggle");
     const overlay = document.getElementById("mobileMenuOverlay");
+    const searchOverlay = document.getElementById("search-modal");
     const body = document.body;
 
     // TODO Hide search modal if open
@@ -121,6 +122,12 @@ const { toggleClass, links } = Astro.props;
       //   // document.documentElement.style.overflow = 'initial';
       //   document.body.scroll = "yes";
       // }
+      if (
+        searchOverlay.hasAttribute("data-open") &&
+        overlay.hasAttribute("data-open")
+      ) {
+        searchOverlay.removeAttribute("data-open");
+      }
     };
 
     // Link dropdowns

@@ -12,13 +12,17 @@
     const toggle = document.getElementById("search-toggle");
     const overlay = document.getElementById("search-modal");
     const searchInput = document.querySelector("#search-modal input");
+    const mobileOverlay = document.getElementById("mobileMenuOverlay");
     const body = document.body;
 
     toggle.onclick = () => {
       overlay.toggleAttribute("data-open");
       overlay.toggleAttribute("aria-hidden");
       body.toggleAttribute("data-overlay-open");
-      if (overlay.getAttribute("data-open") !== null) {
+      if (overlay.hasAttribute("data-open")) {
+        if (mobileOverlay.hasAttribute("data-open"))
+          mobileOverlay.removeAttribute("data-open");
+
         searchInput.focus();
       }
       // if (document.body.scroll = "yes") {
