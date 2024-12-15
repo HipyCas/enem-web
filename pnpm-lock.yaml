@@ -81,6 +81,9 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.13
         version: 0.5.13(tailwindcss@3.4.3(ts-node@10.9.2(@types/node@22.10.1)(typescript@5.4.5)))
+      '@tsmx/human-readable':
+        specifier: ^2.0.3
+        version: 2.0.3
       '@types/node':
         specifier: ^22.10.1
         version: 22.10.1
@@ -1457,6 +1460,10 @@ packages:
 
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
+
+  '@tsmx/human-readable@2.0.3':
+    resolution: {integrity: sha512-GA9l10PLqYPAEj95HfMI/HMJism0seBKfOlob4o/c4ws3xmrEZJcJZ/EtS9bOYXrO0UeeJ4TGEyuJWaBa2Dcsg==}
+    engines: {node: '>=14.0.0', npm: '>=6.0.0'}
 
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -6729,6 +6736,8 @@ snapshots:
 
   '@tsconfig/node16@1.0.4':
     optional: true
+
+  '@tsmx/human-readable@2.0.3': {}
 
   '@types/acorn@4.0.6':
     dependencies:
