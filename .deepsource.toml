@@ -1,0 +1,17 @@
+version = 1
+
+exclude_patterns = [
+  "dist/**",
+  "2025",
+  ".astro/**"
+]
+
+[[analyzers]]
+name = "secrets"
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  plugins = ["vue"]
+  environment = ["nodejs"]
