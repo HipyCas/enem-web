@@ -7,7 +7,7 @@ import { map as amap } from "radash";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  return await amap(posts, async (post) => ({
+  return await amap(posts.filter((post) => import.meta.env.DEV || post.data.draft !== true), async (post) => ({
     params: { slug: post.slug },
     props: { post, headings: (await post.render()).headings },
   }));
@@ -29,7 +29,7 @@ const { Content } = await post.render();
           | <i class="-mb-0.5 i-tabler-tag ml-1" />{" "}
           {post.data.tags.map((tag: string) => (
             <a
-              href={`tags/${tag}`}
+              href={`/2025/noticias/tags/${tag}`}
               class="px-1.5 py-0.5 mr-1 rounded-full cursor-pointer text-clear"
               style={{ backgroundColor: uniqolor(tag).color + "aa" }}
             >
