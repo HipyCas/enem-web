@@ -113,9 +113,6 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
       alt: pageTitle
     }, /* TODO Article */}} twitter={{card: 'summary_large_image', site: 'enem.mat'}} />
 
-    <!-- TODO https://web.dev/articles/defer-non-critical-css or maybe use somthing like Astro Icons or even Vue Tabler so it gets bundled only the ones you use -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.2.0/dist/tabler-icons.min.css">
-
 		<script defer src="https://cdn.jsdelivr.net/npm/walkway.js/src/walkway.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/countup.js/dist/countUp.umd.js" integrity="sha256-aF8VUqJ5xB9GVYPGv9/x7rGzyRa/VgmO19lbDn91X8U=" crossorigin="anonymous"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.7.1/countUp.min.js"></script> -->
