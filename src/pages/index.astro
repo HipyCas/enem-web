@@ -11,29 +11,29 @@ import { Image } from "astro:assets";
 
 <MainLayout>
   <section
-    class="relative hero p-10 xl:pt-0 overflow-x-hidden grid place-items-center overflow-y-hidden"
+    class="grid overflow-x-hidden overflow-y-hidden relative place-items-center p-10 hero xl:pt-0"
   >
     <div
-      class="grid sm:grid-cols-2 xl:-mt-28 md:-mt-24 flex-row items-center h-full w-full max-w-7xl"
+      class="grid flex-row items-center w-full max-w-7xl h-full sm:grid-cols-2 xl:-mt-28 md:-mt-24"
     >
       <h1
-        class="text-primary font-black text-5xl xl:text-7xl tracking-widest -mt-5 sm:mt-0"
+        class="-mt-5 text-5xl font-black tracking-widest text-primary xl:text-7xl sm:mt-0"
       >
         ENEM 2025<br />Granada
       </h1>
       <div class="-mt-30 sm:mt-0 xl:place-self-center">
         <!-- <p class="overflow-y-hidden text-lg font-bold text-dark dark:text-clear">Descubre <SlidingText client:load /></p> -->
-        <p class="text-lg xl:text-xl font-bold text-dark dark:text-clear">
+        <p class="text-lg font-bold xl:text-xl text-dark dark:text-clear">
           Descubre&nbsp;<SlidingText />
         </p>
         <p class="xl:text-lg max max-w-96">
           Un evento nacional por y para estudiantes, aprende sobre matemáticas y
           conoce a más de 300 personas
         </p>
-        <!-- <p class=" dark:text-zinc-400 text-zinc-700">Un congreso nacional de matemáticas, estadística y ciencia de datos, por y para estudiantes</p>
-				<p class=" font-semibold text-lg">Hazte voluntario del ENEM 2025 y forma parte esencial de su organización</p> -->
+        <!-- <p class="dark:text-zinc-400 text-zinc-700">Un congreso nacional de matemáticas, estadística y ciencia de datos, por y para estudiantes</p>
+				<p class="text-lg font-semibold">Hazte voluntario del ENEM 2025 y forma parte esencial de su organización</p> -->
         <!-- <a href="evento/enem" class="block w-fit mt-2 bg-primary text-clear px-2 py-1 rounded-lg shadow hover:shadow-lg hover:shadow-primary-400 dark:hover:shadow-lg hover:scale-[1.03] transition-all cursor-pointer hover:text-clear">¡Participa!</a> -->
-        <!-- <a class="block w-fit mt-2 bg-primary text-clear px-2 py-1 rounded-lg shadow hover:text-dark">
+        <!-- <a class="block px-2 py-1 mt-2 rounded-lg shadow w-fit bg-primary text-clear hover:text-dark">
           ¿Eres una empresa? ¡Colabora! <i class="i-tabler-arrow-right size-5 -mb-[0.3rem]"></i>
         </a> -->
         <UIButton
@@ -47,17 +47,17 @@ import { Image } from "astro:assets";
     </div>
 
     <div
-      class="absolute -z-10 overflow-hidden flex inset-0 -mt-10 sm:mt-0 xl:-mb-24 xl:-mx-40 md:-mx-20 -mx-40 items-center justify-start"
+      class="flex overflow-hidden absolute inset-0 justify-start items-center -mx-40 -mt-10 -z-10 sm:mt-0 xl:-mb-24 xl:-mx-40 md:-mx-20"
     >
       <!-- Empty alt, as it is a decorative image -->
-      <!-- <img id="alhambraSiloutte" alt="" src="/alhmabra-silueta-mejor-export-svg.svg" class=" text-dark dark:text-tertiary h-fit ml-12 sm:-ml-4 -mt-8 sm:mt-60 xl:mt-72"> -->
+      <!-- <img id="alhambraSiloutte" alt="" src="/alhmabra-silueta-mejor-export-svg.svg" class="-mt-8 ml-12 text-dark dark:text-tertiary h-fit sm:-ml-4 sm:mt-60 xl:mt-72"> -->
       <AlhambraSiloutte />
     </div>
 
     <!-- TODO Add blur so it looks betters -->
     <a
       href="#stats"
-      class="group w-fit absolute cursor-pointer bottom-0 sm:bottom-10 text-center text-dark dark:text-clear md:bg-white/15 p-5 pb-0 rounded-full backdrop-blur-2xl"
+      class="absolute bottom-0 p-5 pb-0 text-center rounded-full backdrop-blur-2xl cursor-pointer group w-fit sm:bottom-10 text-dark dark:text-clear md:bg-white/15"
     >
       <p class="italic">Descubre más</p>
       <!-- TOOD Icon hover color -->
@@ -67,19 +67,19 @@ import { Image } from "astro:assets";
     </a>
   </section>
 
-  <section class="mx-auto px-10 w-fit text-2xl my-4 text-center">
+  <section class="px-10 mx-auto my-4 text-2xl text-center w-fit">
     Con la colaboración y apoyo de
     <Image
       src="/2025/img/entities/AIgranada_color_horizontal.png..png"
-      width={450}
-      height={125}
+      width={225}
+      height={62.5}
       class="dark:hidden inline-block w-auto max-h-[80px] sm:ml-1 -mt-1"
       alt="IA Granada"
     />
     <Image
       src="/2025/img/entities/AIgranada_blanco_horizontal.png.png"
-      width={450}
-      height={125}
+      width={225}
+      height={62.5}
       class="hidden dark:inline-block w-auto max-h-[80px] sm:ml-1 -mt-1"
       alt="IA Granada"
     />
@@ -87,17 +87,18 @@ import { Image } from "astro:assets";
 
   <IndexStats />
 
-  <!-- <section class="flex flex-col md:flex-row w-full max-w-5xl mx-auto items-center p-5 text-center">
+  <!-- <section class="flex flex-col items-center p-5 mx-auto w-full max-w-5xl text-center md:flex-row">
     <p class="text-lg">Creado en Granada en 2001</p>
-    <p class="md:-mt-6 flex-grow italic text-zinc-700 dark:text-zinc-300 min-w-fit pl-1 py-6 md:py-0 my-4 md:my-0 md:px-4 mx-4 md:my-4 border-l-4 md:border-l-0 md:border-b-4 border-primary">
+    <p class="flex-grow py-6 pl-1 mx-4 my-4 italic border-l-4 md:-mt-6 text-zinc-700 dark:text-zinc-300 min-w-fit md:py-0 md:my-0 md:px-4 md:my-4 md:border-l-0 md:border-b-4 border-primary">
       Y después de 25 años
     </p>
     <p class="text-lg">De vuelta a Granada para una edición única</p>
   </section> -->
 
   <section class="my-10">
-    <h2 class="text-2xl mt-5 px-10">Colaboradores en años anteriores</h2>
+    <h2 class="px-10 mt-5 text-2xl">Colaboradores en años anteriores</h2>
 
+    <!-- TODO Make this an astro component and use Image component inside -->
     <IndexPatrons
       items={[
         ["/2025/img/patrons/ign.png", "Instituto Geográfico Nacional"],
