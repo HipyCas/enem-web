@@ -1,11 +1,21 @@
 ---
-import MainLayout from '../layouts/Main.astro'
+import MainLayout from "../layouts/Main.astro";
 ---
 
 <MainLayout>
   <main class="hero-lonely flex flex-col justify-center items-center p-10">
-    <h1 class="text-5xl font-black text-center p-10 bg-gradient-to-tr from-secondary-700 to-tertiary-800 bg-clip-text text-transparent">Página no encontrada</h1>
-    <p class="text-center" style="margin-bottom:1.5rem;">La dirección que has indicado no corresponde a ninguna página</p>
-    <a href={import.meta.env.BASE_URL} class="block w-fit bg-primary text-clear px-2 py-1 rounded-lg shadow hover:shadow-lg hover:shadow-primary-400 dark:hover:shadow-lg hover:scale-[1.03] transition-all cursor-pointer hover:text-clear">Volver al inicio</a>
+    <h1
+      class="text-5xl font-black text-center p-10 bg-gradient-to-tr from-secondary-700 to-tertiary-800 bg-clip-text text-transparent"
+    >
+      Página no encontrada
+    </h1>
+    <p class="text-center" style="margin-bottom:1.5rem;">
+      La dirección que has indicado no corresponde a ninguna página
+    </p>
+    <a
+      href={import.meta.env.BASE_URL}
+      class="block w-fit bg-primary text-clear px-2 py-1 rounded-lg shadow hover:shadow-lg hover:shadow-primary-400 dark:hover:shadow-lg hover:scale-[1.03] transition-all cursor-pointer hover:text-clear"
+      >Volver al inicio</a
+    >
   </main>
 </MainLayout>
