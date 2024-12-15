@@ -1,7 +1,7 @@
 import { Client } from "basic-ftp";
 import "dotenv/config";
 import chalk from "chalk";
-import hr from '@tsmx/human-readable'
+import hr from "@tsmx/human-readable";
 
 import { argv } from "node:process";
 
@@ -20,15 +20,27 @@ if (
   process.exit(1);
 
 const client = new Client();
-client.ftp.verbose = argv.includes('-') || argv.includes('--verbose');
+client.ftp.verbose = argv.includes("-") || argv.includes("--verbose");
 
-const showProgress: Parameters<typeof client["trackProgress"]>[0] = (info) => {
-  console.log("\x1b[2J")
-  console.log(chalk.dim(prod ? chalk.bgYellow("⚠ Uploading to production") : "🛈 Uploading to prueba.anem.es/2025"))
-  console.log(chalk.bold(`${chalk.green(capitalizeFirstLetter(info.type))} ${chalk.blue(info.name)}`));
-  console.log("Transferred:", humanBytes(info.bytes))
-  console.log("Transferred Overall:", humanBytes(info.bytesOverall))
-}
+const showProgress: Parameters<(typeof client)["trackProgress"]>[0] = (
+  info,
+) => {
+  console.log("\x1b[2J");
+  console.log(
+    chalk.dim(
+      prod
+        ? chalk.bgYellow("⚠ Uploading to production")
+        : "🛈 Uploading to prueba.anem.es/2025",
+    ),
+  );
+  console.log(
+    chalk.bold(
+      `${chalk.green(capitalizeFirstLetter(info.type))} ${chalk.blue(info.name)}`,
+    ),
+  );
+  console.log("Transferred:", humanBytes(info.bytes));
+  console.log("Transferred Overall:", humanBytes(info.bytesOverall));
+};
 
 async function main() {
   try {
