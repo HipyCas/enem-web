@@ -6,16 +6,21 @@
   <i class="-mb-1 w-5 h-5 i-tabler-search text-dark dark:text-clear"></i>
 </button>
 
+<!-- TODO When clicking or writing some letter, open this and start reading the text -->
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("search-toggle");
     const overlay = document.getElementById("search-modal");
+    const searchInput = document.querySelector("#search-modal input");
     const body = document.body;
 
     toggle.onclick = () => {
       overlay.toggleAttribute("data-open");
       overlay.toggleAttribute("aria-hidden");
       body.toggleAttribute("data-overlay-open");
+      if (overlay.getAttribute("data-open") !== null) {
+        searchInput.focus();
+      }
       // if (document.body.scroll = "yes") {
       //   // document.documentElement.style.overflow = 'hidden';
       //   document.body.scroll = "no";
