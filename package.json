@@ -22,6 +22,7 @@
     "astro": "^4.16.0",
     "astro-meta-tags": "^0.2.2",
     "astro-pagefind": "^1.7.0",
+    "astro-seo": "^0.8.4",
     "countup.js": "^2.8.0",
     "date-fns": "^4.1.0",
     "radash": "^12.1.0",
@@ -42,6 +43,8 @@
     "chalk": "^5.3.0",
     "dotenv": "^16.4.5",
     "extract-md-headings": "^0.2.7",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1",
     "tsx": "^4.19.2",
     "unlighthouse": "^0.12.0",
     "zod": "^3.23.8"
