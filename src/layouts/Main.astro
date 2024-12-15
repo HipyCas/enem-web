@@ -15,7 +15,6 @@ import SearchModal from '../components/search/SearchModal.astro';
 import SearchToggle from '../components/search/SearchToggle.astro';
 
 import type { Link } from '../types'
-import { undefined } from 'astro:schema';
 
 interface Props {
   title?: string;
@@ -89,19 +88,19 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
     <meta name="theme-color" content="#ff6b6b">
 
 		<!-- Facebook Meta Tags -->
-		<meta property="og:url" content={Astro.site + Astro.url.pathname}>
+		<!-- <meta property="og:url" content={Astro.site + Astro.url.pathname}>
 		<meta property="og:type" content="website">
 		<meta property="og:title" content={pageTitle}>
 		<meta property="og:description" content={pageDescription}>
-		<meta property="og:image" content={pageImage}>
+		<meta property="og:image" content={pageImage}> -->
 
 		<!-- Twitter Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image">
+		<!-- <meta name="twitter:card" content="summary_large_image">
 		<meta property="twitter:domain" content={Astro.site?.hostname}>
 		<meta property="twitter:url" content={Astro.site + Astro.url.pathname}>
 		<meta name="twitter:title" content={pageTitle}>
 		<meta name="twitter:description" content={pageDescription}>
-		<meta name="twitter:image" content={pageImage}>
+		<meta name="twitter:image" content={pageImage}> -->
 
     <SEO openGraph={{basic: {
       title: title || 'Inicio',
@@ -112,7 +111,7 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
       siteName: 'ENEM 2025',
     }, image: {
       alt: pageTitle
-    }, /* TODO Article */}} />
+    }, /* TODO Article */}} twitter={{card: 'summary_large_image', site: 'enem.mat'}} />
 
     <!-- TODO https://web.dev/articles/defer-non-critical-css or maybe use somthing like Astro Icons or even Vue Tabler so it gets bundled only the ones you use -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.2.0/dist/tabler-icons.min.css">
@@ -133,8 +132,8 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
 		<div class="max-w-screen">
 			<header class="flex items-center backdrop-blur dark:bg-dark/75 bg-clear/60">
         <a href="/2025/" class="overflow-y-hidden flex-grow p-2 ml-6 h-full text-2xl font-bold font-lexend text-primary w-fit">
-          <Image src={headerImageDark} alt="ENEM 2025 GRX" width={200} class="hidden dark:block h-[90%] object-contain w-36 rounded" />
-          <Image src={headerImageLight} alt="ENEM 2025 GRX" width={200} class="block dark:hidden h-[90%] object-contain w-36 rounded" />
+          <Image loading="eager" src={headerImageDark} alt="ENEM 2025 GRX" width={200} class="hidden dark:block h-[90%] object-contain w-36 rounded" />
+          <Image loading="eager" src={headerImageLight} alt="ENEM 2025 GRX" width={200} class="block dark:hidden h-[90%] object-contain w-36 rounded" />
         </a>
         <SearchToggle />
 				<nav class="hidden mr-4 lg:block">
