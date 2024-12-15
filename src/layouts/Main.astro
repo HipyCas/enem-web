@@ -24,14 +24,14 @@ interface Props {
 
 const { title, og } = Astro.props
 
-const getLn = (ln: string = '/') => import.meta.env.BASE_URL + ln
+const getLn = (ln: string = '') => import.meta.env.BASE_URL + ln
 
 const IN_PRODUCTION = process.env.NODE_ENV === 'production'
 
 // TODO [string, string, Link[]?]
 const LINKS: [string, string | Link[]][] = [
   ['Inicio', getLn()],
-  ['Noticias', getLn('/noticias/')],
+  ['Noticias', getLn('noticias/')],
   // ['Inscripción', getLn('/inscripcion/')],
   ['El Evento', [
     ["El ENEM", '/2025/evento/enem'],
