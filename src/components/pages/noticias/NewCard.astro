@@ -1,0 +1,63 @@
+---
+import type { collections } from "../../../content/config";
+import type { z } from "zod";
+import { Image } from "astro:assets";
+import { format } from "date-fns";
+import uniqolor from "uniqolor";
+
+type New = z.infer<
+  Exclude<(typeof collections)["blog"]["schema"], undefined | Function>
+>;
+
+export interface Props {
+  item: {
+    slug: string;
+    data: New;
+  };
+  emphasize?: boolean;
+  class?: string;
+}
+
+const { emphasize = false, class: thisClass, item } = Astro.props;
+
+const mergedClass = {
+  [thisClass ?? ""]: true,
+  "border-primary": emphasize,
+  "border-dark": !emphasize,
+};
+---
+
+<a
+  href={`/2025/noticias/${item.slug}`}
+  class="block overflow-hidden rounded border border-zinc-300 dark:border-zinc-800 bg-clear dark:bg-dark hover:border-secondary"
+  class:list={mergedClass}
+>
+  {
+    item.data.image && (
+      <Image src={item.data.image} alt="" width={711} height={400} />
+    )
+  }
+  <div class="p-6 text-dark dark:text-clear">
+    <h3 class="text-xl font-bold">{item.data.title}</h3>
+    <span class="text-sm mr-1">
+      <i class="-mb-0.5 i-tabler-calendar"></i>
+      {format(item.data.publishedDate, "dd/MM/yyyy")}
+    </span>
+    {
+      item.data.tags && (
+        <>
+          | <i class="-mb-0.5 i-tabler-tag ml-1" />{" "}
+          {item.data.tags.map((tag: string) => (
+            <span
+              class="px-1.5 py-0.5 mr-1 rounded-full cursor-pointer"
+              style={{ backgroundColor: uniqolor(tag).color + "aa" }}
+            >
+              {" "}
+              {tag}
+            </span>
+          ))}
+        </>
+      )
+    }
+  </div>
+</a>
