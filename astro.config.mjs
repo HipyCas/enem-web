@@ -7,6 +7,8 @@ import mdx from "@astrojs/mdx";
 import pagefind from "astro-pagefind";
 import metaTags from "astro-meta-tags";
 
+import { externalAnchorPlugin } from "./remarkplugins/external-anchor-plugin.mjs";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://enem.anem.es",
@@ -23,4 +25,7 @@ export default defineConfig({
     metaTags(),
     pagefind(),
   ],
+  markdown: {
+    remarkPlugins: [externalAnchorPlugin],
+  }
 });
