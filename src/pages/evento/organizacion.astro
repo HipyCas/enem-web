@@ -1,5 +1,6 @@
 ---
 import PageLayout from "../../layouts/Page.astro";
+import { Image } from "astro:assets";
 
 const HEADINGS = [
   {
@@ -20,12 +21,22 @@ const HEADINGS = [
     <h2>Entidades organizadoras</h2>
 
     <div class="persona">
-      <img src="/2025/img/logo-anem-2018-480x480px.png" />
+      <Image
+        src="/2025/img/logo-anem-2018-480x480px.png"
+        alt="ANEM"
+        width={150}
+        height={150}
+        loading="eager"
+      />
 
       <div>
-        <strong>Asociación Nacional de Estudiantes de Matemáticas (ANEM)</strong
+        <strong id="anem-name"
+          >Asociación Nacional de Estudiantes de Matemáticas (ANEM)</strong
         >
-        <a class="text-sm italic" href="https://www.anem.es/web/"
+        <a
+          class="text-sm italic"
+          href="https://www.anem.es/web/"
+          aria-describedby="anem-name"
           >Página web <i class="ti ti-external-link"></i></a
         >
 
@@ -38,14 +49,22 @@ const HEADINGS = [
     </div>
 
     <div class="persona">
-      <img
+      <!-- TODO Edit image to fix this -->
+      <Image
         src="/2025/img/ugr-g1467.png"
+        alt="UGR"
+        width={150}
+        height={150}
         class="dark:bg-clear dark:p-1.5 !h-auto"
+        loading="eager"
       />
 
       <div>
-        <strong>Universidad de Granada (UGR)</strong>
-        <a class="text-sm italic" href="https://www.ugr.es/"
+        <strong id="ugr-name">Universidad de Granada (UGR)</strong>
+        <a
+          class="text-sm italic"
+          href="https://www.ugr.es/"
+          aria-describedby="ugr-name"
           >Página web <i class="ti ti-external-link"></i></a
         >
 

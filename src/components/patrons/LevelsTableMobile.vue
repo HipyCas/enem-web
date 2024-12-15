@@ -3,9 +3,9 @@
     <div
       v-for="o of objects"
       :key="o[0]"
-      class="ventaja rounded bg-clear dark:bg-dark p-4 mb-2 text-center"
+      class="p-4 mb-2 text-center rounded ventaja bg-clear dark:bg-dark"
     >
-      <p class="font-semibold mb-1 mt-0">{{ o[0] }}</p>
+      <p class="mt-0 mb-1 font-semibold">{{ o[0] }}</p>
 
       <div>
         <template
@@ -25,7 +25,7 @@
             }"
           >
             <i
-              class="i-tabler-check -mb-1 mr-0.5"
+              class="mr-0.5 -mb-1 i-tabler-check"
               v-if="typeof o[1][idx] === 'boolean'"
             />
             <span class="capitalize">{{ lvl }}</span>
@@ -89,12 +89,13 @@ console.info("clas", thisClass);
 }
 
 .ventaja > div > span.has-string {
+  @apply rounded-[1.35rem];
   display: flex;
   flex-direction: column;
 }
 
 .ventaja > div > span.has-string > span:first-of-type {
-  @apply text-xs font-light underline;
+  @apply text-xs font-light /* underline */;
 }
 
 .ventaja > div > span.has-string > span:nth-of-type(2) {

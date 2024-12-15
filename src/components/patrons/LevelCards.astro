@@ -3,7 +3,7 @@ import UIButton from "../ui/Button.vue";
 ---
 
 <section
-  class="mt-4 flex flex-row justify-evenly flex-wrap items-stretch gap-8"
+  class="flex flex-row flex-wrap gap-8 justify-evenly items-stretch mt-4"
 >
   <div class="platino shadow-primary/70">
     <div>
@@ -32,16 +32,18 @@ import UIButton from "../ui/Button.vue";
         al evento
       </li>
       <li class="level-benefits-previous">
-        <span class="i-tabler-plus"></span> Beneficios de Oro
+        <span class="i-tabler-plus"></span> Beneficios de <span
+          class="oro level-identifier">Oro</span
+        >
       </li>
     </ul>
 
     <UIButton
       event="Mecenas Platino Contacta"
       href="mailto:enem2025@anem.es"
-      class="absolute bottom-2 left-2.5 right-2.5"
+      class="absolute bottom-2 right-2.5 left-2.5"
     >
-      <span class="i-tabler-mail size-5 -mb-1"></span> Contáctanos
+      <span class="-mb-1 i-tabler-mail size-5"></span> Contáctanos
     </UIButton>
   </div>
 
@@ -69,16 +71,18 @@ import UIButton from "../ui/Button.vue";
         <span class="i-tabler-check"></span> Logo en el Photocall del evento
       </li>
       <li class="level-benefits-previous">
-        <span class="i-tabler-plus"></span> Beneficios de Plata
+        <span class="i-tabler-plus"></span> Beneficios de <span
+          class="plata level-identifier">Plata</span
+        >
       </li>
     </ul>
 
     <UIButton
       event="Mecenas Platino Contacta"
       href="mailto:enem2025@anem.es"
-      class="absolute bottom-2 left-2.5 right-2.5"
+      class="absolute bottom-2 right-2.5 left-2.5"
     >
-      <span class="i-tabler-mail size-5 -mb-1"></span> Contáctanos
+      <span class="-mb-1 i-tabler-mail size-5"></span> Contáctanos
     </UIButton>
   </div>
 
@@ -103,16 +107,18 @@ import UIButton from "../ui/Button.vue";
         por la entidad
       </li>
       <li class="level-benefits-previous">
-        <span class="i-tabler-plus"></span> Beneficios de Bronce
+        <span class="i-tabler-plus"></span> Beneficios de <span
+          class="bronce level-identifier">Bronce</span
+        >
       </li>
     </ul>
 
     <UIButton
       event="Mecenas Platino Contacta"
       href="mailto:enem2025@anem.es"
-      class="absolute bottom-2 left-2.5 right-2.5"
+      class="absolute bottom-2 right-2.5 left-2.5"
     >
-      <span class="i-tabler-mail size-5 -mb-1"></span> Contáctanos
+      <span class="-mb-1 i-tabler-mail size-5"></span> Contáctanos
     </UIButton>
   </div>
 
@@ -139,16 +145,18 @@ import UIButton from "../ui/Button.vue";
         para el kit de bienvenida
       </li>
       <li class="level-benefits-previous">
-        <span class="i-tabler-plus"></span> Beneficios de Colaborador
+        <span class="i-tabler-plus"></span> Beneficios de <span
+          class="colaborador level-identifier">Colaborador</span
+        >
       </li>
     </ul>
 
     <UIButton
       event="Mecenas Platino Contacta"
       href="mailto:enem2025@anem.es"
-      class="absolute bottom-2 left-2.5 right-2.5"
+      class="absolute bottom-2 right-2.5 left-2.5"
     >
-      <span class="i-tabler-mail size-5 -mb-1"></span> Contáctanos
+      <span class="-mb-1 i-tabler-mail size-5"></span> Contáctanos
     </UIButton>
   </div>
 
@@ -175,9 +183,9 @@ import UIButton from "../ui/Button.vue";
     <UIButton
       event="Mecenas Platino Contacta"
       href="mailto:enem2025@anem.es"
-      class="absolute bottom-2 left-2.5 right-2.5"
+      class="absolute bottom-2 right-2.5 left-2.5"
     >
-      <span class="i-tabler-mail size-5 -mb-1"></span> Contáctanos
+      <span class="-mb-1 i-tabler-mail size-5"></span> Contáctanos
     </UIButton>
   </div>
 </section>
@@ -257,5 +265,9 @@ import UIButton from "../ui/Button.vue";
 
   .level-benefits-previous {
     @apply font-semibold;
+  }
+
+  .level-benefits-previous .level-identifier {
+    @apply bg-[var(--this-color)] text-dark p-1 rounded-lg !shadow-none font-black;
   }
 </style>
