@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../../layouts/Main.astro";
-import NewCard from "../../components/pages/noticias/NewCard.vue";
+import NewCard from "../../components/pages/noticias/NewCard.astro";
 import { getCollection } from "astro:content";
 
 const blog = await getCollection("blog");
@@ -8,11 +8,11 @@ const posts = blog
   .filter(
     (post) =>
       import.meta.env.DEV ||
-      (post.data.draft !== true && post.data.publishedDate <= new Date()),
+      (post.data.draft !== true && post.data.publishedDate <= new Date())
   )
   .sort(
     (postA, postB) =>
-      postB.data.publishedDate.getTime() - postA.data.publishedDate.getTime(),
+      postB.data.publishedDate.getTime() - postA.data.publishedDate.getTime()
   );
 ---
 
@@ -21,7 +21,10 @@ const posts = blog
     <main class="relative mx-auto max-w-7xl">
       <h1 class="pt-10 pb-2.5 text-4xl font-semibold">Noticias</h1>
 
-      <div class="grid grid-cols-2 gap-4" style="grid-auto-rows: 1fr;">
+      <div
+        class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3"
+        style="grid-auto-rows: 1fr;"
+      >
         <!-- <NewCard class="w-full" item={posts[0]} emphasize />
 
         {
