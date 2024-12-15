@@ -6,6 +6,7 @@ interface Props {
   frontmatter: {
     title: string;
     tabTitle?: string;
+    image?: string;
   };
   headings: { depth: number; slug: string; text: string }[];
 }
@@ -13,10 +14,13 @@ interface Props {
 const { frontmatter, headings } = Astro.props;
 ---
 
-<MainLayout title={frontmatter.tabTitle ?? frontmatter.title}>
+<MainLayout
+  title={frontmatter.tabTitle ?? frontmatter.title}
+  og={{ image: frontmatter.image }}
+>
   <div class="px-10 py-10 w-screen">
-    <main class="relative max-w-7xl mx-auto">
-      <h1 class="text-4xl pt-10 font-semibold">{frontmatter.title}</h1>
+    <main class="relative mx-auto max-w-7xl">
+      <h1 class="pt-10 text-4xl font-semibold">{frontmatter.title}</h1>
 
       <slot name="below" />
 
