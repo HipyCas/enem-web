@@ -30,7 +30,7 @@ const { Content } = await post.render();
           {post.data.tags.map((tag: string) => (
             <a
               href={`/2025/noticias/tags/${tag}`}
-              class="px-1.5 py-0.5 mr-1 rounded-full cursor-pointer text-clear"
+              class="px-1.5 py-0.5 mr-1 rounded-full cursor-pointer text-dark dark:text-clear"
               style={{ backgroundColor: uniqolor(tag).color + "aa" }}
             >
               {" "}
