@@ -21,6 +21,6 @@ export default defineConfig({
     vue({ devtools: true }),
     mdx(),
     metaTags(),
-    pagefind()
+    pagefind(),
   ],
 });
