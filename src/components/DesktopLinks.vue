@@ -14,13 +14,13 @@
         {{ ln[0] }}
       </a>
     </li>
-    <li v-else class="navdropwdown group relative">
+    <li v-else class="relative navdropwdown group">
       {{ ln[0] }}
       <span
-        class="i-tabler-chevron-down inline-block group-hover:-rotate-180 transition-transform -mb-0.5"
+        class="inline-block -mb-0.5 transition-transform i-tabler-chevron-down group-hover:-rotate-180"
       ></span>
       <ul
-        class="absolute top-9 hidden opacity-0 group-hover:opacity-100 transition-opacity delay-500 duration-1000 w-max group-hover:block bg-clear dark:bg-dark rounded p-2 shadow-xl border dark:border-zinc-700"
+        class="hidden absolute top-9 p-2 w-max rounded border shadow-xl opacity-0 transition-opacity duration-1000 delay-500 group-hover:opacity-100 group-hover:block bg-clear dark:bg-dark dark:border-zinc-700"
       >
         <template v-for="l2 in ln[1]">
           <li class="">
@@ -43,21 +43,21 @@
     </li>
   </template>
   <a href="mailto:enem2025@anem.es" aria-label="Correo electrónico">
-    <i class="ti ti-mail text-lg inline-block"></i>
+    <i class="inline-block text-lg ti ti-mail"></i>
   </a>
   <a
     href="https://instagram.com/enem.mat"
     aria-label="Instagram"
     class="!-ml-2"
   >
-    <i class="ti ti-brand-instagram text-lg inline-block"></i>
+    <i class="inline-block text-lg ti ti-brand-instagram"></i>
   </a>
   <a
-    href="https://twitter.com/enem.mat"
+    href="https://x.com/enem_mat"
     aria-label="Twitter / X"
     class="!-ml-2"
   >
-    <i class="ti ti-brand-twitter text-lg inline-block"></i>
+    <i class="inline-block text-lg ti ti-brand-twitter"></i>
   </a>
 </template>
 
