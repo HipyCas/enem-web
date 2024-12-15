@@ -43,21 +43,21 @@
     </li>
   </template>
   <a href="mailto:enem2025@anem.es" aria-label="Correo electrónico">
-    <i class="inline-block text-lg ti ti-mail"></i>
+    <i class="inline-block text-lg i-tabler-mail"></i>
   </a>
   <a
     href="https://instagram.com/enem.mat"
     aria-label="Instagram"
     class="!-ml-2"
   >
-    <i class="inline-block text-lg ti ti-brand-instagram"></i>
+    <i class="inline-block text-lg i-tabler-brand-instagram"></i>
   </a>
   <a
     href="https://x.com/enem_mat"
     aria-label="Twitter / X"
     class="!-ml-2"
   >
-    <i class="inline-block text-lg ti ti-brand-twitter"></i>
+    <i class="inline-block text-lg i-tabler-brand-twitter"></i>
   </a>
 </template>
 
