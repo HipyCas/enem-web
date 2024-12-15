@@ -1,0 +1,42 @@
+---
+import Search from "astro-pagefind/components/Search";
+---
+
+<div
+  id="search-modal"
+  class="overflow-y-scroll fixed inset-0 z-20 p-5 bg-white dark:bg-dark"
+>
+  <Search
+    id="search"
+    className="pagefind-ui"
+    uiOptions={{ showImages: false }}
+  />
+</div>
+
+<style scoped>
+  #search-modal {
+    display: none;
+
+    top: var(--header-height);
+  }
+
+  #search-modal[data-open] {
+    display: block;
+  }
+</style>
+
+<style is:global>
+  .pagefind-ui {
+    --pagefind-ui-text: #2c2c2c;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .pagefind-ui {
+      --pagefind-ui-text: #eaeaea;
+    }
+
+    .pagefind-ui form > * {
+      background: #2c2c2c !important;
+    }
+  }
+</style>

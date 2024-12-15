@@ -1,0 +1,28 @@
+<button
+  id="search-toggle"
+  class="px-4 h-full cursor-pointer"
+  aria-label="Buscar"
+>
+  <i class="-mb-1 w-5 h-5 i-tabler-search text-dark dark:text-clear"></i>
+</button>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("search-toggle");
+    const overlay = document.getElementById("search-modal");
+    const body = document.body;
+
+    toggle.onclick = () => {
+      overlay.toggleAttribute("data-open");
+      overlay.toggleAttribute("aria-hidden");
+      body.toggleAttribute("data-overlay-open");
+      // if (document.body.scroll = "yes") {
+      //   // document.documentElement.style.overflow = 'hidden';
+      //   document.body.scroll = "no";
+      // } else {
+      //   // document.documentElement.style.overflow = 'initial';
+      //   document.body.scroll = "yes";
+      // }
+    };
+  });
+</script>

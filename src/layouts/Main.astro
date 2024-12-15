@@ -8,6 +8,8 @@ import headerImageLight from '../assets/img/g10.png'
 
 import MobileMenu from '../components/MobileMenu.astro'
 import Links from '../components/DesktopLinks.vue';
+import SearchModal from '../components/search/SearchModal.astro';
+import SearchToggle from '../components/search/SearchToggle.astro';
 
 import type { Link } from '../types'
 import { Image } from 'astro:assets';
@@ -29,7 +31,7 @@ const IN_PRODUCTION = process.env.NODE_ENV === 'production'
 // TODO [string, string, Link[]?]
 const LINKS: [string, string | Link[]][] = [
   ['Inicio', getLn()],
-  // ['Noticias', getLn('/noticias/')],
+  ['Noticias', getLn('/noticias/')],
   // ['Inscripción', getLn('/inscripcion/')],
   ['El Evento', [
     ["El ENEM", '/2025/evento/enem'],
@@ -107,14 +109,17 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
         : <></> }
 	</head>
 	<body class="dark:bg-[#1c1c1c] dark:text-clear relative">
-		<!-- Needed because on mobile the menu was overflowing and the x-hidden on body did not work properly -->
+		<SearchModal />
+    
+    <!-- Needed because on mobile the menu was overflowing and the x-hidden on body did not work properly -->
 		<div class="max-w-screen">
-			<header class="dark:bg-dark/75 bg-clear/60 backdrop-blur flex items-center justify-between">
-        <a href="/2025/" class="text-2xl font-bold font-lexend text-primary ml-6 h-full w-fit overflow-y-hidden p-2">
+			<header class="flex items-center backdrop-blur dark:bg-dark/75 bg-clear/60">
+        <a href="/2025/" class="overflow-y-hidden flex-grow p-2 ml-6 h-full text-2xl font-bold font-lexend text-primary w-fit">
           <Image src={headerImageDark} alt="ENEM 2025 GRX" width={200} class="hidden dark:block h-[90%] object-contain w-36 rounded" />
           <Image src={headerImageLight} alt="ENEM 2025 GRX" width={200} class="block dark:hidden h-[90%] object-contain w-36 rounded" />
         </a>
-				<nav class="hidden lg:block mr-4">
+        <SearchToggle />
+				<nav class="hidden mr-4 lg:block">
           <!-- <ul>
 						{
               LINKS.map(ln =>
@@ -122,15 +127,15 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
                 <li>
                   <a href={ln[1]} class:list={[Astro.url.pathname.replace(/\//, '').replace('index.html', '') === ln[1].replace(/\//, '') ? 'active' : '', 'navlink']}>{ln[0]}</a>
                 </li>
-                : <li class="navdropwdown group relative">
-                    {ln[0]} <span class=" i-tabler-chevron-down inline-block"></span>
-                    <ul class="absolute top-9 hidden w-max group-hover:block bg-clear dark:bg-dark rounded p-2 shadow-xl border dark:border-zinc-700">
+                : <li class="relative navdropwdown group">
+                    {ln[0]} <span class="inline-block i-tabler-chevron-down"></span>
+                    <ul class="hidden absolute top-9 p-2 w-max rounded border shadow-xl group-hover:block bg-clear dark:bg-dark dark:border-zinc-700">
                       {ln[1].map(l2 => <li><a href={l2[1]} class:list={[Astro.url.pathname.replace(/\//, '').replace('index.html', '') === l2[1].replace(/\//, '') ? 'active' : '', 'navlink']}>{l2[0]}</a></li>)}
                     </ul>
                   </li>
               )
 						}
-						<a href="mailto:enem2025@anem.es" aria-label="Correo electrónico"><i class="ti ti-mail text-lg inline-block"></i></a>
+						<a href="mailto:enem2025@anem.es" aria-label="Correo electrónico"><i class="inline-block text-lg ti ti-mail"></i></a>
 					</ul> -->
           <ul>
             <Links links={LINKS} Astro={Astro} />
@@ -140,18 +145,18 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
 			</header>
 			<slot />
 			<footer>
-        <section class="mx-auto px-10 w-fit text-2xl my-4 block text-center">
+        <section class="block px-10 mx-auto my-4 text-2xl text-center w-fit">
           Con la colaboración y apoyo de
           <Image src="/2025/img/entities/AIgranada_color_horizontal.png..png" width={450} height={125} class="dark:hidden inline-block w-auto h-[44px]" alt="IA Granada" />
           <Image src="/2025/img/entities/AIgranada_blanco_horizontal.png.png" width={450} height={125} class="hidden dark:inline-block w-auto h-[44px]" alt="IA Granada" />
         </section>
 				<div class="mx-auto w-fit h-full flex flex-col justify-center items-center *:text-sm">
-						<p class="w-fit mb-0.5 text-center">El ENEM es un evento organizado por la <a href="https://anem.es/web">Asociación Nacional de Estudiantes de Matemáticas (ANEM)</a></p>
+						<p class="mb-0.5 text-center w-fit">El ENEM es un evento organizado por la <a href="https://anem.es/web">Asociación Nacional de Estudiantes de Matemáticas (ANEM)</a></p>
 						<!-- @ts-ignore -->
 						<p class="w-fit" >Licenciado bajo <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0
-							<img class="h-4 w-4 inline ml-0.5" alt="Creative Commons" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
-							<img class="h-4 w-4 inline" alt="Attribution" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
-							<img class="h-4 w-4 inline" alt="Share-Alike" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg"></a>
+							<img class="inline ml-0.5 w-4 h-4" alt="Creative Commons" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+							<img class="inline w-4 h-4" alt="Attribution" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+							<img class="inline w-4 h-4" alt="Share-Alike" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg"></a>
 						</p>
 				</div>
 			</footer>
