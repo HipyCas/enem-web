@@ -3,7 +3,8 @@ version = 1
 exclude_patterns = [
   "dist/**",
   "2025",
-  ".astro/**"
+  ".astro/**",
+  "src/assets/js/**"
 ]
 
 [[analyzers]]
