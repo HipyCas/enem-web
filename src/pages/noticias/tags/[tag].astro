@@ -1,0 +1,43 @@
+---
+import MainLayout from "../../../layouts/Main.astro";
+import { getCollection } from "astro:content";
+import { unique, sift } from "radash";
+import NewCard from "../../../components/pages/noticias/NewCard.astro";
+
+export interface Props {
+  posts: Awaited<ReturnType<typeof getCollection<"blog">>>
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return unique(sift(posts.map((p) => p.data.tags)).flat()).map((t) => 
+     ({
+    params: { tag: t },
+    props: { posts: posts.filter((p) => p.data.tags?.includes(t)) },
+  }));
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<MainLayout title={`Noticias: ${tag}`}>
+  <div class="px-10 py-10 w-screen">
+    <main class="relative mx-auto max-w-7xl">
+      <h1 class="pt-10 pb-2.5 text-4xl font-semibold">Noticias: {tag}</h1>
+      <p>Todas las noticias de nuestra web con la etiqueta «{tag}». <br> <a href="/2025/noticias" class="italic"><span class="i-tabler-arrow-left -mb-0.5" /> Volver a todas las noticias.</a></p>
+
+      <div
+        class="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3"
+        style="grid-auto-rows: 1fr;"
+      >
+        <!-- <NewCard class="w-full" item={posts[0]} emphasize />
+
+        {
+          posts.slice(1).map(post => <NewCard item={post} />)
+        } -->
+        {posts.map((post) => <NewCard item={post} />)}
+      </div>
+    </main>
+  </div>
+</MainLayout>
