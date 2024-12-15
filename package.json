@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "tsx scripts/deploy.ts",
-    "deploy:prod": "astro build && tsx scripts/deploy.ts prod"
+    "deploy:prod": "astro build && tsx scripts/deploy.ts prod",
+    "profile": "unlighthouse --site https://prueba.anem.es/2025/"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
