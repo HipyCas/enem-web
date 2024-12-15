@@ -1,9 +1,9 @@
 ---
 interface Props {
-  columns: [string, string][]
+  columns: [string, string][];
 }
 
-const { columns } = Astro.props
+const { columns } = Astro.props;
 ---
 
 <div class="flex flex-row justify-evenly flex-wrap md:[flex-wrap:unset]">
@@ -19,22 +19,22 @@ const { columns } = Astro.props
 
   <div>
     <strong class="from-tertiary-700 to-tertiary-500">{columns[2][0]}</strong>
-    <p set:html={columns[2][1]}></p>
+    <p set:html={columns[2][1]} />
   </div>
 </div>
 
 <style scoped>
-strong {
-  @apply tracking-wider text-xl md:text-2xl text-center bg-gradient-to-tr bg-clip-text text-transparent;
+  strong {
+    @apply tracking-wider text-xl md:text-2xl text-center bg-gradient-to-tr bg-clip-text text-transparent;
 
-  font-weight: 700;
-}
+    font-weight: 700;
+  }
 
-div > div {
-  @apply w-full sm:w-[33%];
+  div > div {
+    @apply w-full sm:w-[33%];
 
-  /* min-width: min-content;
+    /* min-width: min-content;
   width: 33%; */
-  text-align: center;
-}
+    text-align: center;
+  }
 </style>

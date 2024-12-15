@@ -1,55 +1,90 @@
 ---
-import MainLayout from '../layouts/Main.astro'
-import SlidingText from '../components/SlidingTextNew.vue'
-import AlhambraSiloutte from '../components/AlhambraSiloutte.astro'
-import IndexStats from '../components/IndexStats.astro'
-import IndexPatrons from '../components/IndexPatrons.vue'
-import UIButton from '../components/ui/Button.vue'
+import MainLayout from "../layouts/Main.astro";
+import SlidingText from "../components/SlidingTextNew.vue";
+import AlhambraSiloutte from "../components/AlhambraSiloutte.astro";
+import IndexStats from "../components/IndexStats.astro";
+import IndexPatrons from "../components/IndexPatrons.vue";
+import UIButton from "../components/ui/Button.vue";
 
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 ---
 
 <MainLayout>
-	<section class="relative hero p-10 xl:pt-0 overflow-x-hidden grid place-items-center overflow-y-hidden">
-		<div class="grid sm:grid-cols-2 xl:-mt-28 md:-mt-24 flex-row items-center h-full w-full max-w-7xl">
-			<h1 class="text-primary font-black text-5xl xl:text-7xl tracking-widest -mt-5 sm:mt-0" >ENEM 2025<br>Granada</h1>
-			<div class="-mt-30 sm:mt-0 xl:place-self-center">
-				<!-- <p class="overflow-y-hidden text-lg font-bold text-dark dark:text-clear">Descubre <SlidingText client:load /></p> -->
-        <p class="text-lg xl:text-xl font-bold text-dark dark:text-clear">Descubre&nbsp;<SlidingText /></p>
-        <p class="xl:text-lg max max-w-96">Un evento nacional por y para estudiantes, aprende sobre matemáticas y conoce a más de 300 personas</p>
-				<!-- <p class=" dark:text-zinc-400 text-zinc-700">Un congreso nacional de matemáticas, estadística y ciencia de datos, por y para estudiantes</p>
+  <section
+    class="relative hero p-10 xl:pt-0 overflow-x-hidden grid place-items-center overflow-y-hidden"
+  >
+    <div
+      class="grid sm:grid-cols-2 xl:-mt-28 md:-mt-24 flex-row items-center h-full w-full max-w-7xl"
+    >
+      <h1
+        class="text-primary font-black text-5xl xl:text-7xl tracking-widest -mt-5 sm:mt-0"
+      >
+        ENEM 2025<br />Granada
+      </h1>
+      <div class="-mt-30 sm:mt-0 xl:place-self-center">
+        <!-- <p class="overflow-y-hidden text-lg font-bold text-dark dark:text-clear">Descubre <SlidingText client:load /></p> -->
+        <p class="text-lg xl:text-xl font-bold text-dark dark:text-clear">
+          Descubre&nbsp;<SlidingText />
+        </p>
+        <p class="xl:text-lg max max-w-96">
+          Un evento nacional por y para estudiantes, aprende sobre matemáticas y
+          conoce a más de 300 personas
+        </p>
+        <!-- <p class=" dark:text-zinc-400 text-zinc-700">Un congreso nacional de matemáticas, estadística y ciencia de datos, por y para estudiantes</p>
 				<p class=" font-semibold text-lg">Hazte voluntario del ENEM 2025 y forma parte esencial de su organización</p> -->
-				<!-- <a href="evento/enem" class="block w-fit mt-2 bg-primary text-clear px-2 py-1 rounded-lg shadow hover:shadow-lg hover:shadow-primary-400 dark:hover:shadow-lg hover:scale-[1.03] transition-all cursor-pointer hover:text-clear">¡Participa!</a> -->
+        <!-- <a href="evento/enem" class="block w-fit mt-2 bg-primary text-clear px-2 py-1 rounded-lg shadow hover:shadow-lg hover:shadow-primary-400 dark:hover:shadow-lg hover:scale-[1.03] transition-all cursor-pointer hover:text-clear">¡Participa!</a> -->
         <!-- <a class="block w-fit mt-2 bg-primary text-clear px-2 py-1 rounded-lg shadow hover:text-dark">
           ¿Eres una empresa? ¡Colabora! <i class="i-tabler-arrow-right size-5 -mb-[0.3rem]"></i>
         </a> -->
-        <UIButton class="w-full sm:w-fit !px-0 font-semibold xl:text-xl" href="/2025/colaboracion/como-colaborar">
-          ¿Eres una empresa? ¡Colabora! <i class="i-tabler-arrow-right size-5 -mb-[0.3rem]"></i>
+        <UIButton
+          class="w-full sm:w-fit !px-0 font-semibold xl:text-xl"
+          href="/2025/colaboracion/como-colaborar"
+        >
+          ¿Eres una empresa? ¡Colabora! <i
+            class="i-tabler-arrow-right size-5 -mb-[0.3rem]"></i>
         </UIButton>
-			</div>
-		</div>
+      </div>
+    </div>
 
-
-		<div class="absolute -z-10 overflow-hidden flex inset-0 -mt-10 sm:mt-0 xl:-mb-24 xl:-mx-40 md:-mx-20 -mx-40 items-center justify-start">
-			<!-- Empty alt, as it is a decorative image -->
-			<!-- <img id="alhambraSiloutte" alt="" src="/alhmabra-silueta-mejor-export-svg.svg" class=" text-dark dark:text-tertiary h-fit ml-12 sm:-ml-4 -mt-8 sm:mt-60 xl:mt-72"> -->
-			<AlhambraSiloutte />
-		</div>
+    <div
+      class="absolute -z-10 overflow-hidden flex inset-0 -mt-10 sm:mt-0 xl:-mb-24 xl:-mx-40 md:-mx-20 -mx-40 items-center justify-start"
+    >
+      <!-- Empty alt, as it is a decorative image -->
+      <!-- <img id="alhambraSiloutte" alt="" src="/alhmabra-silueta-mejor-export-svg.svg" class=" text-dark dark:text-tertiary h-fit ml-12 sm:-ml-4 -mt-8 sm:mt-60 xl:mt-72"> -->
+      <AlhambraSiloutte />
+    </div>
 
     <!-- TODO Add blur so it looks betters -->
-    <a href="#stats" class="group w-fit absolute cursor-pointer bottom-0 sm:bottom-10 text-center text-dark dark:text-clear md:bg-white/15 p-5 pb-0 rounded-full backdrop-blur-2xl">
+    <a
+      href="#stats"
+      class="group w-fit absolute cursor-pointer bottom-0 sm:bottom-10 text-center text-dark dark:text-clear md:bg-white/15 p-5 pb-0 rounded-full backdrop-blur-2xl"
+    >
       <p class="italic">Descubre más</p>
       <!-- TOOD Icon hover color -->
-      <i class="group-hover:text-secondary i-tabler-chevron-down text-dark dark:text-clear size-10 animate-[bounce_2s_infinite]"></i>
+      <i
+        class="group-hover:text-secondary i-tabler-chevron-down text-dark dark:text-clear size-10 animate-[bounce_2s_infinite]"
+      ></i>
     </a>
-	</section>
-	
-	<section class="mx-auto px-10 w-fit text-2xl my-4 text-center">
+  </section>
+
+  <section class="mx-auto px-10 w-fit text-2xl my-4 text-center">
     Con la colaboración y apoyo de
-    <Image src="/2025/img/entities/AIgranada_color_horizontal.png..png" width={450} height={125} class="dark:hidden inline-block w-auto max-h-[80px] sm:ml-1 -mt-1" alt="IA Granada" />
-    <Image src="/2025/img/entities/AIgranada_blanco_horizontal.png.png" width={450} height={125} class="hidden dark:inline-block w-auto max-h-[80px] sm:ml-1 -mt-1" alt="IA Granada" />
-	</section>
-  
+    <Image
+      src="/2025/img/entities/AIgranada_color_horizontal.png..png"
+      width={450}
+      height={125}
+      class="dark:hidden inline-block w-auto max-h-[80px] sm:ml-1 -mt-1"
+      alt="IA Granada"
+    />
+    <Image
+      src="/2025/img/entities/AIgranada_blanco_horizontal.png.png"
+      width={450}
+      height={125}
+      class="hidden dark:inline-block w-auto max-h-[80px] sm:ml-1 -mt-1"
+      alt="IA Granada"
+    />
+  </section>
+
   <IndexStats />
 
   <!-- <section class="flex flex-col md:flex-row w-full max-w-5xl mx-auto items-center p-5 text-center">
@@ -61,26 +96,32 @@ import { Image } from 'astro:assets';
   </section> -->
 
   <section class="my-10">
-    <h2 class="text-2xl mt-5 px-10">
-      Colaboradores en años anteriores
-    </h2>
+    <h2 class="text-2xl mt-5 px-10">Colaboradores en años anteriores</h2>
 
-    <IndexPatrons items={[
-      ["/2025/img/patrons/ign.png", "Instituto Geográfico Nacional"],
-      ['/2025/img/patrons/ine.png', 'Insituto Nacional de Estadística'],
-      ['/2025/img/patrons/navantia.png', 'Navantia'],
-      ["/2025/img/patrons/casio-division-educativa.png", "Casio Division Educativa"],
-      ['/2025/img/patrons/Bluetab-logo.png', 'Bluetab'],
-      ['/2025/img/patrons/oga-data-driven-solutions.png', 'OGA Data Driven Solutions'],
-      // ["/2025/img/patrons/Axesor-1.png", "Axesor"],
-    ]} />
+    <IndexPatrons
+      items={[
+        ["/2025/img/patrons/ign.png", "Instituto Geográfico Nacional"],
+        ["/2025/img/patrons/ine.png", "Insituto Nacional de Estadística"],
+        ["/2025/img/patrons/navantia.png", "Navantia"],
+        [
+          "/2025/img/patrons/casio-division-educativa.png",
+          "Casio Division Educativa",
+        ],
+        ["/2025/img/patrons/Bluetab-logo.png", "Bluetab"],
+        [
+          "/2025/img/patrons/oga-data-driven-solutions.png",
+          "OGA Data Driven Solutions",
+        ],
+        // ["/2025/img/patrons/Axesor-1.png", "Axesor"],
+      ]}
+    />
   </section>
-  
-	<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, soluta aliquam dolor corporis nostrum ea praesentium omnis similique ex, maxime asperiores. Maiores quis quos odit consequatur sunt officia, qui deleniti aliquid ut ducimus provident quod. Maxime ipsam temporibus aliquid quaerat itaque, voluptatem provident pariatur tenetur sint animi fuga minima consequuntur ab explicabo magnam expedita amet obcaecati earum! Neque aut ratione iste temporibus, hic corrupti aliquid quidem nulla consequuntur pariatur vero illum dignissimos veritatis voluptatibus impedit quaerat magni quam? Deleniti asperiores vel nihil, est perferendis minima minus dicta, quod saepe maxime repellendus molestias! In maxime qui recusandae dolorum facere praesentium iste dolor fuga delectus earum alias illo, sit asperiores voluptatibus corporis mollitia quibusdam porro, hic error ex rem. Dicta illo pariatur unde possimus. Sit deserunt recusandae ex alias, sequi, incidunt ab ratione cumque quod harum ea aspernatur! Cum alias aperiam sunt nulla distinctio nesciunt assumenda quasi nihil sit, et officiis, recusandae ducimus, temporibus aliquam facere ut. Beatae vitae voluptatum fugiat dolor animi quos harum quis distinctio adipisci tempore, ipsam unde omnis quia incidunt est totam iusto praesentium illo explicabo reiciendis! Nulla non, ex natus reiciendis vel odit obcaecati saepe iure consequuntur illum molestias impedit. Rem beatae, vel quo exercitationem dolorum tenetur nostrum quis hic explicabo. Voluptatum incidunt ducimus id! Accusamus asperiores veniam laboriosam nobis error, nam quasi nostrum unde officia? Eius maxime in nam, illum optio libero nesciunt animi debitis, reprehenderit assumenda odio ex accusamus vero officiis nulla incidunt voluptatum ducimus aspernatur necessitatibus a temporibus similique dolore! Deserunt temporibus magni tenetur cumque vitae sequi nihil, a quibusdam et commodi dolorem, eveniet, ex veritatis expedita alias rerum at odit. Hic, modi dignissimos fugiat quis eaque veritatis dolorem ipsam repellendus? Vero natus blanditiis hic minus neque asperiores tenetur deleniti laborum totam fugit? Itaque eligendi saepe aliquam doloribus omnis vel, quibusdam accusamus officia molestiae corrupti sapiente aliquid alias, facere possimus provident nam officiis cumque quo tempore libero nihil. Nam officiis distinctio tenetur blanditiis quos, itaque, dolorem nesciunt aspernatur numquam vitae saepe tempora quo? Consequatur, saepe nihil officia animi omnis dicta quas blanditiis temporibus iure iste quasi provident veniam ducimus rem in expedita harum nostrum adipisci quos at sequi, optio repellendus. Placeat asperiores quae ab ex laborum ratione sint qui voluptate atque molestiae aliquam amet impedit officia fugit cumque fugiat, minus laudantium dolor facilis quia nisi? Obcaecati magni sapiente minus eaque excepturi voluptas voluptatibus reprehenderit distinctio labore rerum inventore sed suscipit ipsum debitis culpa temporibus amet repellat deleniti, libero quis quibusdam placeat enim. Vero pariatur aspernatur architecto explicabo veritatis exercitationem quisquam! Animi ratione, deleniti velit obcaecati quidem officia sit. Sit, rerum. Fugit, quis possimus. Reprehenderit odit distinctio ut. Tempora soluta eligendi, accusantium magnam sint unde optio aut beatae at fuga nulla voluptas sequi nihil culpa delectus et eaque. Mollitia vero temporibus blanditiis nam rerum sequi aspernatur quidem tenetur corporis minus reprehenderit assumenda laboriosam, eum amet vitae consequatur quas? Maiores voluptate nisi optio totam, aperiam consequuntur sapiente qui eligendi at fugit excepturi, recusandae expedita, deleniti porro modi ipsum labore omnis? Suscipit unde deleniti aliquam aperiam laborum?</p> -->
+
+  <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, soluta aliquam dolor corporis nostrum ea praesentium omnis similique ex, maxime asperiores. Maiores quis quos odit consequatur sunt officia, qui deleniti aliquid ut ducimus provident quod. Maxime ipsam temporibus aliquid quaerat itaque, voluptatem provident pariatur tenetur sint animi fuga minima consequuntur ab explicabo magnam expedita amet obcaecati earum! Neque aut ratione iste temporibus, hic corrupti aliquid quidem nulla consequuntur pariatur vero illum dignissimos veritatis voluptatibus impedit quaerat magni quam? Deleniti asperiores vel nihil, est perferendis minima minus dicta, quod saepe maxime repellendus molestias! In maxime qui recusandae dolorum facere praesentium iste dolor fuga delectus earum alias illo, sit asperiores voluptatibus corporis mollitia quibusdam porro, hic error ex rem. Dicta illo pariatur unde possimus. Sit deserunt recusandae ex alias, sequi, incidunt ab ratione cumque quod harum ea aspernatur! Cum alias aperiam sunt nulla distinctio nesciunt assumenda quasi nihil sit, et officiis, recusandae ducimus, temporibus aliquam facere ut. Beatae vitae voluptatum fugiat dolor animi quos harum quis distinctio adipisci tempore, ipsam unde omnis quia incidunt est totam iusto praesentium illo explicabo reiciendis! Nulla non, ex natus reiciendis vel odit obcaecati saepe iure consequuntur illum molestias impedit. Rem beatae, vel quo exercitationem dolorum tenetur nostrum quis hic explicabo. Voluptatum incidunt ducimus id! Accusamus asperiores veniam laboriosam nobis error, nam quasi nostrum unde officia? Eius maxime in nam, illum optio libero nesciunt animi debitis, reprehenderit assumenda odio ex accusamus vero officiis nulla incidunt voluptatum ducimus aspernatur necessitatibus a temporibus similique dolore! Deserunt temporibus magni tenetur cumque vitae sequi nihil, a quibusdam et commodi dolorem, eveniet, ex veritatis expedita alias rerum at odit. Hic, modi dignissimos fugiat quis eaque veritatis dolorem ipsam repellendus? Vero natus blanditiis hic minus neque asperiores tenetur deleniti laborum totam fugit? Itaque eligendi saepe aliquam doloribus omnis vel, quibusdam accusamus officia molestiae corrupti sapiente aliquid alias, facere possimus provident nam officiis cumque quo tempore libero nihil. Nam officiis distinctio tenetur blanditiis quos, itaque, dolorem nesciunt aspernatur numquam vitae saepe tempora quo? Consequatur, saepe nihil officia animi omnis dicta quas blanditiis temporibus iure iste quasi provident veniam ducimus rem in expedita harum nostrum adipisci quos at sequi, optio repellendus. Placeat asperiores quae ab ex laborum ratione sint qui voluptate atque molestiae aliquam amet impedit officia fugit cumque fugiat, minus laudantium dolor facilis quia nisi? Obcaecati magni sapiente minus eaque excepturi voluptas voluptatibus reprehenderit distinctio labore rerum inventore sed suscipit ipsum debitis culpa temporibus amet repellat deleniti, libero quis quibusdam placeat enim. Vero pariatur aspernatur architecto explicabo veritatis exercitationem quisquam! Animi ratione, deleniti velit obcaecati quidem officia sit. Sit, rerum. Fugit, quis possimus. Reprehenderit odit distinctio ut. Tempora soluta eligendi, accusantium magnam sint unde optio aut beatae at fuga nulla voluptas sequi nihil culpa delectus et eaque. Mollitia vero temporibus blanditiis nam rerum sequi aspernatur quidem tenetur corporis minus reprehenderit assumenda laboriosam, eum amet vitae consequatur quas? Maiores voluptate nisi optio totam, aperiam consequuntur sapiente qui eligendi at fugit excepturi, recusandae expedita, deleniti porro modi ipsum labore omnis? Suscipit unde deleniti aliquam aperiam laborum?</p> -->
 </MainLayout>
 
 <style scoped>
-	#alhambraSiloutte {
-		stroke-width: 1.5px;
-	}
+  #alhambraSiloutte {
+    stroke-width: 1.5px;
+  }
 </style>

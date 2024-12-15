@@ -38,8 +38,8 @@ defineProps<{
       string | boolean,
       string | boolean,
       string | boolean,
-      string | boolean
-    ]
+      string | boolean,
+    ],
   ][];
 }>();
 

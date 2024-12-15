@@ -1,19 +1,23 @@
 ---
 const objects = [
-  ['Nombre de una de las salas de workshops y posibilidad de decorarla internamente como se desee, con su repercusión posterior en fotos, vídeos, etc', 7, 100],
-  ['Envío de un email a los asistentes',                5, 75,  true],
-  ['Vídeo promocional de la empresa en redes sociales', 5, 100, true],
-  ['Logo tríptico / folleto del evento',                5, 150, true],
-  ['Logo grande en el X-banner',                        5, 250, true],
-  ['Logo grande en el Photocall',                       2, 350, true],
-  ['Logo en bolígrados',                                1, 175],
-  ['Contraportada del programa impreso del evento',     1, 200, true],
-  ['Logo en abanicos',                                  1, 350],
-  ['Logo en lanyards',                                  1, 450, true],
-  ['Logo en la bolsa',                                  1, 600, true],
-  ['Logo en las botellas de cristal',                   1, 600],
-  ['Logo en las tazas',                                 1, 800],
-]
+  [
+    "Nombre de una de las salas de workshops y posibilidad de decorarla internamente como se desee, con su repercusión posterior en fotos, vídeos, etc",
+    7,
+    100,
+  ],
+  ["Envío de un email a los asistentes", 5, 75, true],
+  ["Vídeo promocional de la empresa en redes sociales", 5, 100, true],
+  ["Logo tríptico / folleto del evento", 5, 150, true],
+  ["Logo grande en el X-banner", 5, 250, true],
+  ["Logo grande en el Photocall", 2, 350, true],
+  ["Logo en bolígrados", 1, 175],
+  ["Contraportada del programa impreso del evento", 1, 200, true],
+  ["Logo en abanicos", 1, 350],
+  ["Logo en lanyards", 1, 450, true],
+  ["Logo en la bolsa", 1, 600, true],
+  ["Logo en las botellas de cristal", 1, 600],
+  ["Logo en las tazas", 1, 800],
+];
 ---
 
 <table class="max-w-2xl mx-auto">
@@ -24,11 +28,15 @@ const objects = [
   </thead>
   <tbody>
     {
-      objects.map(o => <tr>
-        <td class="font-semibold">{o[0]} {o[3] && '*'}</td>
-        <td class="text-center">{o[1]}</td>
-        <td class="text-center">{o[2]}€</td>
-      </tr>)
+      objects.map((o) => (
+        <tr>
+          <td class="font-semibold">
+            {o[0]} {o[3] && "*"}
+          </td>
+          <td class="text-center">{o[1]}</td>
+          <td class="text-center">{o[2]}€</td>
+        </tr>
+      ))
     }
   </tbody>
 </table>

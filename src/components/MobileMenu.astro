@@ -1,23 +1,24 @@
 ---
-import MobileLinks from './MobileLinks.vue';
+import MobileLinks from "./MobileLinks.vue";
 
 interface Props {
   toggleClass?: string;
   // links: [string, string | [string, string][]][];
-  links: any[]
+  links: any[];
 }
 
-const { toggleClass, links } = Astro.props
+const { toggleClass, links } = Astro.props;
 ---
 
-
 <>
-  <span id="mobileMenuToggle" class:list={[
-    'i-tabler-menu-2 h-6 w-6 text-dark dark:text-clear px-8 cursor-pointer',
-    toggleClass
-  ]}></span>
-  
-  <nav id="mobileMenuOverlay" class="bg-white dark:bg-dark">
+  <span
+    id="mobileMenuToggle"
+    class:list={[
+      "i-tabler-menu-2 h-6 w-6 text-dark dark:text-clear px-8 cursor-pointer",
+      toggleClass,
+    ]}></span>
+
+  <nav id="mobileMenuOverlay" class="z-10 bg-white dark:bg-dark">
     <MobileLinks links={links} Astro={Astro} />
 
     <div class="flex flex-row justify-evenly">
@@ -33,14 +34,14 @@ const { toggleClass, links } = Astro.props
         aria-label="Instagram"
         class="text-dark dark:text-clear"
       >
-        <i class="ti ti-brand-instagram text-lg inline-block"></i>
+        <i class="inline-block text-lg ti ti-brand-instagram"></i>
       </a>
       <a
         href="https://twitter.com/enem.mat"
         aria-label="Twitter / X"
         class="text-dark dark:text-clear"
       >
-        <i class="ti ti-brand-twitter text-lg inline-block"></i>
+        <i class="inline-block text-lg ti ti-brand-twitter"></i>
       </a>
     </div>
   </nav>
@@ -56,13 +57,15 @@ const { toggleClass, links } = Astro.props
     position: fixed;
     inset: 0;
     top: var(--header-height);
-    
+
     height: calc(100vh - var(--header-height));
     height: calc(100dvh - var(--header-height));
     z-index: 9999;
 
     /* used on close, when leaving screen */
-    transition: transform 350ms ease-in, toDisplayNone 350ms linear;
+    transition:
+      transform 350ms ease-in,
+      toDisplayNone 350ms linear;
   }
 
   /* TODO Better implement this, rn value is hardcoded  */
@@ -89,24 +92,25 @@ const { toggleClass, links } = Astro.props
   } */
 
   #mobileMenuOverlay a {
-    @apply block px-6 py-4 text-xl
+    @apply block px-6 py-4 text-xl;
   }
-/* 
+  /* 
   #mobileMenuOverlay a.active {
     @apply text-secondary underline decoration-2 underline-offset-4
   }  */
 </style>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('mobileMenuToggle')
-    const overlay = document.getElementById('mobileMenuOverlay')
-    const body = document.body
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("mobileMenuToggle");
+    const overlay = document.getElementById("mobileMenuOverlay");
+    const body = document.body;
 
+    // TODO Hide search modal if open
     toggle.onclick = () => {
-      overlay.toggleAttribute('data-open')
-      overlay.toggleAttribute('aria-hidden')
-      body.toggleAttribute('data-overlay-open')
+      overlay.toggleAttribute("data-open");
+      overlay.toggleAttribute("aria-hidden");
+      body.toggleAttribute("data-overlay-open");
       // if (document.body.scroll = "yes") {
       //   // document.documentElement.style.overflow = 'hidden';
       //   document.body.scroll = "no";
@@ -114,23 +118,25 @@ const { toggleClass, links } = Astro.props
       //   // document.documentElement.style.overflow = 'initial';
       //   document.body.scroll = "yes";
       // }
-    }
+    };
 
     // Link dropdowns
-    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown')
+    const mobileDropdowns = document.querySelectorAll(".mobile-dropdown");
     mobileDropdowns.forEach((el, idx) => {
-      el.addEventListener('click', (ev) => {
-        if (ev.target instanceof HTMLAnchorElement) return
+      el.addEventListener(
+        "click",
+        (ev) => {
+          if (ev.target instanceof HTMLAnchorElement) return;
 
-        mobileDropdowns[idx].toggleAttribute('data-mobile-dropdown-open')
-        mobileDropdowns.forEach((el2, idx2) => {
-          if (idx !== idx2) {
-            el2.removeAttribute('data-mobile-dropdown-open')
-          }
-        })
-      }, {
-        
-      })
-    })
-  })
+          mobileDropdowns[idx].toggleAttribute("data-mobile-dropdown-open");
+          mobileDropdowns.forEach((el2, idx2) => {
+            if (idx !== idx2) {
+              el2.removeAttribute("data-mobile-dropdown-open");
+            }
+          });
+        },
+        {},
+      );
+    });
+  });
 </script>

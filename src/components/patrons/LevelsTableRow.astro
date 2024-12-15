@@ -1,16 +1,30 @@
 ---
 interface Props {
-  lvl: [string, [string | boolean, string | boolean, string | boolean, string | boolean, string | boolean]]
+  lvl: [
+    string,
+    [
+      string | boolean,
+      string | boolean,
+      string | boolean,
+      string | boolean,
+      string | boolean,
+    ],
+  ];
 }
 
-const { lvl: [txt, lvls] } = Astro.props
+const {
+  lvl: [txt, lvls],
+} = Astro.props;
 
-const showlvl = (lvl: string | boolean) => typeof lvl === 'string' ? `<td>${lvl}</td>` : lvl ? '<td><span class="i-tabler-check"></span></td>' : '<td></td>'
+const showlvl = (lvl: string | boolean) =>
+  typeof lvl === "string"
+    ? `<td>${lvl}</td>`
+    : lvl
+      ? '<td><span class="i-tabler-check"></span></td>'
+      : "<td></td>";
 ---
 
 <tr>
   <td>{txt}</td>
-  {
-    lvls.map(lvl => <Fragment set:html={showlvl(lvl)} />)
-  }
+  {lvls.map((lvl) => <Fragment set:html={showlvl(lvl)} />)}
 </tr>

@@ -1,13 +1,15 @@
 ---
 interface Props {
-  headings: { depth: number; slug: string; text: string }[]
+  headings: { depth: number; slug: string; text: string }[];
 }
 
 const { headings } = Astro.props;
-console.info(headings)
+console.info(headings);
 // // const headers = (/<(h[123]).*>(.+)<\/h[123]>/gm).exec(pageHTML);
-type Header = {level: 'h1' | 'h2' | 'h3', text: string, id: string}
-let headers = headings.map((h) => ({text: h.text, id: h.slug, level: `h${h.depth}`})).filter(h => ['h1', 'h2', 'h3'].includes(h.level)) as Header[]
+type Header = { level: "h1" | "h2" | "h3"; text: string; id: string };
+let headers = headings
+  .map((h) => ({ text: h.text, id: h.slug, level: `h${h.depth}` }))
+  .filter((h) => ["h1", "h2", "h3"].includes(h.level)) as Header[];
 
 // // https://regex101.com/r/qJHNkV/1
 // const regex = /<(h[123]) (id="([\w\s\-\_áéíóú]+)")?.*>(.+)<\/h[123]>/gm;
@@ -26,41 +28,43 @@ let headers = headings.map((h) => ({text: h.text, id: h.slug, level: `h${h.depth
 //       text: m[4],
 //       id: m[3]
 //     } as Header
-    
+
 //     // The result can be accessed through the `m`-variable.
 //     headers.push(h)
 // }
 
 // console.info(headers)
 ---
+
 <div
   class="sticky w-full flex flex-row justify-end bottom-4 left-auto mt-4"
-  class:list={[headers.length === 0 ? 'hidden' : '']}
+  class:list={[headers.length === 0 ? "hidden" : ""]}
 >
   <div class="w-full md:w-max max-w-full bg-clear dark:bg-dark rounded-lg pt-5">
-    <div 
+    <div
       data-collapsed
       id="tocContents"
       class="bottom-16 p-5 py-0 toc overflow-y-hidden transition-[max-height] duration-1000"
     >
-      <ol
-        style={'--header-count: ' + headers.length}>
+      <ol style={"--header-count: " + headers.length}>
         {
-          headers.map(h =>
-            h.level === 'h3' ?
-              <li class:list={['toc-header', h.level]}>
-                <span class="i-tabler-arrow-forward mr-0.5"></span>
-                <a href={'#' + h.id}>{h.text}</a>
-              </li> :
-              <li class:list={['toc-header', h.level]}>
-                <a href={'#' + h.id}>{h.text}</a>
+          headers.map((h) =>
+            h.level === "h3" ? (
+              <li class:list={["toc-header", h.level]}>
+                <span class="i-tabler-arrow-forward mr-0.5" />
+                <a href={"#" + h.id}>{h.text}</a>
               </li>
-            )
+            ) : (
+              <li class:list={["toc-header", h.level]}>
+                <a href={"#" + h.id}>{h.text}</a>
+              </li>
+            ),
+          )
         }
       </ol>
       <div class="h-3"></div>
     </div>
-    
+
     <button id="tocToggle" data-collapsed class="w-full p-5 pt-0 text-left">
       <span class="h-6 w-6 -mb-1.5 i-tabler-chevron-up mr-1.5 shadow"></span>
       Contenidos
@@ -89,7 +93,7 @@ let headers = headings.map((h) => ({text: h.text, id: h.slug, level: `h${h.depth
   }
 
   .toc[data-collapsed] {
-    max-height: 0
+    max-height: 0;
     /* transform: scaleY(0); */
   }
 
@@ -101,22 +105,27 @@ let headers = headings.map((h) => ({text: h.text, id: h.slug, level: `h${h.depth
     font-size: 0.95rem;
   }
 
-  .toc-header.h3, .toc-header.toc-header.h3 a {
+  /* TODO Fix arrow turning yellow alone */
+  .toc-header.h3,
+  .toc-header.toc-header.h3 a {
     @apply !text-secondary hover:!text-tertiary;
     font-size: 0.85rem;
   }
 
   .toc-header span {
-    @apply -mb-0.5
+    @apply -mb-0.5;
   }
 </style>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('tocToggle')
-    const contents = document.getElementById('tocContents')
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("tocToggle");
+    const contents = document.getElementById("tocContents");
 
-    toggle.onclick = () => {contents.toggleAttribute('data-collapsed'); toggle.toggleAttribute('data-collapsed')}
+    toggle.onclick = () => {
+      contents.toggleAttribute("data-collapsed");
+      toggle.toggleAttribute("data-collapsed");
+    };
     // TODO Move data-collapsed to wrapper
-  })
+  });
 </script>

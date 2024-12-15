@@ -1,42 +1,63 @@
 ---
 import PageLayout from "../../layouts/Page.astro";
 
-const HEADINGS = [{
+const HEADINGS = [
+  {
     depth: 2,
-    slug: 'entidades',
-    text: 'Entidades organizadoras'
+    slug: "entidades",
+    text: "Entidades organizadoras",
   },
   {
     depth: 2,
-    slug: 'comite',
-    text: 'Comité Organizador'
+    slug: "comite",
+    text: "Comité Organizador",
   },
 ];
 ---
 
-<PageLayout frontmatter={{ title: 'Organización' }} headings={HEADINGS}>
+<PageLayout frontmatter={{ title: "Organización" }} headings={HEADINGS}>
   <section id="entidades">
     <h2>Entidades organizadoras</h2>
 
     <div class="persona">
       <img src="/2025/img/logo-anem-2018-480x480px.png" />
-      
-      <div>
-        <strong>Asociación Nacional de Estudiantes de Matemáticas (ANEM)</strong>
-        <a class="text-sm italic" href="https://www.anem.es/web/">Página web <i class="ti ti-external-link" /></a>
 
-        <p>Creada dos años después del primer ENEM, la ANEM representa a los estudiantes de Matemáticas de nuestro país y es la encargada de coordinar la organización del ENEM y la elección de su sede.</p>
+      <div>
+        <strong>Asociación Nacional de Estudiantes de Matemáticas (ANEM)</strong
+        >
+        <a class="text-sm italic" href="https://www.anem.es/web/"
+          >Página web <i class="ti ti-external-link"></i></a
+        >
+
+        <p>
+          Creada dos años después del primer ENEM, la ANEM representa a los
+          estudiantes de Matemáticas de nuestro país y es la encargada de
+          coordinar la organización del ENEM y la elección de su sede.
+        </p>
       </div>
     </div>
 
     <div class="persona">
-      <img src="/2025/img/ugr-g1467.png" class="dark:bg-clear dark:p-1.5 !h-auto" />
-      
+      <img
+        src="/2025/img/ugr-g1467.png"
+        class="dark:bg-clear dark:p-1.5 !h-auto"
+      />
+
       <div>
         <strong>Universidad de Granada (UGR)</strong>
-        <a class="text-sm italic" href="https://www.ugr.es/">Página web <i class="ti ti-external-link" /></a>
+        <a class="text-sm italic" href="https://www.ugr.es/"
+          >Página web <i class="ti ti-external-link"></i></a
+        >
 
-        <p>La Universidad de Granada cuenta con más de 500 años de historia. Entre otros méritos, es reseñable que se encuentra entre las 100 universidades con mejores Grados en Matemáticas y Estadística y el puesto 20 del mundo en Ciencias de la Computación. Actúa, a través de la <a href="https://defc.ugr.es">Delegación de Estudiantes de la Facultad de Ciencias</a>, como organizadora principal.</p>
+        <p>
+          La Universidad de Granada cuenta con más de 500 años de historia.
+          Entre otros méritos, es reseñable que se encuentra entre las 100
+          universidades con mejores Grados en Matemáticas y Estadística y el
+          puesto 20 del mundo en Ciencias de la Computación. Actúa, a través de
+          la <a href="https://defc.ugr.es"
+            >Delegación de Estudiantes de la Facultad de Ciencias</a
+          >, como organizadora principal.
+        </p>
       </div>
     </div>
   </section>
@@ -46,56 +67,81 @@ const HEADINGS = [{
 
     <div class="persona">
       <!-- <img src="/2025/img/construccion-isotipo/img33.jpg" /> -->
-      
+
       <div>
         <strong>Adrián García Barragán</strong>
         <em>Presidente</em>
 
-        <p>Estudiante del Grado en Matemáticas, ha sido Presidente y Vicepresidente de AMAT, Coordinador de la UGR en la ANEM y ha participado en muchos otros órganos, actividades y eventos de la representación y participación estudiantil que le han requerido de una amplia capacidad organizativa e institucional.</p>
+        <p>
+          Estudiante del Grado en Matemáticas, ha sido Presidente y
+          Vicepresidente de AMAT, Coordinador de la UGR en la ANEM y ha
+          participado en muchos otros órganos, actividades y eventos de la
+          representación y participación estudiantil que le han requerido de una
+          amplia capacidad organizativa e institucional.
+        </p>
       </div>
     </div>
 
     <div class="persona">
       <!-- <img src="/2025/img/construccion-isotipo/img33.jpg" /> -->
-      
+
       <div>
         <strong>Iván Salido Cobo</strong>
         <em>Tesorería y Secretaría</em>
 
-        <p>Graduado en Matemáticas y estudiante del Máster en Desarrollo de Software, ha ostentado la Tesorería de la DGE, Secretaría de la DEFC y actualmente es Secretario en AMAT y miembro en la Comisión Económica de la UGR.</p>
+        <p>
+          Graduado en Matemáticas y estudiante del Máster en Desarrollo de
+          Software, ha ostentado la Tesorería de la DGE, Secretaría de la DEFC y
+          actualmente es Secretario en AMAT y miembro en la Comisión Económica
+          de la UGR.
+        </p>
       </div>
     </div>
 
     <div class="persona">
       <!-- <img src="/2025/img/construccion-isotipo/img33.jpg" /> -->
-      
+
       <div>
         <strong>Lucas de Uña Ocampo</strong>
         <em>Dirección Técnica y Digital</em>
 
-        <p>Estudiante del Grado en Ingeniería Informática, ha sido Vocal de Web en la ANEM y Director técnico y digital del CEEBI, para el cuál ha desarrollado su aplicación. Además ha ostentado cargos con amplia carga en relaciones institucionales en AMAT, ARQUS, la DGE y la DEFC.</p>
+        <p>
+          Estudiante del Grado en Ingeniería Informática, ha sido Vocal de Web
+          en la ANEM y Director técnico y digital del CEEBI, para el cuál ha
+          desarrollado su aplicación. Además ha ostentado cargos con amplia
+          carga en relaciones institucionales en AMAT, ARQUS, la DGE y la DEFC.
+        </p>
       </div>
     </div>
 
     <div class="persona">
       <!-- <img src="/2025/img/construccion-isotipo/img33.jpg" /> -->
-      
+
       <div>
         <strong>Paula García Linares</strong>
         <em>Dirección de Actividades</em>
 
-        <p>Estudiante del Grado en Matemáticas, ha sido Vocal de Actividades en AMAT, ha asistido a numerosos eventos relacionados con las matemáticas como las tres últimas ediciones del ENEM, además de participar como voluntaria en el ECM celebrado en Sevilla en 2024.</p>
+        <p>
+          Estudiante del Grado en Matemáticas, ha sido Vocal de Actividades en
+          AMAT, ha asistido a numerosos eventos relacionados con las matemáticas
+          como las tres últimas ediciones del ENEM, además de participar como
+          voluntaria en el ECM celebrado en Sevilla en 2024.
+        </p>
       </div>
     </div>
 
     <div class="persona">
       <!-- <img src="/2025/img/construccion-isotipo/img33.jpg" /> -->
-      
+
       <div>
         <strong>Elisa Rivera Sanmartín</strong>
         <em>Dirección de Difusión</em>
 
-        <p>Estudiante del Grado en Matemáticas, es Vocal de Comunicación de AMAT y participa como voluntaria en la Comisión de Comunicación de la DEFC y la Vocalía de Comunicación de la ANEM.</p>
+        <p>
+          Estudiante del Grado en Matemáticas, es Vocal de Comunicación de AMAT
+          y participa como voluntaria en la Comisión de Comunicación de la DEFC
+          y la Vocalía de Comunicación de la ANEM.
+        </p>
       </div>
     </div>
   </section>

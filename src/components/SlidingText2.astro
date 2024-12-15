@@ -1,23 +1,32 @@
 ---
 interface Props {
-  words: string[]
+  words: string[];
 }
 
-const { words } = Astro.props
+const { words } = Astro.props;
 ---
 
 <span class="overflow-y-hidden h-min">
   <span class="text-slide w-max h-min relative">
     {
-      words.map((w, idx) => (<span class="block left-0" style={{
-        top: `${idx * 1.2 - 0.1}lh`,
-      }}>{w}</span>))
+      words.map((w, idx) => (
+        <span
+          class="block left-0"
+          style={{
+            top: `${idx * 1.2 - 0.1}lh`,
+          }}
+        >
+          {w}
+        </span>
+      ))
     }
-  
-    <span class="block absolute left-0" style={{
-      top: `${words.length * 1.2 - 0.1}lh`,
-    }}>{words[0]}</span>
-  
+
+    <span
+      class="block absolute left-0"
+      style={{
+        top: `${words.length * 1.2 - 0.1}lh`,
+      }}>{words[0]}</span
+    >
   </span>
 </span>
 

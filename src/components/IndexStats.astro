@@ -1,4 +1,7 @@
-<section id="stats" class="pb-10 pt-5 sm:flex flex-row justify-evenly *:text-center *:w-full">
+<section
+  id="stats"
+  class="pb-10 pt-5 sm:flex flex-row justify-evenly *:text-center *:w-full"
+>
   <div class="mt-5">
     <p class="text-6xl font-black" id="cnt-anios">0</p>
     <p class="font-semibold mt-2 text-xl">Años de historia</p>
@@ -14,43 +17,43 @@
 </section>
 
 <script is:inline type="module">
-  import { CountUp } from "/2025/js/countUp.js"
+  import { CountUp } from "/2025/js/countUp.js";
 
   document.addEventListener("DOMContentLoaded", () => {
-    const cntAnios = new CountUp("cnt-anios", 25)
-    const cntDias = new CountUp("cnt-dias", 5)
-    const cntAsistentes = new CountUp("cnt-asistentes", 300)
+    const cntAnios = new CountUp("cnt-anios", 25);
+    const cntDias = new CountUp("cnt-dias", 5);
+    const cntAsistentes = new CountUp("cnt-asistentes", 300);
 
     let observer;
 
     const scrollHandler = () => {
-      observer.unobserve(document.getElementById('stats'))
-      observer.observe(document.getElementById('stats'))
-    }
+      observer.unobserve(document.getElementById("stats"));
+      observer.observe(document.getElementById("stats"));
+    };
 
     const observeHandler = (entries) => {
-      console.info('start observer')
+      console.info("start observer");
       entries.forEach((entry) => {
-        console.info('help', entry)
-        console.info(entry.intersectionRatio, entry.isIntersecting)
+        console.info("help", entry);
+        console.info(entry.intersectionRatio, entry.isIntersecting);
         if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-          console.info('observed')
-          cntAnios.start()
-          cntDias.start()
-          cntAsistentes.start()
-          observer.unobserve(entry.target)
-          document.removeEventListener('scroll', scrollHandler)
+          console.info("observed");
+          cntAnios.start();
+          cntDias.start();
+          cntAsistentes.start();
+          observer.unobserve(entry.target);
+          document.removeEventListener("scroll", scrollHandler);
         } else {
-          console.info('ok')
+          console.info("ok");
         }
-      })
-    }
+      });
+    };
     observer = new IntersectionObserver(observeHandler, {
       root: null,
-    })
+    });
 
-    observer.observe(document.getElementById('stats'))
+    observer.observe(document.getElementById("stats"));
 
-    document.addEventListener('scroll', scrollHandler)
-  })
+    document.addEventListener("scroll", scrollHandler);
+  });
 </script>
