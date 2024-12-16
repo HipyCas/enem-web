@@ -1,9 +1,10 @@
 <template>
   <a
     :href="`/2025/noticias/${item.slug}`"
-    class="block rounded p-6 bg-dark border hover:border-secondary"
+    class="block p-6 rounded border bg-dark hover:border-secondary"
     :class="mergedClass"
   >
+    <Image :src="item.data.image" width="711" height="400" />
     <h3 class="text-xl font-bold text-clear">{{ item.data.title }}</h3>
   </a>
 </template>
@@ -23,6 +24,7 @@ const { emphasize = false, class: thisClass } = defineProps<{
   };
   emphasize?: boolean;
   class?: string;
+  Image: any;
 }>();
 
 const mergedClass = {
