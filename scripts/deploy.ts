@@ -6,7 +6,7 @@ import hr from "@tsmx/human-readable";
 import { argv } from "node:process";
 
 const prod = argv.includes("prod");
-if (prod) console.info(chalk.yellow("Deploying to production"));
+if (prod) console.info(chalk.yellow("!!! Deploying to production"));
 
 if (
   !(
@@ -27,11 +27,9 @@ const showProgress: Parameters<(typeof client)["trackProgress"]>[0] = (
 ) => {
   console.log("\x1b[2J");
   console.log(
-    chalk.dim(
-      prod
-        ? chalk.bgYellow("⚠ Uploading to production")
-        : "🛈 Uploading to prueba.anem.es/2025",
-    ),
+    prod
+      ? chalk.bgYellow("⚠ Uploading to production")
+      : chalk.dim("🛈 Uploading to prueba.anem.es/2025"),
   );
   console.log(
     chalk.bold(
