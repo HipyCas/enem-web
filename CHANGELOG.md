@@ -1,3 +1,8 @@
+## Unreleased
+
+- fix: add target to links in _Organización_
+- feat: make post tag clickable
+
 ## 2024-12-15
 
 - feat: add top margin to each index stat
