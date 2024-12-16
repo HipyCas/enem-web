@@ -1,1 +1,3 @@
 public/**/*.js
+public/**/*.json
+public/**/*.xml
