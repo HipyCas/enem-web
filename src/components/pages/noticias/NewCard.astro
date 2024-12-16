@@ -27,9 +27,10 @@ const mergedClass = {
 };
 ---
 
-<a
-  href={`/2025/noticias/${item.slug}`}
-  class="block overflow-hidden rounded border border-zinc-300 dark:border-zinc-800 bg-clear dark:bg-dark hover:border-secondary"
+<div
+  data-make-link
+  data-href={`/2025/noticias/${item.slug}`}
+  class="block cursor-pointer overflow-hidden rounded border border-zinc-300 dark:border-zinc-800 bg-clear dark:bg-dark hover:border-secondary"
   class:list={mergedClass}
 >
   {
@@ -48,15 +49,31 @@ const mergedClass = {
         <>
           | <i class="-mb-0.5 i-tabler-tag ml-1" />{" "}
           {item.data.tags.map((tag: string) => (
-            <span
-              class="px-1.5 py-0.5 mr-1 rounded-full cursor-pointer"
+            <a
+              data-tag
+              href={`/2025/noticias/tags/${tag}`}
+              class="px-1.5 text-dark hover:text-dark dark:text-clear dark:hover:text-clear py-0.5 mr-1 inline-block rounded-full cursor-pointer hover:ring-2 ring-secondary/75 transition-all"
               style={{ backgroundColor: uniqolor(tag).color + "aa" }}
             >
               {tag}
-            </span>
+            </a>
           ))}
         </>
       )
     }
   </div>
-</a>
+</div>
+
+<script is:inline>
+  // TODO Simplify this to a onclick attribute
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-make-link]").forEach((el) => {
+      el.addEventListener("click", (e) => {
+        // e.preventDefault();
+        // console.info(e.target.hasAttribute('data-tag'))
+        // if (e.target.hasAttribute('data-tag'))
+          window.location.href = el.getAttribute("data-href");
+      });
+    });
+  });
+</script>
