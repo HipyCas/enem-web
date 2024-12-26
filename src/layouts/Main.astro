@@ -61,7 +61,7 @@ const isIndex = Astro.url.pathname === import.meta.env.BASE_URL
 
 const SITE_TITLE = 'ENEM 2025'
 const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE
-const pageDescription = og?.description ?? '25 aniversario del Encuentro Nacional de Estudiantes de MAtemáticas, un congreso nacional de matemáticas, estadística y ciencia de datos, por y para estudiantes'
+const pageDescription = og?.description ?? '25 aniversario del Encuentro Nacional de Estudiantes de Matemáticas, un congreso nacional de matemáticas, estadística y ciencia de datos, por y para estudiantes'
 
 const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.url.pathname.replace(/^\/2025/, '')}.jpg`)
 ---
@@ -187,7 +187,7 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
 <style is:global>
 	:root {
 		--header-height: 5rem;
-		--footer-height: 5.5rem;
+		--footer-height: 12rem;
 
 		scroll-behavior: smooth;
 		scroll-padding-top: calc(var(--header-height) + 2rem);
