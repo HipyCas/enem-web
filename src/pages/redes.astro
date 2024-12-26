@@ -1,0 +1,29 @@
+---
+import Main from "../layouts/Main.astro";
+---
+
+<Main title="Redes Sociales">
+  <div class="hero-lonely">
+    <h1 class="pt-20 pl-10 text-4xl font-semibold">Nuestras Redes Sociales</h1>
+    
+    <div class="links flex flex-row flex-wrap justify-center items-center gap-5 px-20 py-10">
+      <a href="https://instagram.com/enem.mat" aria-label="instagram-text" target="_blank">
+        <i class="i-tabler-brand-instagram" /> <span id="instagram-text">Instagram</span>
+      </a>
+      <a href="https://instagram.com/enem.mat" aria-labelledby="x-text" target="_blank">
+        <i class="i-tabler-brand-x" /> <span id="x-text">X (Twitter)</span>
+      </a>
+    </div>
+  </div>
+</Main>
+
+<style>
+  .links a {
+    @apply text-xl text-dark dark:text-clear rounded-xl border-2 border-dark dark:border-clear px-2.5 py-3;
+    @apply hover:bg-primary/75;
+  }
+
+  .links a i {
+    @apply inline-block size-6 -mb-1.5;
+  }
+</style>
