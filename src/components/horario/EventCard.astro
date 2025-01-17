@@ -1,0 +1,22 @@
+---
+import type {HORARIO as horario} from '../../pages/data/horario.json'
+import markdownit from 'markdown-it'
+
+interface Props {
+  event: typeof horario[keyof typeof horario][number]
+}
+
+const { event } = Astro.props
+
+const md = markdownit()
+const description = md.renderInline(event.description);
+---
+
+<div class="bg-clear dark:bg-dark rounded-lg ml-6 p-4 relative mb-4">
+  <div class="absolute -ml-8 top-2 left-0 bg-tertiary rounded-full size-5 z-[2]"></div>
+
+  <p class="font-semibold m-0 text-lg">{event.name} ⋅ {event.start} {event.end && '- ' + event.end || ''}</p>
+  <p class="mt-1" set:html={description} />
+  <p class="text-sm mb-0"><i class="i-tabler-map -mb-0.5"></i> {event.location}</p>
+  <p class="text-sm mt-1 mb-0 capitalize"><i class="i-tabler-tag -mb-0.5"></i> {event.category?.replace("_", " ")}</p>
+</div>

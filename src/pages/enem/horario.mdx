@@ -1,0 +1,72 @@
+---
+layout: "../../layouts/Page.astro"
+title: Horario
+---
+
+Te presentamos el horario del evento, un horario hyper completo y con una amplia
+variedad de actividades tanto formativas como culturales y de ocio.
+
+import Alert from "../../components/ui/Alert.astro";
+
+<Alert text="El horario puede cambiar en cualquier momento. El horario indicado es el provisional y previsiblemente definitivo." />
+
+import { HORARIO as horario } from "../data/horario.json";
+import DayTimeline from "../../components/horario/DayTimeline.astro";
+
+## Martes 22
+
+El día 22 por la tarde se da comienzo al evento, iniciando con varios actos
+inaugurales. Se dará introducción al evento a todos los asistentes y se
+explicará todo lo necesario.
+
+<DayTimeline data={horario["22"]} />
+
+## Miércoles 23
+
+El primer día de evento estará lleno de conferencias en las que enriquecerse con
+una diversa cantidad de conocimiento.
+
+<DayTimeline data={horario["23"]} />
+
+## Jueves 24
+
+Un día dinámico y completo, en el que tendremos las actividades en grupos
+dividos y un gran contacto con el mundo profesional. Durante todo el día, a
+excepción de las pechakuchas y últimas conferencias, nos dividiremos en grupos
+más pequeños para asistir al Foro de Empresas y Emprendimiento, talleres y
+microcharlas. Por la tarde, también tendremos los turnos de entrevistas.
+
+<DayTimeline data={horario["24"]} />
+
+## Viernes 25
+
+El viernes será el último día formativo en nuestro congreso, con las últimas
+charlas y última mesa rendoda, cerrando el evento con su clausura y un acto
+institucional de clausura.
+
+<DayTimeline data={horario["25"]} />
+
+## Sábado 26
+
+El sábado tendremos la oportunidad de conocer la ciudad de Granada y todas sus
+maravillas. Podrás adquirir el Pase Cultural para asistir a un sinfín de
+actividades organizadas por nuestro Comité Organizador o tomarte el día libre y
+disfrutar del turismo por la ciudad.
+
+{/* TODO Link each event card */}
+
+Este día tendremos también nuestra Cena de Clausura, una cena de gala en la que
+todos disfrutaremos y nos conoceremos.
+
+<DayTimeline data={horario["26"]} />
+
+## Domingo 27
+
+Ya nos despedimos y utilizamos esta mañana para dejar el hotel y partir cada uno
+a dónde corresponda.
+
+<DayTimeline data={horario["27"]} />
+
+## Asamblea - Lunes 21 y martes 22
+
+_Horario por determinar_.

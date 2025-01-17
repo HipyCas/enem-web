@@ -1,0 +1,26 @@
+---
+import type { HORARIO as horario } from '../../pages/data/horario.json'
+import EventCard from './EventCard.astro'
+
+interface Props {
+  data: typeof horario[keyof typeof horario]
+}
+
+const { data } = Astro.props
+---
+
+<div class="relative">
+  <div class="bar"></div>
+
+  {
+    data.map((item) => (
+      <EventCard event={item} />
+    ))
+  }
+</div>
+
+<style>
+  .bar {
+    @apply absolute top-0 left-0 h-full w-1 bg-primary rounded-full;
+  }
+</style>
