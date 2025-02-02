@@ -1,7 +1,48 @@
-## Unreleased
+## 2025-02-02
+
+- feat: actualiza página inscripciones para quitar enlace a inscripción
+  presencial, sección de qué necesitas y añadir la sección de preguntas
+  frecuentes
+
+## 2025-01-31
+
+- feat: página de tarjeta de contacto /adry
+
+## 2024-12-30
+
+- change index cta to inscriptions
+- fix: update index paragraph attendantes count
+- link a form de inscripción
+- feat: enem/actividades
+- añadir sesión iniciada a lo necesario para inscribirte
+
+## 2024-12-28@2
+
+- fix: add horizontal scroll on overflow to page layout
+
+## 2024-12-28@1
+
+- feat: inscripciones
+
+## 2024-12-26@4
+
+- feat: horario
+
+## 2024-12-26@3
+
+- remove voluntarios banner
+
+## 2024-12-26@2
+
+- fix: correct X/Twitter link
+
+## 2024-12-26@1
 
 - fix: add target to links in _Organización_
 - feat: make post tag clickable
+- fix: minify public static XML & JSON files
+- feat: página de redes sociales en /redes
+- fix: meta description wrong capitalizing
 
 ## 2024-12-15
 
