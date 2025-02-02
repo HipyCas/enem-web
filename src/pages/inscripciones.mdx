@@ -1,0 +1,192 @@
+---
+layout: "../layouts/Page.astro"
+title: Inscripciones
+---
+
+import Button from "../components/ui/Button.vue";
+import ButtonOutline from "../components/ui/ButtonOutline.astro";
+
+<section class="not-prose flex flex-row justify-center items-center text-center py-10 *:px-4 *:max-w-80 flex-1 flex-wrap gap-10 *:bg-clear *:dark:bg-dark *:rounded-lg *:py-4">
+  <div>
+    <strong class="text-xl">Presencial</strong>
+    <p>Asiste al evento completo del 22 al 27 de julio</p>
+    {/* href="https://docs.google.com/forms/d/e/1FAIpQLSfseBYe1TjocTOkPrErybIJ9FgHCfkPHxbJPh_g0__Lt1dPqg/viewform?usp=sf_link" */}
+    <Button
+      disabled
+      event="Formulario Inscripción Presencial"
+      target="_blank"
+    >
+      Inscripciones cerradas
+    </Button>
+    <ButtonOutline href="#inscripción-presencial">
+      Más información <i class="i-tabler-arrow-down size-5 -mb-1" />
+    </ButtonOutline>
+    {/* <em class="text-sm block !mt-2 text-primary-500">
+      Apertura el 30/12/2024 a las 12:00 horas
+    </em> */}
+  </div>
+  <div>
+    <strong class="text-xl">Online</strong>
+    <p>Disfruta del evento retransmitido en directo</p>
+    <Button disabled target="_blank">
+      <em>Próximamente</em>
+    </Button>
+    <ButtonOutline href="#inscripción-online">
+      Más información <i class="i-tabler-arrow-down size-5 -mb-1" />
+    </ButtonOutline>
+  </div>
+  <div>
+    <strong class="text-xl">Foro</strong>
+    <p>Acércate al mundo profesional en el Foro de Empresas y Emprendimiento</p>
+    <Button disabled target="_blank">
+      <em>Próximamente</em>
+      <ButtonOutline href="#inscripción-foro">
+        Más información <i class="i-tabler-arrow-down size-5 -mb-1" />
+      </ButtonOutline>
+    </Button>
+  </div>
+</section>
+
+## Tipos de inscripciones
+
+### Inscripción Presencial
+
+La inscripción completa y presencia al evento, la de toda la vida. Esta
+inscripción incluye:
+
+- Asistencia a todas las actividades del evento: charlas, talleres, mesas
+  redondas, Foro de Empresas y Emprendimiento, etc.
+
+- Pack de bienvenida
+
+- En función de la modalidad seleccionada, alojamiento y comidas
+
+- Un día libre para conocer Granada
+
+- Pase Cultural para el día libre (si se adquiere, que no supondrá un suplemento
+  de más de 25€)
+
+El precio de esta inscripción será, en un principio, de **200€ en su modalidad
+completa**. La inscripción se abona por transferencia directa y está limitada al
+aforo disponible. En este caso, sacaremos una **primera remesa de, al menos, 215
+personas** aceptadas. Se te confirmará por correo electrónico si se te ha
+aceptado o no y, en caso de que sí, cómo proceder al abono de la inscripción. Si
+no se te aceptase, no te desilusiones, **se sacarán múltiples remesas de
+aceptados** según vaya cancelando la gente.
+
+La inscripción se realiza a través de un formulario de Google que pondrás
+encontrar en esta página.
+
+#### Modalidades
+
+Dentro de la inscripción presencial, hay disponibles 4 modalidades diferentes:
+
+- **Completo (200€)**: este tipo de inscripción incluye todas las actividades
+  del evento, incluyendo la Asamblea General Ordinaria de la ANEM, y el
+  alojamiento y todas las comidas.
+
+- **Sin alojamiento (120€)**: este tipo de inscripción incluye todas las
+  actividades del evento, incluyendo la Asamblea General Ordinaria de la ANEM,
+  exceptuando el alojamiento y los desayunos.
+
+- **Sin alojamiento ni manutención (70€)**: este tipo de inscripción incluye
+  todas las actividades del evento, incluyendo la Asamblea General Ordinaria de
+  la ANEM, el cóctel de inauguración y la cena de gala, y exceptuando el
+  alojamiento, los desayunos, las comidas y las cenas.
+
+- **Sólo Asamblea (_Precio por determinar_)**: este tipo de inscripción da
+  derecho **sólo** a la asistencia a la Asamblea General Ordinaria de la ANEM y,
+  si cabe, a alguna actividad que se considere relevante para su correcto
+  desarrollo. Cabe recalcar que la asamblea se realizará el lunes 21 de julio
+  (antes de comenzar el evento), y previsiblemente el martes 22.
+
+_El precio de las inscripciones podría variar hasta 50€ por arriba o por abajo,
+se indica el precio inicial y el previsto._
+
+En la siguiente tabla, puedes ver la comparativa de qué incluye cada modalidad:
+
+|                      Modalidad | Alojamiento | Desayuno | Comida | Cena | Evento | Cena de Gala | Cóctel Inaugural | Asamblea |
+| -----------------------------: | :---------: | :------: | :----: | :--: | :----: | :----------: | :--------------: | :------: |
+|                       Completa |     ✅      |    ✅    |   ✅   |  ✅  |   ✅   |      ✅      |        ✅        |   \*️⃣    |
+|                Sin Alojamiento |     ❌      |    ❌    |   ✅   |  ✅  |   ✅   |      ✅      |        ✅        |   \*️⃣    |
+| Sin Alojamiento ni manutención |     ❌      |    ❌    |   ❌   |  ❌  |   ✅   |      ✅      |        ✅        |   \*️⃣    |
+|                  Sólo Asamblea |     ❌      |    ❌    |   ❌   |  ❌  |   ❌   |      ❌      |        ❌        |    ✅    |
+
+\*️⃣: _incluído pero requiere solicitud previa debido a que se realiza el día
+anterior al evento, puede suponer un coste adicional._
+
+### Inscripción Online
+
+_Aún no disponible, se abrirá más tarde._
+
+Este año abriremos una inscripción online, en la que tendrás la posibilidad de
+asistir de manera telemática al ENEM, viendo en directo todas las charlas y
+mesas redondas así como algunas microcharlas y pudiendo hacer preguntas a los
+ponentes. Esta inscripción no tiene cupo/aforo y se abrirá por un precio
+reducido cercano a cualquier persona interesante.
+
+### Inscripción Foro
+
+_Aún no disponible, se abrirá más tarde._
+
+Además de las modalidades de evento completo, este año se ofertará una modalidad
+de asistencia sólo al Foro de Empresas y Emprendimiento. Esta modalidad da la
+posibilidad a las personas interesadas en aprovechar las ventajas del Foro de
+Empresas sin necesidad asistir a la totalidad del evento, siendo especialmente
+atractiva para gente de Granada o las proximidades que no puedan asistir a la
+totalidad del evento. Esta modalidad **SÓLO incluye el Foro de Empresas y
+Emprendimiento**. Su disponibilidad está limitada al aforo del espacio dónde se
+realizará la actividad.
+
+## ¿Qué saber antes de inscribirte?
+
+### La Asamblea de la ANEM
+
+El lunes de la semana del ENEM, se realiza la Asamblea General Ordinaria de la
+ANEM. La Asamblea es el sitio dónde se toman todas las sobre la ANEM (Asociación
+Nacional de Estudiantes de Matemáticas), que es la entidad que organiza todos
+los años este evento. En estas reuniones se debaten y deciden temas como el
+coste del ENEM, su organización, qué ciudad lo alojará, posicionamientos sobre
+la docencia de las matemáticas, etc.
+
+Como asiste y miembro de la ANEM, tienes derecho a asistir a la reunión de la
+Asamblea que se realizará el lunes 21 de julio. Cabe destacar, que cómo se trata
+de una noche extra, si se confirma el interés a asistir a la Asamblea, para la
+obtención del certificado de aprovechamiento se tendrá en cuenta la asistencia
+total a ésta.
+
+Durante el formulario se preguntará si tienes interés en asistir a esta, sin
+implicar esto ningún compromiso de pago. Más adelante, se confirmará tu interés
+en asistir antes de bloquear habitaciones o pedirte ningún pago en caso de
+haberlo indicado.
+
+### El Pase Cultural 🎟✨
+
+Este año, queremos que todos los asistentes le saquen el mejor partido posible a
+el ENEM y en concreto, a su día libre para turismo y actividades culturales. Es
+por ello, que hemos creado el _Pase Cultural_.
+
+Este _Pase Cultural_ estará disponible para adquirir a todos los asistentes y
+**costará entre 10 y 25 euros** (se confirmará próximamente). Incluirá diversas
+actividades como visitas a la Alhambra o al museo
+[Parque de las Ciencias](https://www.parqueciencias.com/).
+
+Durante el formulario de isncripción, se preguntará si se desea adquirir para
+sondear el interés e informar a las personas interesadas cuándo se determine el
+precio final En cualquier caso, **se podrá adquirir y abonar más adelante**.
+Próximamente proveeremos más información.
+
+{/* ## Prepárate: lo que necesitas
+
+Para rellenar el formulario de inscripción (presencial) ten en cuenta que
+necesitarás tener a mano las siguientes cosas:
+
+- Tener la sesión iniciada en tu cuenta de Google
+- Resguardo de matrícula
+- Información personal, incluyendo número de DNI/NIF/Pasaporte
+- Talla de camiseta */}
+
+{/* Usar esto hace que no aparezca en los enlaces de contenido <h2 id="faq">Preguntas frecuentes</h2> */}
+## Preguntas frecuentes
+
+_Según nos vayan llegando preguntas al correo, iremos completando esta sección._
