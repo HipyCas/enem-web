@@ -1,0 +1,26 @@
+---
+export interface Props {
+  title: string;
+}
+---
+
+<details class="mb-4 ml-1">
+  <summary class="cursor-pointer text-xl font-semibold marker:hidden marker:transition-all border-b-2 border-zinc-500 pb-2">
+    <i class="i-tabler-chevron-right -mb-1 size-6 -mr-1 transition-transform" /> {Astro.props.title}
+  </summary>
+  <slot />
+</details>
+
+<style> 
+summary::-webkit-details-marker, summary::marker, *::marker {
+  display:none;
+}
+
+summary {
+  list-style: none;
+}
+
+details[open] i {
+  transform: rotate(90deg);
+}
+</style>
