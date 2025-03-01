@@ -38,10 +38,14 @@ const IN_PRODUCTION = process.env.NODE_ENV === 'production'
 const LINKS: [string, string | Link[]][] = [
   ['Inicio', getLn()],
   ['Noticias', getLn('noticias/')],
-  // ['Inscripción', getLn('/inscripcion/')],
-  ['El Evento', [
-    ["El ENEM", '/2025/evento/enem'],
-    ['Organización', '/2025/evento/organizacion'],
+  ['Inscripciones', getLn('inscripciones/')],
+  ['El ENEM', [
+  ['¿Qué es?', '/2025/enem/que-es'],
+    ['Horario', '/2025/enem/horario'],
+    ['Actividades', '/2025/enem/actividades'],
+    // ['Alojamiento', '/2025/enem/alojamiento'],
+    // ['Asamblea', '/2025/enem/asamblea'],
+    ['Organización', '/2025/enem/organizacion'],
     // ['Su historia', '/2025/evento/historia']
   ]],
   ['Colaboración', [
