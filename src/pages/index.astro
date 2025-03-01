@@ -20,11 +20,14 @@ import { Image } from "astro:assets";
     <div
       class="grid flex-row items-center w-full max-w-7xl h-full sm:grid-cols-2 xl:-mt-28 md:-mt-24"
     >
-      <h1
-        class="-mt-5 text-5xl font-black tracking-widest text-primary xl:text-7xl sm:mt-0"
-      >
-        ENEM 2025<br />Granada
-      </h1>
+      <div>
+        <h1
+          class="-mt-5 text-5xl font-black tracking-widest text-primary xl:text-7xl sm:mt-0"
+        >
+          ENEM 2025<br />Granada
+        </h1>
+        <p class="text-xl font-semibold text-secondary italic mt-0.5">Del 21 al 26 de julio</p>
+      </div>
       <div class="-mt-30 sm:mt-0 xl:place-self-center">
         <!-- <p class="overflow-y-hidden text-lg font-bold text-dark dark:text-clear">Descubre <SlidingText client:load /></p> -->
         <p class="text-lg font-bold xl:text-xl text-dark dark:text-clear">
@@ -32,7 +35,7 @@ import { Image } from "astro:assets";
         </p>
         <p class="xl:text-lg max max-w-96">
           Un evento nacional por y para estudiantes, aprende sobre matemáticas y
-          conoce a más de 300 personas
+          conoce a más de 350 personas
         </p>
         <!-- <p class="dark:text-zinc-400 text-zinc-700">Un congreso nacional de matemáticas, estadística y ciencia de datos, por y para estudiantes</p>
 				<p class="text-lg font-semibold">Hazte voluntario del ENEM 2025 y forma parte esencial de su organización</p> -->
@@ -41,10 +44,11 @@ import { Image } from "astro:assets";
           ¿Eres una empresa? ¡Colabora! <i class="i-tabler-arrow-right size-5 -mb-[0.3rem]"></i>
         </a> -->
         <UIButton
-          class="w-full sm:w-fit !px-0 font-semibold xl:text-xl"
-          href="/2025/colaboracion/como-colaborar"
+          class="w-full sm:w-fit font-semibold xl:text-xl"
+          href="/2025/inscripciones"
         >
-          ¿Eres una empresa? ¡Colabora! <i
+          <!-- ¡Inscríbete! <i -->
+          ¿Eres una empresa? ¡Colabora! <i  
             class="i-tabler-arrow-right size-5 -mb-[0.3rem]"></i>
         </UIButton>
       </div>
