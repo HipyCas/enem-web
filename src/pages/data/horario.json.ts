@@ -441,7 +441,7 @@ export const HORARIO = {
     {
       name: "Coffee Break",
       description:
-        "Una breve pausa para tomar un Café y unos aperitivos antes de seguir.",
+        "Una breve pausa para tomar un café y unos aperitivos antes de seguir.",
       location: "Hall Facultad de Ciencias",
       category: "coffee_break",
       start: "18:00",
