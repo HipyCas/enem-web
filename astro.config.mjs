@@ -17,6 +17,10 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true,
   },
+  redirects: {
+    "/participa": "/2025/noticias/voluntarios-ordinaria",
+  },
+
   integrations: [
     sitemap(),
     tailwind(),
