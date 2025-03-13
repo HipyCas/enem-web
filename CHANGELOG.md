@@ -1,3 +1,13 @@
+## 2025-03-13
+
+- Redirigir /participa a la noticia de convocatoria de voluntarios actualmente
+  abierta (/noticias/voluntarios-ordinaria)
+
+## 2025-03-12
+
+- Creada la noticia de la Convocatoria Ordinaria de Voluntarios
+- Añadido banner para inscribirse como voluntario en la página de inicio
+
 ## 2025-02-02
 
 - feat: actualiza página inscripciones para quitar enlace a inscripción
