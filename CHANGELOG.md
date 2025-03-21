@@ -1,4 +1,9 @@
-## 2025-03-21
+## 2025-03-21@2
+
+- Corregir fechas de resolución definitiva en la noticia de convocatoria
+  ordinaria
+
+## 2025-03-21@1
 
 - Actualización noticia convocatoria ordinaria
 - Redirigir /participa a la noticia de convocatoria de voluntarios actualmente
