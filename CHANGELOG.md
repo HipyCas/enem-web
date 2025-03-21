@@ -1,5 +1,6 @@
-## 2025-03-13
+## 2025-03-21
 
+- Actualización noticia convocatoria ordinaria
 - Redirigir /participa a la noticia de convocatoria de voluntarios actualmente
   abierta (/noticias/voluntarios-ordinaria)
 
