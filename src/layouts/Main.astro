@@ -125,6 +125,16 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
     { IN_PRODUCTION ?
         <script defer src="https://analytics.wupp.dev/script.js" data-website-id="20e6b808-c30e-4d59-a9f7-215bd031f4d5"></script>
         : <></> }
+
+    {
+      IN_PRODUCTION ? (
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+      ) : (
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+      )
+    }
 	</head>
 	<body class="dark:bg-[#1c1c1c] dark:text-clear relative">
 		<SearchModal />
@@ -184,6 +194,8 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
       const urlParams = new URLSearchParams(window.location.search);
       const entity = urlParams.get('entity');
       if (entity) setTimeout(() => {umami.identify({ entity }); console.info('registered entity:', entity)}, 1000);
+
+      tippy('[data-tippy-content]')
     </script>
 	</body>
 </html>
