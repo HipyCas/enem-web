@@ -42,20 +42,26 @@
       </ul>
     </li>
   </template>
-  <a href="mailto:enem2025@anem.es" aria-label="Correo electrónico" target="_blank">
+  <a
+    href="mailto:enem2025@anem.es"
+    aria-label="Correo electrónico"
+    target="_blank"
+  >
     <i class="inline-block text-lg i-tabler-mail"></i>
   </a>
   <a
     href="https://instagram.com/enem.mat"
     aria-label="Instagram"
-    class="!-ml-2" target="_blank"
+    class="!-ml-2"
+    target="_blank"
   >
     <i class="inline-block text-lg i-tabler-brand-instagram"></i>
   </a>
   <a
     href="https://x.com/enem_mat"
     aria-label="Twitter / X"
-    class="!-ml-2" target="_blank"
+    class="!-ml-2"
+    target="_blank"
   >
     <i class="inline-block text-lg i-tabler-brand-twitter"></i>
   </a>
