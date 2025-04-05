@@ -1,0 +1,148 @@
+---
+import { Image } from "astro:assets";
+import MainLayout from "../../layouts/Main.astro";
+import { PATRONS, type Patron } from "../data/patrons.json";
+import { keys } from "radash";
+
+// const PLATINUM_SIZE =
+
+// const CASIO_RATIO = 2073 / 534; // width / height
+
+// const renderPatron = (patron: Patron) => (
+//   <a href={patron.website}>
+//     {typeof patron.logo === "string" ? (
+//       <img src={patron.logo} alt="Casio" />
+//     ) : (
+//       <>
+//         <img
+//           class="dark:hidden"
+//           src="/2025/img/patrons/plata/Logo IIC_positivo.png"
+//           alt="Instituto de Ingeniería del Conocimiento"
+//         />
+//         <img
+//           class="hidden dark:block"
+//           src="/2025/img/patrons/plata/Logo-IIC_negativo.png"
+//           alt="Instituto de Ingeniería del Conocimiento"
+//         />
+//       </>
+//     )}
+//   </a>
+// );
+
+const PATRONS_KEYS = Object.keys(PATRONS);
+---
+
+<MainLayout title="Colaboradores">
+  <!-- TODO Rn setting width and height doesn't affect bc Image does not process public images -->
+  {
+    PATRONS_KEYS.map((key) =>
+      PATRONS[key].length > 0 ? (
+        <section class={key}>
+          <h2 class="capitalize">{key}</h2>
+          <div class="img-grid">
+            {PATRONS[key].map((patron) => (
+              <a href={patron.website}>
+                {typeof patron.logo === "string" ? (
+                  <img src={patron.logo} alt={patron.name} />
+                ) : (
+                  <>
+                    <img
+                      class="dark:hidden"
+                      src={patron.logo.light}
+                      alt={patron.name}
+                    />
+                    <img
+                      class="hidden dark:block"
+                      src={patron.logo.dark}
+                      alt={patron.name}
+                    />
+                  </>
+                )}
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : (
+        <></>
+      ),
+    )
+  }
+
+  <a href="como-colaborar" class="text-lg text-center block mb-20 italic px-5">Descubre como participar y aparecer también en nuestra web &rarr;</a>
+</MainLayout>
+
+<style>
+  section h2 {
+    @apply text-2xl font-semibold;
+    display: block;
+    text-align: center;
+    margin: 2em auto 0.5em auto;
+    width: 50%;
+  }
+
+  @media (max-width: 660px) {
+    section h2 {
+      width: 75%;
+    }
+  }
+
+  .platino h2 {
+    @apply text-dark bg-primary;
+    background-color: #e5e4e2;
+  }
+  .platino h2::before, .platino h2::after {
+    content: '🏆';
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .oro h2 {
+    @apply text-dark;
+    background-color: #ffbf00;
+  }
+
+  .plata h2 {
+    @apply text-dark;
+    background-color: #bab7b2;
+  }
+
+  .bronce h2 {
+    @apply text-dark;
+    background-color: #cd7f32;
+  }
+
+  img.platino,
+  .platino img {
+    max-height: 150px;
+    max-width: 400px;
+  }
+
+  img.oro,
+  .oro img {
+    max-height: 100px;
+    max-width: 400px;
+  }
+
+  img.plata,
+  .plata img {
+    max-height: 90px;
+    max-width: 400px;
+  }
+
+  .bronce img {
+    max-height: 75px;
+    max-width: 175px;
+  }
+
+  .img-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section:last-of-type {
+    margin-bottom: 3em;
+  }
+</style>
