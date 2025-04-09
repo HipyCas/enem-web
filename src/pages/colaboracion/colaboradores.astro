@@ -1,33 +1,6 @@
 ---
-import { Image } from "astro:assets";
 import MainLayout from "../../layouts/Main.astro";
 import { PATRONS, type Patron } from "../data/patrons.json";
-import { keys } from "radash";
-
-// const PLATINUM_SIZE =
-
-// const CASIO_RATIO = 2073 / 534; // width / height
-
-// const renderPatron = (patron: Patron) => (
-//   <a href={patron.website}>
-//     {typeof patron.logo === "string" ? (
-//       <img src={patron.logo} alt="Casio" />
-//     ) : (
-//       <>
-//         <img
-//           class="dark:hidden"
-//           src="/2025/img/patrons/plata/Logo IIC_positivo.png"
-//           alt="Instituto de Ingeniería del Conocimiento"
-//         />
-//         <img
-//           class="hidden dark:block"
-//           src="/2025/img/patrons/plata/Logo-IIC_negativo.png"
-//           alt="Instituto de Ingeniería del Conocimiento"
-//         />
-//       </>
-//     )}
-//   </a>
-// );
 
 const PATRONS_KEYS = Object.keys(PATRONS);
 ---
@@ -43,13 +16,14 @@ const PATRONS_KEYS = Object.keys(PATRONS);
             {PATRONS[key].map((patron) => (
               <a href={patron.website}>
                 {typeof patron.logo === "string" ? (
-                  <img src={patron.logo} alt={patron.name} />
+                  <img src={patron.logo} alt={patron.name} data-pagefind-index-attrs="alt" />
                 ) : (
                   <>
                     <img
                       class="dark:hidden"
                       src={patron.logo.light}
                       alt={patron.name}
+                      data-pagefind-index-attrs="alt"
                     />
                     <img
                       class="hidden dark:block"
@@ -72,48 +46,50 @@ const PATRONS_KEYS = Object.keys(PATRONS);
 </MainLayout>
 
 <style>
+  section {
+    @apply border-4 rounded-lg relative;
+    padding: 2.5rem 2rem 2rem 2rem;
+    margin: 2rem auto;
+    max-width: min(900px, 90vw);
+
+    border-color: var(--emph, red);
+  }
   section h2 {
-    @apply text-2xl font-semibold;
+    @apply border-4 rounded-lg text-dark text-2xl font-semibold absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
     display: block;
     text-align: center;
-    margin: 2em auto 0.5em auto;
-    width: 50%;
+    width: fit;
+    padding: 0 0.75rem;
+
+    border-color: var(--emph, red);
+    background-color: var(--emph, red);
+  }
+  
+  .platino {
+    --emph: #e5e4e2;
+  }
+  .oro {
+    --emph: var(--oro);
+  }
+  .plata {
+    --emph: var(--plata);
+  }
+  .bronce {
+    --emph: var(--bronce);
+  }
+  .colaborador {
+    --emph: #fda575;
   }
 
-  @media (max-width: 660px) {
-    section h2 {
-      width: 75%;
-    }
-  }
-
-  .platino h2 {
-    @apply text-dark bg-primary;
-    background-color: #e5e4e2;
-  }
   .platino h2::before, .platino h2::after {
     content: '🏆';
     display: inline-block;
     margin: 0 5px;
   }
 
-  .oro h2 {
-    @apply text-dark;
-    background-color: #ffbf00;
-  }
-
-  .plata h2 {
-    @apply text-dark;
-    background-color: #bab7b2;
-  }
-
-  .bronce h2 {
-    @apply text-dark;
-    background-color: #cd7f32;
-  }
-
   img.platino,
   .platino img {
-    max-height: 150px;
+    max-height: 125px;
     max-width: 400px;
   }
 
@@ -140,6 +116,10 @@ const PATRONS_KEYS = Object.keys(PATRONS);
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+
+  .img-grid img {
+    max-width: 85vw;
   }
 
   section:last-of-type {
