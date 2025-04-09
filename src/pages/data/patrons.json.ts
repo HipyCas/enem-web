@@ -6,21 +6,21 @@ export const PATRONS: Record<string, Patron[]> = {
       website: "https://www.casio.com/es/",
     },
     {
-      name: "Instituto Geográfico Nacional",
+      name: "Instituto Geográfico Nacional (IGN)",
       website: "https://www.ign.es/web/inicio",
       logo: "/2025/img/patrons/platino/Doc digitales MTMT IGN-CNIG color 3n.png",
     },
   ],
   oro: [
     {
-      name: "Instituto Nacional de Estadística",
+      name: "Instituto Nacional de Estadística (INE)",
       website: "https://ine.es",
       logo: "/2025/img/patrons/oro/logo INE.jpg",
     },
   ],
   plata: [
     {
-      name: "Instituto de Ingeniería del Conocimiento",
+      name: "Instituto de Ingeniería del Conocimiento (IIC)",
       website: "https://www.iic.uam.es/",
       logo: {
         light: "/2025/img/patrons/plata/Logo IIC_positivo.png",
@@ -38,7 +38,13 @@ export const PATRONS: Record<string, Patron[]> = {
       },
     },
   ],
-  colaboradores: [],
+  colaboradores: [
+    // {
+    //   name: "Delegación de Estudiantes de la Facultad de Ciencias Económicas y Empresariales (UGR)",
+    //   website: "https://fccee.ugr.es/estudiantes/delegacion",
+    //   logo: "/2025/img/patrons/colaboradores/deccee.webp",
+    // },
+  ],
 };
 
 export async function GET() {
