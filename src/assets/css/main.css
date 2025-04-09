@@ -1,3 +1,9 @@
+:root { 
+  --oro: #ffbf00;
+  --plata: #bab7b2;
+  --bronce: #cd7f32;
+}
+
 body {
   font-family: "Montserrat Variable", sans-serif;
 }
