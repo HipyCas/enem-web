@@ -7,50 +7,59 @@ const PATRONS_KEYS = Object.keys(PATRONS);
 
 <MainLayout title="Colaboradores">
   <!-- TODO Rn setting width and height doesn't affect bc Image does not process public images -->
-  {
-    PATRONS_KEYS.map((key) =>
-      PATRONS[key].length > 0 ? (
-        <section class={key}>
-          <h2 class="capitalize">{key}</h2>
-          <div class="img-grid">
-            {PATRONS[key].map((patron) => (
-              <a href={patron.website}>
-                {typeof patron.logo === "string" ? (
-                  <img src={patron.logo} alt={patron.name} data-pagefind-index-attrs="alt" />
-                ) : (
-                  <>
-                    <img
-                      class="dark:hidden"
-                      src={patron.logo.light}
-                      alt={patron.name}
-                      data-pagefind-index-attrs="alt"
-                    />
-                    <img
-                      class="hidden dark:block"
-                      src={patron.logo.dark}
-                      alt={patron.name}
-                    />
-                  </>
-                )}
-              </a>
-            ))}
-          </div>
-        </section>
-      ) : (
-        <></>
-      ),
-    )
-  }
+  <main>
+    <div id="title-wrap" class="pt-10 mb-14 mx-auto">
+      <h1 class="block text-4xl font-semibold">Colaboradores</h1>
+      <p>Diferentes entidades y empresas colaboran con nuestro evento haciéndolo posible, disfrutando también de un amplio rango de ventajas. <a href="/2025/colaboracion/como-colaborar/">Únete a ellas y disfruta de todas las ventajas &rarr;</a></p>
+    </div>
 
-  <a href="/2025/colaboracion/como-colaborar" class="text-lg text-center block mb-20 italic px-5">Descubre como participar y aparecer también en nuestra web &rarr;</a>
+    {
+      PATRONS_KEYS.map((key) =>
+        PATRONS[key].length > 0 ? (
+          <section class={key}>
+            <h2 class="capitalize">{key}</h2>
+            <div class="img-grid">
+              {PATRONS[key].map((patron) => (
+                <a href={patron.website}>
+                  {typeof patron.logo === "string" ? (
+                    <img src={patron.logo} alt={patron.name} data-pagefind-index-attrs="alt" />
+                  ) : (
+                    <>
+                      <img
+                        class="dark:hidden"
+                        src={patron.logo.light}
+                        alt={patron.name}
+                        data-pagefind-index-attrs="alt"
+                      />
+                      <img
+                        class="hidden dark:block"
+                        src={patron.logo.dark}
+                        alt={patron.name}
+                      />
+                    </>
+                  )}
+                </a>
+              ))}
+            </div>
+          </section>
+        ) : (
+          <></>
+        ),
+      )
+    }
+    <a href="/2025/colaboracion/como-colaborar" class="text-lg text-center block mb-20 italic px-5">Descubre como participar y aparecer también en nuestra web &rarr;</a>
+  </main>
 </MainLayout>
 
 <style>
+   #title-wrap, section {
+    max-width: min(900px, 90vw);
+   }
+
   section {
     @apply border-4 rounded-lg relative;
     padding: 2.5rem 2rem 2rem 2rem;
     margin: 2rem auto;
-    max-width: min(900px, 90vw);
 
     border-color: var(--emph, red);
   }
