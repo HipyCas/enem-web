@@ -3,7 +3,7 @@ export const HORARIO = {
     {
       name: "Check-in",
       description:
-        "Check-in al evento. Se te entregará la acreditación y el pack de bienvenida. **Esto no es el check-in al alojamiento**",
+        "Check-in al evento. Se te entregará la acreditación y el pack de bienvenida. **Esto no es el check-in al alojamiento**. **Es necesario realizar el check-in para asistir**. Si tienes cualquier problema para asistir a él en el horario previsto, contáctanos por correo.",
       location: "Hall Facultad de Ciencias",
       start: "12:00",
       end: "17:30",
