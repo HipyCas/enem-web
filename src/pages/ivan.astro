@@ -1,0 +1,63 @@
+---
+import Main from "../layouts/Main.astro";
+import { Image } from "astro:assets";
+
+import IvanIMG from "../assets/img/equipo/ivan.jpg";
+---
+
+<Main title="Iván Salido">
+  <div class="sm:hero-lonely *:mx-auto py-10 px-5 *:text-center">
+    <Image
+      class="rounded-full h-[300px] w-[300px] object-cover"
+      src={IvanIMG}
+      alt=""
+      width="500"
+      height="500"
+    />
+    <h1 class="w-fit mt-4 text-2xl sm:text-3xl md:text-4xl font-bold">
+      Iván Salido Cobo
+    </h1>
+    <p class="w-fit text-lg md:text-xl dark:text-zinc-400 text-zinc-600">
+      Tesorero y Secretario
+    </p>
+
+    <div>
+      <a
+        class="hover:shadow-lg hover:shadow-primary/75 dark:hover:shadow-primary-600/75 transition-all bg-primary rounded-lg inline-block w-fit px-2 py-1 mt-2 text-clear text-lg font-bold hover:text-clear"
+        href="mailto:enem2025@anem.es"
+      >
+        <i class="i-tabler-mail text-2xl -mb-1.5"></i> enem2025@anem.es
+      </a>
+    </div>
+
+    <h2 class="text-xl mt-4 mb-1">Otros contactos</h2>
+    <div
+      class="mx-auto w-fit grid sm:grid-cols-[max-content,max-content] gap-x-2.5 gap-y-1 items-center *:w-full"
+    >
+      <a
+        class="hover:bg-primary hover:text-clear border border-primary rounded-lg inline-block w-fit px-2 py-1 mt-2 text-lg font-bold"
+        href="tel:+34744481721"
+      >
+        <i class="i-tabler-phone -mb-0.5"></i> 744 481 721
+      </a>
+      <a
+        class="border border-zinc-500 text-zinc-500 rounded-lg inline-block w-fit px-2 py-1 mt-2 text-lg font-bold"
+        href="mailto:isalidocobo@gmail.com"
+      >
+        <i class="i-tabler-mail -mb-0.5"></i> Personal
+      </a>
+      <a
+        class="border border-zinc-500 text-zinc-500 rounded-lg inline-block w-fit px-2 py-1 mt-2 text-lg font-bold"
+        href="https://www.linkedin.com/in/ivansalidocobo/"
+      >
+        <i class="i-tabler-brand-linkedin -mb-0.5"></i> LinkedIn
+      </a>
+      <a
+        class="border border-zinc-500 text-zinc-500 rounded-lg inline-block w-fit px-2 py-1 mt-2 text-lg font-bold"
+        href="https://t.me/comic_ivans"
+      >
+        <i class="i-tabler-brand-telegram -mb-0.5"></i> Telegram
+      </a>
+    </div>
+  </div>
+</Main>
