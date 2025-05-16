@@ -1,11 +1,70 @@
 ---
-import PageLayout from "../../layouts/Page.astro";
----
+import fs from "fs";
+import path from "path";
+import MainLayout from "../../layouts/Main.astro";
 
-<PageLayout frontmatter={{ title: "Notas de Prensa" }} headings={[]}>
-  <em
-    >Mi idea aquí es hacer una grid similar a la que hay en Noticias. Haría
-    falta pasar las notas de prensa a contenido mdx como están las noticias y
-    poner en public el DOCX para que se pueda descargar.</em
-  >
-</PageLayout>
+// Ruta al CSV
+
+const csvPath = path.resolve("./src/assets/Apariciones en medios ENEM - Apariciones.csv");
+const csvData = fs.readFileSync(csvPath, "utf8");
+
+//aqui hago el parse del csv por las comas asi es mas facil y lo convierto en objetos individuales
+
+const lines = csvData.trim().split("\n");
+const headers = lines[0].split(",");
+const rows = lines.slice(1).map(line => {
+  const values = line.split(",");
+  return {
+    Medio: values[0],
+    Título: values[1],
+    Enlace: values[2],
+  };
+});
+
+//aqui he ordenado por el medio peropodria añadir un boton para ordenarlo por otro campo
+
+rows.sort((a, b) => a.Medio.localeCompare(b.Medio));
+
+---
+<MainLayout>
+  <div class="px-10 py-10 w-screen bg-black">
+
+    <main class="relative mx-auto max-w-7xl">
+
+      <h1 class="pt-10 pb-2.5 text-4xl font-semibold text-white">Notas de Prensa</h1>
+      
+      <div
+
+        class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3"
+        style="grid-auto-rows: 1fr; background-color: #000;"
+        
+      >
+        {rows.map(row => (
+          
+          <a
+            
+            href={row.Enlace}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-lg p-4 flex flex-col gap-2 shadow transition-colors border-2 border-transparent hover:border-orange-400"
+            style="background-color: #111; text-decoration: none;"
+          
+          >
+            
+            <h1 class="font-bold text-lg text-white">{row.Medio}</h1>
+            <div class="text-white">{row.Título}</div>
+          
+          </a>
+        
+        ))}
+      
+      </div>
+    
+    </main>
+  
+  </div>
+</MainLayout>
+
+
+
+
