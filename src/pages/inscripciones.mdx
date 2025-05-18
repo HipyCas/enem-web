@@ -10,11 +10,11 @@ import ButtonOutline from "../components/ui/ButtonOutline.astro";
   <div>
     <strong class="text-xl">Presencial</strong>
     <p>Asiste al evento completo del 22 al 27 de julio</p>
-    {/* href="https://docs.google.com/forms/d/e/1FAIpQLSfseBYe1TjocTOkPrErybIJ9FgHCfkPHxbJPh_g0__Lt1dPqg/viewform?usp=sf_link" */}
+
     <Button
-      disabled
-      event="Formulario Inscripción Presencial"
+      event="Formulario Inscripción Extraordinaria Presencial"
       target="_blank"
+      href="https://docs.google.com/forms/d/e/1FAIpQLScpy1fXHLDMCg90cXZuMCfUO3Oqi6aoWZo1S4JmKqtmWmBqiw/viewform?usp=dialog"
     >
       Inscripciones cerradas
     </Button>
@@ -24,6 +24,7 @@ import ButtonOutline from "../components/ui/ButtonOutline.astro";
     {/* <em class="text-sm block !mt-2 text-primary-500">
       Apertura el 30/12/2024 a las 12:00 horas
     </em> */}
+
   </div>
   <div>
     <strong class="text-xl">Online</strong>
@@ -66,13 +67,16 @@ inscripción incluye:
 - Pase Cultural para el día libre (si se adquiere, que no supondrá un suplemento
   de más de 25€)
 
-El precio de esta inscripción será, en un principio, de **200€ en su modalidad
+El precio de esta inscripción será, en un principio, de **300€ en su modalidad
 completa**. La inscripción se abona por transferencia directa y está limitada al
-aforo disponible. En este caso, sacaremos una **primera remesa de, al menos, 215
-personas** aceptadas. Se te confirmará por correo electrónico si se te ha
-aceptado o no y, en caso de que sí, cómo proceder al abono de la inscripción. Si
-no se te aceptase, no te desilusiones, **se sacarán múltiples remesas de
-aceptados** según vaya cancelando la gente.
+aforo disponible. Inicialmente con un precio de 200€, hemos cubierto todas las
+plazas de modalidad completa subvencionada que podemos cubrir, por lo que hemos
+abierto la inscripción a precio de coste y con acceso directo.
+
+Se te confirmará por correo electrónico si se te ha aceptado o no y, en caso de
+que sí, cómo proceder al abono de la inscripción. Si no se te aceptase, no te
+desilusiones, **se sacarán múltiples remesas de aceptados** según vaya
+cancelando la gente.
 
 La inscripción se realiza a través de un formulario de Google que pondrás
 encontrar en esta página.
@@ -81,9 +85,10 @@ encontrar en esta página.
 
 Dentro de la inscripción presencial, hay disponibles 4 modalidades diferentes:
 
-- **Completo (200€)**: este tipo de inscripción incluye todas las actividades
-  del evento, incluyendo la Asamblea General Ordinaria de la ANEM, y el
-  alojamiento y todas las comidas.
+- **Completo (~~200€~~ 300€)**: este tipo de inscripción incluye todas las
+  actividades del evento, incluyendo la Asamblea General Ordinaria de la ANEM, y
+  el alojamiento y todas las comidas. _Tras agotar las inscripciones
+  subvencionadas, está disponible la inscripción completa a precio de coste._
 
 - **Sin alojamiento (120€)**: este tipo de inscripción incluye todas las
   actividades del evento, incluyendo la Asamblea General Ordinaria de la ANEM,
@@ -106,12 +111,12 @@ se indica el precio inicial y el previsto._
 En la siguiente tabla, puedes ver la comparativa de qué incluye cada modalidad:
 
 <div class="overflow-x-auto max-w-[100%]">
-|                      Modalidad | Alojamiento | Desayuno | Comida | Cena | Evento | Cena de Gala | Cóctel Inaugural | Asamblea |
-| -----------------------------: | :---------: | :------: | :----: | :--: | :----: | :----------: | :--------------: | :------: |
-|                       Completa |     ✅      |    ✅    |   ✅   |  ✅  |   ✅   |      ✅      |        ✅        |   \*️⃣    |
-|                Sin Alojamiento |     ❌      |    ❌    |   ✅   |  ✅  |   ✅   |      ✅      |        ✅        |   \*️⃣    |
-| Sin Alojamiento ni manutención |     ❌      |    ❌    |   ❌   |  ❌  |   ✅   |      ✅      |        ✅        |   \*️⃣    |
-|                  Sólo Asamblea |     ❌      |    ❌    |   ❌   |  ❌  |   ❌   |      ❌      |        ❌        |    ✅    |
+  | Modalidad                      | Alojamiento | Desayuno | Comida | Cena | Evento | Cena de Gala | Cóctel Inaugural | Asamblea |
+  | -----------------------------: | :---------: | :------: | :----: | :--: | :----: | :----------: | :--------------: | :------: |
+  | Completa                       | ✅          | ✅       | ✅     | ✅   | ✅     | ✅ | ✅ | \*️⃣ | 
+  | Sin Alojamiento                | ❌          | ❌       | ✅     | ✅   | ✅     | ✅ | ✅ | \*️⃣ | 
+  | Sin Alojamiento ni manutención | ❌          | ❌       | ❌     | ❌   | ✅     | ✅ | ✅ | \*️⃣ | 
+  | Sólo Asamblea                  | ❌          | ❌       | ❌     | ❌   | ❌     | ❌ | ❌ | ✅ |
 </div>
 
 \*️⃣: _incluído pero requiere solicitud previa debido a que se realiza el día
@@ -186,32 +191,46 @@ necesitarás tener a mano las siguientes cosas:
 - Tener la sesión iniciada en tu cuenta de Google
 - Resguardo de matrícula
 - Información personal, incluyendo número de DNI/NIF/Pasaporte
-- Talla de camiseta */}
+- Talla de camiseta \*/}
 
 {/* Usar esto hace que no aparezca en los enlaces de contenido <h2 id="faq">Preguntas frecuentes</h2> */}
+
 ## Preguntas frecuentes
 
 _Según nos vayan llegando preguntas al correo, iremos completando esta sección._
 
-import Accordion from '../components/Accordion.astro'
+import Accordion from "../components/Accordion.astro";
+
+<Accordion title="Estoy en lista de espera, ¿cómo cambio de modalidad?">
+Estamos trabajando actualmente en habilitar el procedimiento para que las personas en lista de espera podáis cambiar de modalidad. Tan pronto como tengamos el procedimiento habilitado os informaremos.
+</Accordion>
 
 <Accordion title="¿Qué criterio seguís para seleccionar a la gente?">
   Los criterios de admisión al ENEM se establecen en el Artículo 5 del Libro VIII, concretamente su apartado 3° en lo que refiere a asistentes generales y miembros de la ANEM. Puedes consultar este reglamento en la [web de la ANEM](https://www.anem.es/web/documentos-generales/).
 
-  Estos criterios se actualizaron hace poco, y unos de los cambios que se hizo fue eliminar el 40% de plazas reservadas para miembros de la ANEM con una antigüedad mayor a un año, por lo que los miembros de la ANEM ya no tienen prioridad frente a otros estudiantes.
+Estos criterios se actualizaron hace poco, y unos de los cambios que se hizo fue
+eliminar el 40% de plazas reservadas para miembros de la ANEM con una antigüedad
+mayor a un año, por lo que los miembros de la ANEM ya no tienen prioridad frente
+a otros estudiantes.
+
 </Accordion>
 <Accordion title="Estoy en lista de espera, ¿tengo posibilidades de entrar?">
   Sí, es muy probable aún que entres. Hemos abierto pocas plazas en esta primera remesa y normalmente la lista de espera varía mucho, por tanto no te desanimes que hay muchas posibilidades aún de que entres.
 
-  Recalcar que, en el momento actual, la modalidad de inscripción no afecta a la prioridad, por tanto cambiar de modalidad no garantiza el acceso a una plaza.
+Recalcar que, en el momento actual, la modalidad de inscripción no afecta a la
+prioridad, por tanto cambiar de modalidad no garantiza el acceso a una plaza.
+
 </Accordion>
 <Accordion title="¿Puedo saber mi posición en la lista de espera?">
   Debido al gran volumen de inscripciones en lista de espera, y al hecho de que esta es independiente para cada universidad, no podemos comunicarte tu posición.
 
-  Te recomendamos que esperes a las próximas remesas, en las que de ser posible procuraremos informar de la posición en la lista.
+Te recomendamos que esperes a las próximas remesas, en las que de ser posible
+procuraremos informar de la posición en la lista.
+
 </Accordion>
 <Accordion title="Me he olvidado de inscribirme o ha habido un error, ¿puedo solucionarlo?">
   Sentimos escuchar eso. Si ha habido un problema técnico que nos puedas de alguna forma verificar/certificar, puedes escribirnos a [enem2025@anem.es](mailto:enem2025@anem.es). Si no, no podemos hacer nada ahora mismo. Es posible que en un futuro abramos otro plazo de inscripción, pero ahora mismo no podemos confirmar nada.
 
-  Recordarte que en cualquier caso, próximamente abriremos inscripciones Online.
+Recordarte que en cualquier caso, próximamente abriremos inscripciones Online.
+
 </Accordion>
