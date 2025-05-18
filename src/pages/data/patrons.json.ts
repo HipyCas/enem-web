@@ -10,11 +10,6 @@ export const PATRONS: Record<string, Patron[]> = {
       website: "https://www.ign.es/web/inicio",
       logo: "/2025/img/patrons/platino/Doc digitales MTMT IGN-CNIG color 3n.png",
     },
-    {
-      name: "OGA Data Driven Solutions",
-      website: "https://www.oga.ai/",
-      logo: "/2025/img/patrons/platino/OGA Logo horiz.png",
-    },
   ],
   oro: [
     {
@@ -23,12 +18,9 @@ export const PATRONS: Record<string, Patron[]> = {
       logo: "/2025/img/patrons/oro/logo INE.jpg",
     },
     {
-      name: "Navantia",
-      website: "https://www.navantia.es/es/",
-      logo: {
-        light: "/2025/img/patrons/oro/Navantia vertical color positivo (1).jpg",
-        dark: "/2025/img/patrons/oro/Navantia vertical blanco PNG.png"
-      },
+      name: "Caja Rural Granada",
+      website: "https://www.cajaruralgranada.es/es",
+      logo: "/2025/img/patrons/oro/Caja Rural Granada.png",
     },
   ],
   plata: [
@@ -41,9 +33,9 @@ export const PATRONS: Record<string, Patron[]> = {
       },
     },
     {
-      name: "Seidor",
-      website: "https://www.seidor.com/es-es",
-      logo: "/2025/img/patrons/plata/seidor.png",
+      name: "EIG",
+      website: "https://esgerencia.com/",
+      logo: "/2025/img/patrons/plata/EIG-SIN-FONDO (1).png",
     },
   ],
   bronce: [
@@ -55,26 +47,6 @@ export const PATRONS: Record<string, Patron[]> = {
         dark: "/2025/img/patrons/bronce/Management Solutions 16.9 oscuro.png",
       },
     },
-    {
-      name: "Afi Global Education",
-      website: "https://www.afiglobaleducation.com/",
-      logo: "/2025/img/patrons/bronce/Logo_Afi_Escuela_30_72ppp.png",
-    },
-    {
-      name: "GMV",
-      website: "https://www.gmv.com/es-es",
-      logo: "/2025/img/patrons/bronce/logo GMV.png.png",
-    },
-    {
-      name: "Jane Street",
-      website: "https://www.janestreet.com/",
-      logo: "/2025/img/patrons/bronce/logo_horizontal_black_registered.png",
-    },
-    {
-      name: "Bluetab",
-      website: "https://bluetab.net/es/",
-      logo: "/2025/img/patrons/bronce/Bluetab.svg",
-    },
   ],
   colaboradores: [
     // {
@@ -82,6 +54,16 @@ export const PATRONS: Record<string, Patron[]> = {
     //   website: "https://fccee.ugr.es/estudiantes/delegacion",
     //   logo: "/2025/img/patrons/colaboradores/deccee.webp",
     // },
+    {
+      name: "Círculo Tecnológico Granada",
+      website: "https://ctgranada.es/",
+      logo: "/2025/img/patrons/colaboradores/Círculo Tecnológico Granada.jpg",
+    },
+    {
+      name: "Parque de las Ciencias Granada",
+      website: "https://www.parqueciencias.com/",
+      logo: "/2025/img/patrons/colaboradores/Logoparque version corta_2024.jpg",
+    },
   ],
 };
 
