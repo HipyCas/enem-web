@@ -110,7 +110,7 @@ const rootFiles = grouped["root"] || [];
           
           {rootFiles.map(({ file, fileUrl }) => {
             
-            const publicUrl = `/2025/public/${fileUrl.replace(/\\/g, "/")}`;
+            const publicUrl = `/2025/${fileUrl.replace(/\\/g, "/")}`;
             
             return (
               
@@ -178,7 +178,7 @@ const rootFiles = grouped["root"] || [];
           
           {grouped[folder].map(({ file, fileUrl }) => {
             
-            const publicUrl = `/2025/public/${fileUrl.replace(/\\/g, "/")}`;
+            const publicUrl = `/2025/${fileUrl.replace(/\\/g, "/")}`;
             
             return (
               
