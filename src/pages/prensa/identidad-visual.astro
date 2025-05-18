@@ -1,7 +1,232 @@
 ---
+
+import fs from "fs";
+import path from "path";
 import PageLayout from "../../layouts/Page.astro";
+
+// Función recursiva para obtener todos los archivos
+
+function getAllFiles(
+  
+  dir: string,
+  baseUrl = "img",
+  baseDir = dir
+
+) {
+  let results: {
+
+    file: string;
+    fileUrl: string;
+    relPath: string;
+    folder: string;
+    birthtimeMs: number;
+
+  }[] = [];
+
+  const list = fs.readdirSync(dir);
+  
+  list.forEach((file) => {
+
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat && stat.isDirectory()) {
+
+      results = results.concat(
+
+        getAllFiles(filePath, `${baseUrl}/${file}`, baseDir)
+      
+      );
+
+    } else if (!file.startsWith(".")) {
+
+      results.push({
+
+        file,
+        fileUrl: `${baseUrl}/${file}`,
+        relPath: path.relative(baseDir, filePath),
+        folder: path.relative(baseDir, path.dirname(filePath)),
+        birthtimeMs: stat.birthtimeMs,
+      
+      });
+    
+    }
+  
+  });
+
+  return results;
+
+}
+
+const assetsDir = path.join(process.cwd(), "public", "img");
+let files = fs.existsSync(assetsDir) ? getAllFiles(assetsDir) : [];
+
+
+// Agrupar archivos por carpeta
+const grouped: { [key: string]: typeof files } = {};
+
+files.forEach(f => {
+
+  const folder = f.folder === "" ? "root" : f.folder;
+  if (!grouped[folder]) grouped[folder] = [];
+  grouped[folder].push(f);
+
+});
+
+const folders = Object.keys(grouped).filter(f => f !== "root");
+const rootFiles = grouped["root"] || [];
+
 ---
 
 <PageLayout frontmatter={{ title: "Identidad Visual" }} headings={[]}>
-  <p>hi</p>
+  
+  <div class="max-w-7xl mx-auto px-4 py-10">
+
+    {/* Sección imágenes generales (raíz) */}
+
+    {rootFiles.length > 0 && (
+
+      <section class="mb-10">
+        
+        <p class="mb-4 text-lg font-semibold text-white">
+          
+          Estas son las imágenes generales que hemos utilizado para las entidades precursoras del ENEM.
+          
+          <button
+            
+            type="button"
+            class="ml-3 underline text-orange-400 hover:text-orange-600 font-bold cursor-pointer"
+            onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')"
+          
+          >
+            
+            Ver imágenes
+          
+          </button>
+        
+        </p>
+        
+        <div class="hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center bg-transparent">
+          
+          {rootFiles.map(({ file, fileUrl }) => {
+            
+            const publicUrl = `/2025/public/${fileUrl.replace(/\\/g, "/")}`;
+            
+            return (
+              
+              <div class="flex flex-col items-center justify-center">
+                
+                <div
+                  
+                  class="flex flex-col items-center rounded-lg p-6 h-full bg-transparent"
+                  style={`background: url('${publicUrl}') center/contain no-repeat; min-height: 260px; width: 100%;`}
+                
+                >
+                </div>
+                
+                <a
+                  
+                  href={publicUrl}
+                  download={file}
+                  class="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition-colors"
+                  style="text-decoration: none; text-align: center; margin-top: 3%;"
+                
+                >
+                  
+                  Descargar
+                
+                </a>
+              
+              </div>
+
+            );
+
+          })}
+
+        </div>
+
+      </section>
+
+    )}
+
+    
+    {folders.map(folder => (
+
+      <section class="mb-10">
+        
+        <h2 class="text-2xl font-bold mb-2 text-orange-400">{folder}</h2>
+        
+        <p class="mb-4 text-lg font-semibold text-white">
+          
+          Estas son las imágenes que hemos utilizado para la carpeta <b>{folder}</b> y sus recursos relacionados.
+          
+          <button
+            
+            type="button"
+            class="ml-3 underline text-orange-400 hover:text-orange-600 font-bold cursor-pointer"
+            onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')"
+          
+          >
+            
+            Ver imágenes
+          
+          </button>
+        
+        </p>
+        
+        <div class="hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center bg-transparent">
+          
+          {grouped[folder].map(({ file, fileUrl }) => {
+            
+            const publicUrl = `/2025/public/${fileUrl.replace(/\\/g, "/")}`;
+            
+            return (
+              
+              <div class="flex flex-col items-center justify-center">
+                
+                <div
+                  
+                  class="flex flex-col items-center rounded-lg p-6 h-full bg-transparent"
+                  style={`background: url('${publicUrl}') center/contain no-repeat; min-height: 260px; width: 100%;`}
+                
+                >
+                </div>
+                
+                <a
+                  
+                  href={publicUrl}
+                  download={file}
+                  class="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition-colors"
+                  style="text-decoration: none; text-align: center; margin-top: 3%;"
+                
+                >
+                  
+                  Descargar
+                
+                </a>
+              
+              </div>
+
+            );
+
+          })}
+
+        </div>
+
+      </section>
+
+    ))}
+
+    {files.length === 0 && (
+
+      <div class="col-span-full text-center text-gray-400">
+        
+        No hay elementos de identidad visual.
+      
+      </div>
+
+    )}
+    
+  </div>
+
 </PageLayout>
