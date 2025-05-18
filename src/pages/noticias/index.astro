@@ -2,17 +2,19 @@
 import MainLayout from "../../layouts/Main.astro";
 import NewCard from "../../components/pages/noticias/NewCard.astro";
 import { getCollection } from "astro:content";
+import { startOfDay } from "date-fns";
 
 const blog = await getCollection("blog");
 const posts = blog
   .filter(
     (post) =>
       import.meta.env.DEV ||
-      (post.data.draft !== true && post.data.publishedDate <= new Date())
+      (post.data.draft !== true &&
+        startOfDay(post.data.publishedDate) <= new Date()),
   )
   .sort(
     (postA, postB) =>
-      postB.data.publishedDate.getTime() - postA.data.publishedDate.getTime()
+      postB.data.publishedDate.getTime() - postA.data.publishedDate.getTime(),
   );
 ---
 
