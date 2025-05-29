@@ -20,7 +20,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia Inaugural",
-      description: "",
+      description: "Conferencia dada por _Clara Grima_.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "19:30",
@@ -72,7 +72,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia 1",
-      description: "_Conferencia por determinar_",
+      description: "Conferencia dada por la _Sociedad Española de Investigación en Educación Matemática_.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "9:30",
@@ -80,7 +80,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia 2",
-      description: "_Conferencia por determinar_",
+      description: "Conferencia dada por _CASIO_.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "10:30",
@@ -97,7 +97,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia 3",
-      description: "_Conferencia por determinar_",
+      description: "Conferencia dada por la _Sociedad Española de Matemática Aplicada_.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "12:00",
@@ -147,7 +147,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia 5",
-      description: "_Conferencia por determinar_",
+      description: "Conferencia dada por el _Instituto Geográfico Nacional_.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "18:30",
@@ -323,7 +323,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia 8",
-      description: "_Conferencia por determinar_",
+      description: "Conferencia dada por _Luis José Rodríguez_.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "19:30",
@@ -375,7 +375,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia 9",
-      description: "_Conferencia por determinar_",
+      description: "Conferencia dada por _Víctor Aranda_.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "9:30",
@@ -383,7 +383,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia 10",
-      description: "_Conferencia por determinar_",
+      description: "Conferencia dada por la _Federación Española de Sociedades de Profesores de Matemáticas_.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "10:30",
@@ -424,15 +424,15 @@ export const HORARIO = {
     },
     {
       name: "Conferencia 11",
-      description: "_Conferencia por determinar_",
+      description: "Conferencia dada por la _Sociedad de Estadística e Investigación Operativa_.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "16:00",
       end: "17:00",
     },
     {
-      name: "Conferencia 12",
-      description: "_Conferencia por determinar_",
+      name: "Conferencia: Códigos detectores y correctores de errores",
+      description: "Conferencia dada por _Luis Merino_: ¿Sirve para algo el Álgebra en el día a día ? Una de las aplicaciones más importantes, además de la criptografía, es la de los  códigos detectores y correctores. Sin ellos no funcionarían, por ejemplo, nuestros móviles u ordenadores porque no habría memorias eficientes para ellos. Éstos códigos están basados Álgebra lineal sobre cuerpos finitos y usan también anillos de polinomios y son fundamentales en todo tipo de intercambios de información.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "17:00",
@@ -449,7 +449,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia de Clausura",
-      description: "_Conferencia por determinar_",
+      description: "Conferencia dada por _Bert Jansen_.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "18:30",
