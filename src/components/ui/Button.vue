@@ -13,11 +13,9 @@
 </template>
 
 <script setup lang="ts">
-const {
-  group,
-  class: classProp,
-  disabled = false,
-} = defineProps<{
+import { computed } from "vue";
+
+const props = defineProps<{
   class?: string;
   event?: string;
   as?: "a" | "button" | "span";
@@ -27,13 +25,13 @@ const {
   target?: string;
 }>();
 
-const classes = {
+const classes = computed(() => ({
   "hover:shadow-lg hover:shadow-primary-400 dark:hover:shadow-lg hover:scale-[1.03]":
-    !group,
+    !props.group,
   "group-hover:shadow-lg group-hover:shadow-primary-400 dark:group-hover:shadow-lg group-hover:scale-[1.03]":
-    group,
+    props.group,
   "opacity-50 !cursor-not-allowed hover:transform-none !bg-gray-500 !border-gray-500":
-    disabled,
-  [classProp ?? ""]: true,
-};
+    props.disabled,
+  [props.class ?? ""]: true,
+}));
 </script>
