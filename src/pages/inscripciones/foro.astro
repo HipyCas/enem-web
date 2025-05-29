@@ -1,0 +1,44 @@
+---
+import Page from "../../layouts/Page.astro";
+import InscripcionForo from "../../components/InscripcionForo.vue";
+---
+
+<Page frontmatter={{ title: "Inscripción Foro" }} headings={[]}>
+  <p>
+    Inscríbete al Foro de Empresas y Emprendimiento del XXVI ENEM a nuestro
+    evento a través de esta página web. Tus datos serán procesados
+    automáticamente y podrás pagar con tarjeta directamente, siendo tu pago
+    procesado de forma segura. Una vez completado el formulario y realizado el
+    pago,
+    <b>ya eres asistente al Foro de Empresas y Emprendimiento del XXVI ENEM</b>.
+  </p>
+
+  <h2>¿Por qué inscribirte?</h2>
+  <ul class="list-inside">
+    <li>
+      Conoce y entra en contacto con <b
+        >múltipes empresas locales, nacionales e internacionales</b
+      >
+    </li>
+    <li>
+      Ten la posibilidad de <b>realizar entrevistas de trabajo</b> en el momento
+    </li>
+    <li><b>Entrada libre en cualquier momento</b> de su realización</li>
+    <li>
+      Mayor posibilidad de entrar en contacto con una empresa al ser un grupo
+      reducido comparado con otras ferias de empleo
+    </li>
+    <li>Posibildad de conocer empresas y ser contratado por sólo 2.25€</li>
+  </ul>
+  <p>
+    Para inscribirte, simplemente
+    <b>rellena el siguiente formulario de inscripción</b>. Si deseas una factura
+    del pago, puedes escribir a
+    <a href="mailto:tesoreria@anem.es">tesoreria@anem.es</a>. Si tienes
+    cualquier otra duda al respecto, puedes contactarnos en el correo
+    <a href="mailto:enem2025@anem.es">enem2025@anem.es</a>.
+  </p>
+
+  <h2>Formulario de inscripción</h2>
+  <InscripcionForo client:load />
+</Page>

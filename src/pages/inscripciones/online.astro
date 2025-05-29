@@ -1,0 +1,42 @@
+---
+import Page from "../../layouts/Page.astro";
+import InscripcionOnline from "../../components/InscripcionOnline.vue";
+---
+
+<Page frontmatter={{ title: "Inscripción Online" }} headings={[]}>
+  <p>
+    Inscríbete en modalidad online a nuestro evento a través de esta página web.
+    Tus datos serán procesados automáticamente y podrás pagar con tarjeta
+    directamente, siendo tu pago procesado de forma segura. Una vez completado
+    el formulario y realizado el pago,
+    <b>ya eres asistente online al XXVI ENEM</b>.
+  </p>
+
+  <h2>¿Por qué inscribirte?</h2>
+  <ul class="list-inside">
+    <li>
+      Asiste a <b>todas las conferencias y mesas redondas</b> del evento
+    </li>
+    <li>
+      Recibe <b>certificado de asistencia</b> oficial y firmado
+    </li>
+    <li>
+      Disfruta del evento <b>desde donde tú quieras</b> y desde cualquier dispositivo
+    </li>
+    <li>
+      Ten la oportunidad de vivir el ENEM por
+      <b>un precio reducido de sólo 15€</b>
+    </li>
+  </ul>
+  <p>
+    Para inscribirte, simplemente
+    <b>rellena el siguiente formulario de inscripción</b>. Si deseas una factura
+    del pago, puedes escribir a
+    <a href="mailto:tesoreria@anem.es">tesoreria@anem.es</a>. Si tienes
+    cualquier otra duda al respecto, puedes contactarnos en el correo
+    <a href="mailto:enem2025@anem.es">enem2025@anem.es</a>.
+  </p>
+
+  <h2>Formulario de inscripción</h2>
+  <InscripcionOnline client:load />
+</Page>

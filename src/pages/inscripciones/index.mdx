@@ -1,10 +1,10 @@
 ---
-layout: "../layouts/Page.astro"
+layout: "../../layouts/Page.astro"
 title: Inscripciones
 ---
 
-import Button from "../components/ui/Button.vue";
-import ButtonOutline from "../components/ui/ButtonOutline.astro";
+import Button from "../../components/ui/Button.vue";
+import ButtonOutline from "../../components/ui/ButtonOutline.astro";
 
 <section class="not-prose flex flex-row justify-center items-center text-center py-10 *:px-4 *:max-w-80 flex-1 flex-wrap gap-10 *:bg-clear *:dark:bg-dark *:rounded-lg *:py-4">
   <div>
@@ -28,9 +28,9 @@ import ButtonOutline from "../components/ui/ButtonOutline.astro";
   </div>
   <div>
     <strong class="text-xl">Online</strong>
-    <p>Disfruta del evento retransmitido en directo</p>
-    <Button disabled target="_blank">
-      <em>Próximamente</em>
+    <p>Disfruta del evento retransmitido en directo a un precio reducido</p>
+    <Button target="_blank" href="https://enem.anem.es/2025/inscripciones/online/">
+      <em>¡Inscríbete!</em>
     </Button>
     <ButtonOutline href="#inscripción-online">
       Más información <i class="i-tabler-arrow-down size-5 -mb-1" />
@@ -39,12 +39,12 @@ import ButtonOutline from "../components/ui/ButtonOutline.astro";
   <div>
     <strong class="text-xl">Foro</strong>
     <p>Acércate al mundo profesional en el Foro de Empresas y Emprendimiento</p>
-    <Button disabled target="_blank">
+    <Button target="_blank" href="https://enem.anem.es/2025/inscripciones/online/">
       <em>Próximamente</em>
-      <ButtonOutline href="#inscripción-foro">
-        Más información <i class="i-tabler-arrow-down size-5 -mb-1" />
-      </ButtonOutline>
     </Button>
+    <ButtonOutline href="#inscripción-foro">
+      Más información <i class="i-tabler-arrow-down size-5 -mb-1" />
+    </ButtonOutline>
   </div>
 </section>
 
@@ -124,26 +124,28 @@ anterior al evento, puede suponer un coste adicional._
 
 ### Inscripción Online
 
-_Aún no disponible, se abrirá más tarde._
+Ten la posibilidad de asistir de manera telemática al ENEM, viendo en directo
+todas las charlas y mesas redondas así como algunas microcharlas y pudiendo
+hacer preguntas a los ponentes, todo esto a un precio reducido de 15€. Además,
+podrás obtener un **certificado de asistencia** así como **presentar un
+póster y obtener certificado de ello**.
 
-Este año abriremos una inscripción online, en la que tendrás la posibilidad de
-asistir de manera telemática al ENEM, viendo en directo todas las charlas y
-mesas redondas así como algunas microcharlas y pudiendo hacer preguntas a los
-ponentes. Esta inscripción no tiene cupo/aforo y se abrirá por un precio
-reducido cercano a cualquier persona interesante.
+**Precio: 15€**
+_Esta inscripción no tiene cupo/aforo._
 
 ### Inscripción Foro
 
-_Aún no disponible, se abrirá más tarde._
+Ten la posibilidad de asistir a nuestro Foro de Empresas y Emprendimiento por un precio muy reducido, a cualquier hora y con posibilidad de hacer entrevistas.
 
-Además de las modalidades de evento completo, este año se ofertará una modalidad
-de asistencia sólo al Foro de Empresas y Emprendimiento. Esta modalidad da la
+Esta modalidad da la
 posibilidad a las personas interesadas en aprovechar las ventajas del Foro de
 Empresas sin necesidad asistir a la totalidad del evento, siendo especialmente
 atractiva para gente de Granada o las proximidades que no puedan asistir a la
 totalidad del evento. Esta modalidad **SÓLO incluye el Foro de Empresas y
-Emprendimiento**. Su disponibilidad está limitada al aforo del espacio dónde se
-realizará la actividad.
+Emprendimiento y las entrevistas ofertadas**.
+
+**Precio: 2.25€**
+_Su disponibilidad está limitada al aforo del espacio dónde se realizará la actividad._
 
 ## ¿Qué saber antes de inscribirte?
 
@@ -199,10 +201,10 @@ necesitarás tener a mano las siguientes cosas:
 
 _Según nos vayan llegando preguntas al correo, iremos completando esta sección._
 
-import Accordion from "../components/Accordion.astro";
+import Accordion from "../../components/Accordion.astro";
 
 <Accordion title="Estoy en lista de espera, ¿cómo cambio de modalidad?">
-Estamos trabajando actualmente en habilitar el procedimiento para que las personas en lista de espera podáis cambiar de modalidad. Tan pronto como tengamos el procedimiento habilitado os informaremos.
+  Si te hayas en lista de espera para la modalidad completa del evento, tienes la posibilidad de cambiar a otra de las modalidades disponibles. Las modalidades a las que puedes cambiarte son: Completa sin subvención, Sin alojamiento, y Sin alojamiento ni manutención. Puedes encontrar más información en la [noticia al respecto](https://enem.anem.es/2025/noticias/cambio-inscripcion/).
 </Accordion>
 
 <Accordion title="¿Qué criterio seguís para seleccionar a la gente?">
@@ -214,23 +216,19 @@ mayor a un año, por lo que los miembros de la ANEM ya no tienen prioridad frent
 a otros estudiantes.
 
 </Accordion>
+
 <Accordion title="Estoy en lista de espera, ¿tengo posibilidades de entrar?">
-  Sí, es muy probable aún que entres. Hemos abierto pocas plazas en esta primera remesa y normalmente la lista de espera varía mucho, por tanto no te desanimes que hay muchas posibilidades aún de que entres.
+  Actualmente, no disponemos de más plazas een modalidad Completa subvencionada. Es probable que la lista se mueva, pero en dicho caso se movería muy caso, y no podemos garantizarlo.
 
-Recalcar que, en el momento actual, la modalidad de inscripción no afecta a la
-prioridad, por tanto cambiar de modalidad no garantiza el acceso a una plaza.
-
+Si deseas asistir al ENEM seguro, puedes realizar el cambio de modalidad, ya que el resto de modalidades no tienen lista de espera actualmente.
 </Accordion>
+
 <Accordion title="¿Puedo saber mi posición en la lista de espera?">
   Debido al gran volumen de inscripciones en lista de espera, y al hecho de que esta es independiente para cada universidad, no podemos comunicarte tu posición.
-
-Te recomendamos que esperes a las próximas remesas, en las que de ser posible
-procuraremos informar de la posición en la lista.
-
 </Accordion>
+
 <Accordion title="Me he olvidado de inscribirme o ha habido un error, ¿puedo solucionarlo?">
   Sentimos escuchar eso. Si ha habido un problema técnico que nos puedas de alguna forma verificar/certificar, puedes escribirnos a [enem2025@anem.es](mailto:enem2025@anem.es). Si no, no podemos hacer nada ahora mismo. Es posible que en un futuro abramos otro plazo de inscripción, pero ahora mismo no podemos confirmar nada.
 
-Recordarte que en cualquier caso, próximamente abriremos inscripciones Online.
-
+Recordarte que en cualquier caso, están reabiertas las inscripciones en varias modalidades, tanto presenciales como online.
 </Accordion>
