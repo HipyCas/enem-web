@@ -173,13 +173,13 @@ const pageImage = og?.image || '/2025/og' + (isIndex ? `/_index.jpg` : `${Astro.
 				<MobileMenu toggleClass="lg:hidden" links={LINKS} />
 			</header>
 			<slot />
-			<footer>
-        <section class="block px-10 mx-auto my-4 text-2xl text-center w-fit">
+			<footer class="flex flex-col">
+        <!-- <section class="block px-10 mx-auto my-4 text-2xl text-center w-fit">
           Con la colaboración y apoyo de
           <Image src="/2025/img/entities/AIgranada_color_horizontal.png..png" width={112.5} height={31.25} class="dark:hidden inline-block w-auto h-[44px]" alt="IA Granada" />
           <Image src="/2025/img/entities/AIgranada_blanco_horizontal.png.png" width={112.5} height={31.25} class="hidden dark:inline-block w-auto h-[44px]" alt="IA Granada" />
-        </section>
-				<div class="mx-auto w-fit h-full flex flex-col justify-center items-center *:text-sm">
+        </section> -->
+				<div class="mx-auto w-fit h-full flex flex-grow flex-col justify-center items-center *:text-sm">
 						<p class="mb-0.5 text-center w-fit">El ENEM es un evento organizado por la <a href="https://anem.es/web">Asociación Nacional de Estudiantes de Matemáticas (ANEM)</a></p>
 						<!-- @ts-ignore -->
 						<p class="w-fit" >Licenciado bajo <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0

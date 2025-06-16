@@ -29,8 +29,8 @@ import ButtonOutline from "../../components/ui/ButtonOutline.astro";
   <div>
     <strong class="text-xl">Online</strong>
     <p>Disfruta del evento retransmitido en directo a un precio reducido</p>
-    <Button target="_blank" href="https://enem.anem.es/2025/inscripciones/online/">
-      ¡Inscríbete!
+    <Button target="_blank" href="/2025/inscripciones/online/">
+      <em>¡Inscríbete!</em>
     </Button>
     <ButtonOutline href="#inscripción-online">
       Más información <i class="i-tabler-arrow-down size-5 -mb-1" />
@@ -38,9 +38,9 @@ import ButtonOutline from "../../components/ui/ButtonOutline.astro";
   </div>
   <div>
     <strong class="text-xl">Foro</strong>
-    <p>Acércate al mundo profesional en el Foro de Empresas y Emprendimiento</p>
-    <Button target="_blank" href="https://enem.anem.es/2025/inscripciones/online/">
-      ¡Inscríbete!
+    <p>Acércate al mundo profesional en el Foro de Empresas</p>
+    <Button target="_blank" href="/2025/inscripciones/foro/">
+      <em>¡Inscríbete!</em>
     </Button>
     <ButtonOutline href="#inscripción-foro">
       Más información <i class="i-tabler-arrow-down size-5 -mb-1" />
@@ -96,73 +96,69 @@ Dentro de la inscripción presencial, hay disponibles 4 modalidades diferentes:
 
 - **Sin alojamiento ni manutención (80€)**: este tipo de inscripción incluye
   todas las actividades del evento, incluyendo la Asamblea General Ordinaria de
-  la ANEM, el cóctel de inauguración y la cena de gala, y exceptuando el
+  la ANEM, el cóctel de inauguración y la cena de clausura, y exceptuando el
   alojamiento, los desayunos, las comidas y las cenas.
 
-- **Sólo Asamblea (_Precio por determinar_)**: este tipo de inscripción da
-  derecho **sólo** a la asistencia a la Asamblea General Ordinaria de la ANEM y,
-  si cabe, a alguna actividad que se considere relevante para su correcto
-  desarrollo. Cabe recalcar que la asamblea se realizará el lunes 21 de julio
-  (antes de comenzar el evento), y previsiblemente el martes 22.
-
-_El precio de las inscripciones podría variar hasta 50€ por arriba o por abajo,
-se indica el precio inicial y el previsto._
+- **Sólo Asamblea (55€)**: este tipo de inscripción da derecho **sólo** a la
+  asistencia a la Asamblea General Ordinaria de la ANEM y, si cabe, a alguna
+  actividad que se considere relevante para su correcto desarrollo. Cabe
+  recalcar que la asamblea se realizará entre el jueves 24 y el viernes 25 de
+  julio.
 
 En la siguiente tabla, puedes ver la comparativa de qué incluye cada modalidad:
 
 <div class="overflow-x-auto max-w-[100%]">
-  | Modalidad                      | Alojamiento | Desayuno | Comida | Cena | Evento | Cena de Gala | Cóctel Inaugural | Asamblea |
-  | -----------------------------: | :---------: | :------: | :----: | :--: | :----: | :----------: | :--------------: | :------: |
-  | Completa                       | ✅          | ✅       | ✅     | ✅   | ✅     | ✅ | ✅ | \*️⃣ | 
-  | Sin Alojamiento                | ❌          | ❌       | ✅     | ✅   | ✅     | ✅ | ✅ | \*️⃣ | 
-  | Sin Alojamiento ni manutención | ❌          | ❌       | ❌     | ❌   | ✅     | ✅ | ✅ | \*️⃣ | 
-  | Sólo Asamblea                  | ❌          | ❌       | ❌     | ❌   | ❌     | ❌ | ❌ | ✅ |
+  | Modalidad | Alojamiento | Desayuno | Comida | Cena | Evento | Cena de
+  Clausura | Cóctel Inaugural | Asamblea | | -----------------------------: |
+  :---------: | :------: | :----: | :--: | :----: | :----------: |
+  :--------------: | :------: | | Completa | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+  \*️⃣ | | Sin Alojamiento | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | \*️⃣ | | Sin
+  Alojamiento ni manutención | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | \*️⃣ | | Sólo
+  Asamblea | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 </div>
 
-\*️⃣: _incluído pero requiere solicitud previa debido a que se realiza el día
-anterior al evento, puede suponer un coste adicional._
+\*️⃣: _incluído pero requiere solicitud previa._
 
 ### Inscripción Online
 
 Ten la posibilidad de asistir de manera telemática al ENEM, viendo en directo
 todas las charlas y mesas redondas así como algunas microcharlas y pudiendo
 hacer preguntas a los ponentes, todo esto a un precio reducido de 15€. Además,
-podrás obtener un **certificado de asistencia** así como **presentar un
-póster y obtener certificado de ello**.
+podrás obtener un **certificado de asistencia** así como **presentar un póster y
+obtener certificado de ello**.
 
-**Precio: 15€**
-_Esta inscripción no tiene cupo/aforo._
+**Precio: 15€** _Esta inscripción no tiene cupo/aforo._
 
 ### Inscripción Foro
 
-Ten la posibilidad de asistir a nuestro Foro de Empresas y Emprendimiento por un precio muy reducido, a cualquier hora y con posibilidad de hacer entrevistas.
+Ten la posibilidad de asistir a nuestro Foro de Empresas y Emprendimiento por un
+precio muy reducido, a cualquier hora y con posibilidad de hacer entrevistas.
 
-Esta modalidad da la
-posibilidad a las personas interesadas en aprovechar las ventajas del Foro de
-Empresas sin necesidad asistir a la totalidad del evento, siendo especialmente
-atractiva para gente de Granada o las proximidades que no puedan asistir a la
-totalidad del evento. Esta modalidad **SÓLO incluye el Foro de Empresas y
-Emprendimiento y las entrevistas ofertadas**.
+Esta modalidad da la posibilidad a las personas interesadas en aprovechar las
+ventajas del Foro de Empresas sin necesidad asistir a la totalidad del evento,
+siendo especialmente atractiva para gente de Granada o las proximidades que no
+puedan asistir a la totalidad del evento. Esta modalidad **SÓLO incluye el Foro
+de Empresas y Emprendimiento y las entrevistas ofertadas**.
 
-**Precio: 2.25€**
-_Su disponibilidad está limitada al aforo del espacio dónde se realizará la actividad._
+**Precio: 2.25€** _Su disponibilidad está limitada al aforo del espacio dónde se
+realizará la actividad._
 
 ## ¿Qué saber antes de inscribirte?
 
 ### La Asamblea de la ANEM
 
-El lunes de la semana del ENEM, se realiza la Asamblea General Ordinaria de la
-ANEM. La Asamblea es el sitio dónde se toman todas las sobre la ANEM (Asociación
-Nacional de Estudiantes de Matemáticas), que es la entidad que organiza todos
-los años este evento. En estas reuniones se debaten y deciden temas como el
-coste del ENEM, su organización, qué ciudad lo alojará, posicionamientos sobre
-la docencia de las matemáticas, etc.
+Entre el jueves 24 y viernes 25 de julio se realiza la Asamblea General
+Ordinaria de la ANEM. La Asamblea es el sitio dónde se toman todas las sobre la
+ANEM (Asociación Nacional de Estudiantes de Matemáticas), que es la entidad que
+organiza todos los años este evento. En estas reuniones se debaten y deciden
+temas como el coste del ENEM, su organización, qué ciudad lo alojará,
+posicionamientos sobre la docencia de las matemáticas, etc.
 
 Como asiste y miembro de la ANEM, tienes derecho a asistir a la reunión de la
-Asamblea que se realizará el lunes 21 de julio. Cabe destacar, que cómo se trata
-de una noche extra, si se confirma el interés a asistir a la Asamblea, para la
-obtención del certificado de aprovechamiento se tendrá en cuenta la asistencia
-total a ésta.
+Asamblea. Cabe destacar que si se confirma el interés a asistir a la Asamblea,
+para la obtención del certificado de aprovechamiento se tendrá en cuenta la
+asistencia total a ésta y no se podrá asistir a las conferencias programadas en
+paralelo al transcurso de la Asamblea.
 
 Durante el formulario se preguntará si tienes interés en asistir a esta, sin
 implicar esto ningún compromiso de pago. Más adelante, se confirmará tu interés
@@ -185,16 +181,6 @@ sondear el interés e informar a las personas interesadas cuándo se determine e
 precio final En cualquier caso, **se podrá adquirir y abonar más adelante**.
 Próximamente proveeremos más información.
 
-{/* ## Prepárate: lo que necesitas
-
-Para rellenar el formulario de inscripción (presencial) ten en cuenta que
-necesitarás tener a mano las siguientes cosas:
-
-- Tener la sesión iniciada en tu cuenta de Google
-- Resguardo de matrícula
-- Información personal, incluyendo número de DNI/NIF/Pasaporte
-- Talla de camiseta \*/}
-
 {/* Usar esto hace que no aparezca en los enlaces de contenido <h2 id="faq">Preguntas frecuentes</h2> */}
 
 ## Preguntas frecuentes
@@ -204,7 +190,12 @@ _Según nos vayan llegando preguntas al correo, iremos completando esta sección
 import Accordion from "../../components/Accordion.astro";
 
 <Accordion title="Estoy en lista de espera, ¿cómo cambio de modalidad?">
-  Si te hayas en lista de espera para la modalidad completa del evento, tienes la posibilidad de cambiar a otra de las modalidades disponibles. Las modalidades a las que puedes cambiarte son: Completa sin subvención, Sin alojamiento, y Sin alojamiento ni manutención. Puedes encontrar más información en la [noticia al respecto](https://enem.anem.es/2025/noticias/cambio-inscripcion/).
+  Si te hayas en lista de espera para la modalidad completa del evento, tienes
+  la posibilidad de cambiar a otra de las modalidades disponibles. Las
+  modalidades a las que puedes cambiarte son: Completa sin subvención, Sin
+  alojamiento, y Sin alojamiento ni manutención. Puedes encontrar más
+  información en la [noticia al
+  respecto](https://enem.anem.es/2025/noticias/cambio-inscripcion/).
 </Accordion>
 
 <Accordion title="¿Qué criterio seguís para seleccionar a la gente?">
@@ -220,15 +211,21 @@ a otros estudiantes.
 <Accordion title="Estoy en lista de espera, ¿tengo posibilidades de entrar?">
   Actualmente, no disponemos de más plazas een modalidad Completa subvencionada. Es probable que la lista se mueva, pero en dicho caso se movería muy caso, y no podemos garantizarlo.
 
-Si deseas asistir al ENEM seguro, puedes realizar el cambio de modalidad, ya que el resto de modalidades no tienen lista de espera actualmente.
+Si deseas asistir al ENEM seguro, puedes realizar el cambio de modalidad, ya que
+el resto de modalidades no tienen lista de espera actualmente.
+
 </Accordion>
 
 <Accordion title="¿Puedo saber mi posición en la lista de espera?">
-  Debido al gran volumen de inscripciones en lista de espera, y al hecho de que esta es independiente para cada universidad, no podemos comunicarte tu posición.
+  Debido al gran volumen de inscripciones en lista de espera, y al hecho de que
+  esta es independiente para cada universidad, no podemos comunicarte tu
+  posición.
 </Accordion>
 
 <Accordion title="Me he olvidado de inscribirme o ha habido un error, ¿puedo solucionarlo?">
   Sentimos escuchar eso. Si ha habido un problema técnico que nos puedas de alguna forma verificar/certificar, puedes escribirnos a [enem2025@anem.es](mailto:enem2025@anem.es). Si no, no podemos hacer nada ahora mismo. Es posible que en un futuro abramos otro plazo de inscripción, pero ahora mismo no podemos confirmar nada.
 
-Recordarte que en cualquier caso, están reabiertas las inscripciones en varias modalidades, tanto presenciales como online.
+Recordarte que en cualquier caso, están reabiertas las inscripciones en varias
+modalidades, tanto presenciales como online.
+
 </Accordion>
