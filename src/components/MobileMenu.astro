@@ -11,12 +11,13 @@ const { toggleClass, links } = Astro.props;
 ---
 
 <>
-  <span
+  <button
     id="mobileMenuToggle"
+    aria-label="Abrir/Cerrar menú de navegación"
     class:list={[
       "i-tabler-menu-2 h-6 w-6 text-dark dark:text-clear px-8 cursor-pointer",
       toggleClass,
-    ]}></span>
+    ]}></button>
 
   <nav id="mobileMenuOverlay" class="z-10 bg-white dark:bg-dark">
     <MobileLinks links={links} Astro={Astro} />
@@ -145,7 +146,7 @@ const { toggleClass, links } = Astro.props;
             }
           });
         },
-        {}
+        {},
       );
     });
   });

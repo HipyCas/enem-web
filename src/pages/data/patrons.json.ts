@@ -62,7 +62,7 @@ export const PATRONS: Record<string, Patron[]> = {
     {
       name: "Parque de las Ciencias Granada",
       website: "https://www.parqueciencias.com/",
-      logo: "/2025/img/patrons/colaboradores/Logoparque version corta_2024.jpg",
+      logo: "/2025/img/patrons/colaboradores/Logoparque recortado.jpg",
     },
   ],
 };

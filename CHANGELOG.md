@@ -1,3 +1,41 @@
+## 2025-05-08
+
+- fix accessibility in mobile menu handle
+- fix remove cups from platino in colaboradores page
+- added logo parque ciencias
+- created noticia talleres y microcharlas
+
+## 2025-05-19
+
+- fix hide medios/prensa páginas y del menú
+
+## 2025-05-18@2
+
+- fix cambiar texto inscripciones cerradas por inscribete
+
+## 2025-05-18
+
+- Update mecenas y colaboradores
+- Actualización de la página de inscripciones de acorde a las nuevas
+- Creación y publicación de la noticia del isotipo
+- fix mostrar correctamente las noticias por dia
+
+## 2025-04-23
+
+- fix SIN-SIN inscription cost
+
+## 2025-04-09
+
+- Actualizar página de colaboradores a nuevo diseño
+- Indexar los nombres de los colaboradores (a través del atributo `alt`) para la
+  búsqueda
+
+## 2025-04-05
+
+- Crear página de colaboradores y poner los que por ahora tenemos y añadirla al
+  menú
+- Retirar banner convocatoria ordinaria de voluntarios
+
 ## 2025-03-21@2
 
 - Corregir fechas de resolución definitiva en la noticia de convocatoria
