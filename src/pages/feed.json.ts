@@ -32,7 +32,7 @@ export const GET: APIRoute = async function (context) {
 
   const items = await amap(news, async (post) => {
     const mdx = readFileSync(
-      join("/home/hipy/defc/xxvi-enem/web-enem/src/content/blog/" + post.id),
+      join(process.cwd(), "src/content/blog", post.id),
       "utf-8",
     );
     const txt = md2txt(mdx);
