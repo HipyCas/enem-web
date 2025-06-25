@@ -2,7 +2,7 @@
   <span class="sliding-text-wrapper">
     <span>
       <span>Matemáticas</span>
-      <span>Estadísitica</span>
+      <span>Estadística</span>
       <span>Ciencia de Datos</span>
       <span>Inteligencia Artificial</span>
       <span>Álgebra</span>
