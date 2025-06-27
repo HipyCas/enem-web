@@ -2,10 +2,16 @@
   <div
     v-if="confirmationScreen"
     id="confirmationScreen"
-    class="max-w-xl mx-auto card"
+    class="max-w-xl mx-auto card success"
   >
-    <h3 id="confirmationTitle" class="no-border text-3xl !mb-2"></h3>
-    <p id="confirmationMessage"></p>
+    <h3 id="confirmationTitle" class="no-border text-3xl !mb-2">
+      ¡Inscripción realizada! 🎉
+    </h3>
+    <p id="confirmationMessage">
+      La inscripción ha sido completada con éxito, ¡bienvenido al XXVI ENEM! En
+      tu correo electrónico dispones de más información al respecto de tu plaza
+      en el evento.
+    </p>
 
     <div
       class="rounded p-2 bg-amber-200 dark:bg-amber-500/40 flex flex-row items-stretch"
@@ -13,8 +19,11 @@
       <i class="i-tabler-alert-circle size-10 flex-shrink-0 mr-3" />
       <p class="p-0 m-0">
         El identificador de tu pago es:
-        <span class="font-semibold !text-sm" id="paymentId"></span>. Guarda este
-        número por si hay cualquier error o deseas solicitar factura.
+        <span class="font-semibold !text-sm" id="paymentId">{{
+          paymentId
+        }}</span
+        >. Guarda este número por si hay cualquier error o deseas solicitar
+        factura.
       </p>
     </div>
   </div>
@@ -23,43 +32,13 @@
     <div class="card mb-6">
       <strong>Estás inscribiéndote al Foro de Empresas y Emprendimiento</strong>
       <p>
-        Tu inscripción se procesará automáticamente y se te cobrará directamente
-        a través de esta página.
+        Tu inscripción se procesará automáticamente y serás asistente una vez
+        enviado este formulario.
       </p>
-
-      <div class="*:block *:mb-1">
-        <span class="text-emerald-800 dark:text-emerald-100"
-          ><i class="i-tabler-lock-check"></i> Pago seguro con Stripe</span
-        >
-        <span
-          ><i class="i-tabler-user"></i> A Asociación Nacional de Estudiantes de
-          Matemáticas</span
-        >
-        <span class="text-primary-700 dark:text-primary-400"
-          ><i class="i-tabler-cash"></i> Total: 2.25€</span
-        >
-      </div>
     </div>
 
     <form
-      v-if="paymentScreen"
-      id="payment-form"
-      @submit.prevent="confirmPayment"
-    >
-      <div id="payment-element">
-        <!-- Elements will create form elements here -->
-      </div>
-      <Button as="button" id="submit" type="submit" class="w-full"
-        >Submit</Button
-      >
-      <p id="error-message">
-        <!-- Display error message to your customers here -->
-      </p>
-    </form>
-
-    <form
-      v-else
-      @submit.prevent="initPayment"
+      @submit.prevent="register"
       class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl"
     >
       <!-- Correo electrónico -->
@@ -300,12 +279,7 @@ const VITE_INTRANET_URL = "https://enem.wupp.dev";
 const STORAGE_KEY = "enem_stripe_idemportency_key";
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-const stripe = await loadStripe(
-  "pk_live_51ORfIIEgEiIGP6lnUcLDxpVa4hoYa248rSQ5m8tV3WHmVU5oRKuu0PQiwEXxtKU2o4dD8d4CXhU3N67Y3VlLUoU700U8xt1vpd",
-);
-
 const confirmationScreen = ref(false);
-const paymentScreen = ref(false);
 const loading = ref(false);
 
 const email = ref("");
@@ -341,15 +315,15 @@ const hasErrors = computed(
     isEmpty(idNumber),
 );
 
-let stripeElements: StripeElements;
-async function initPayment() {
+const paymentId = ref<string>();
+
+async function register() {
   loading.value = true;
 
   try {
-    const res = await fetch(VITE_INTRANET_URL + "/api/_w/inscripcion/intent", {
+    const res = await fetch(VITE_INTRANET_URL + "/api/_w/inscripcion/foro", {
       method: "POST",
       body: JSON.stringify({
-        modality: "FORO",
         data: {
           email: email.value,
           emailConfirmation: emailConfirmation.value,
@@ -358,135 +332,18 @@ async function initPayment() {
           idType: idType.value,
           idNumber: idNumber.value,
         },
-        idempotencyKey: getIdempotencyKey(),
       }),
-      headers: {
-        "Content-Type": "application/json",
-      },
     });
-    const json = await res.json();
-
-    if (stripe) {
-      const options: StripeElementsOptionsClientSecret = {
-        clientSecret: json.client_secret,
-        // Fully customizable with appearance API.
-        appearance: {
-          variables: {
-            colorPrimary: "#fda575",
-          },
-        },
-      };
-
-      // Set up Stripe.js and Elements to use in checkout form, passing the client secret obtained in a previous step
-      stripeElements = stripe.elements(options);
-
-      // Create and mount the Payment Element
-      const paymentElementOptions = { layout: "accordion" };
-      const paymentElement = stripeElements.create(
-        "payment",
-        paymentElementOptions,
-      );
-      paymentScreen.value = true;
-      await nextTick();
-      paymentElement.mount("#payment-element");
-    } else {
-      document.getElementById("error-message")!.innerText =
-        "No ha sido posible conectarse a Stripe";
-    }
+    const id = await res.text();
+    paymentId.value = id;
+    confirmationScreen.value = true;
   } catch (error: any) {
     unknownError.value = error.toString();
   } finally {
     loading.value = false;
   }
 }
-async function confirmPayment() {
-  if (stripe === null || stripeElements === undefined) return;
 
-  loading.value = true;
-
-  const { error } = await stripe.confirmPayment({
-    elements: stripeElements,
-    confirmParams: {
-      return_url: "http://enem.wupp.dev/2025/inscripciones/foro",
-    },
-  });
-
-  if (error) {
-    // This point will only be reached if there is an immediate error when
-    // confirming the payment. Show error to your customer (for example, payment
-    // details incomplete)
-    loading.value = false;
-    const messageContainer = document.querySelector("#error-message");
-    messageContainer!.textContent = error.message ?? null;
-  } else {
-    // Your customer will be redirected to your `return_url`. For some payment
-    // methods like iDEAL, your customer will be redirected to an intermediate
-    // site first to authorize the payment, then redirected to the `return_url`.
-  }
-}
-
-async function managePaymentComplete(clientSecret: string) {
-  if (stripe === null) return;
-
-  stripe
-    .retrievePaymentIntent(clientSecret)
-    .then(({ paymentIntent }) => {
-      const screen = document.getElementById("confirmationScreen")!;
-      const title = document.getElementById(
-        "confirmationTitle",
-      )! as HTMLHeadElement;
-      const message = document.getElementById(
-        "confirmationMessage",
-      )! as HTMLParagraphElement;
-
-      (document.getElementById("paymentId")! as HTMLSpanElement).innerText =
-        paymentIntent?.id ?? "";
-
-      // Inspect the PaymentIntent `status` to indicate the status of the payment
-      // to your customer.
-      //
-      // Some payment methods will [immediately succeed or fail][0] upon
-      // confirmation, while others will first enter a `processing` state.
-      //
-      // [0]: https://stripe.com/docs/payments/payment-methods#payment-notification
-      switch (paymentIntent?.status) {
-        case "succeeded":
-          screen.classList.add("success");
-          title.innerText = "¡Inscripción realizada! 🎉";
-          message.innerText =
-            "La inscripción y pago han sido completados con éxito, ¡bienvenido al XXVI ENEM! En tu correo electrónico dispones de más información al respecto de tu plaza en nuestro evento.";
-          clearIdempotencyKey();
-          break;
-
-        case "processing":
-          title.innerText = "Pago en proceso";
-          message.innerText =
-            "Estamos procesando tu pago. Recibirás más información al respecto en tu correo electrónico. Tranquilo, tus datos están guardados a salvo.";
-          break;
-
-        case "requires_payment_method":
-          screen.classList.add("error");
-          title.innerText = "Pago fallido";
-          message.innerText =
-            "El pago de la inscripción ha fallado. Vuelve a intentarlo con otro método de pago.";
-          // Redirect your user back to your payment page to attempt collecting
-          // payment again
-          break;
-
-        default:
-          screen.classList.add("error");
-          title.innerText = "Algo ha salido mal";
-          message.innerText =
-            "Ha habido un error inesperado. Vuelve a intentar registrarte y, si el error persiste, por favor contacta con nosotros por correo electrónico.";
-          break;
-      }
-    })
-    .catch(
-      (e) =>
-        (document.querySelector<HTMLParagraphElement>("#message")!.innerText =
-          "Error inesperado, contacta con nosotros"),
-    );
-}
 onMounted(() => {
   const clientSecret = new URLSearchParams(window.location.search).get(
     "payment_intent_client_secret",
@@ -494,22 +351,8 @@ onMounted(() => {
 
   if (clientSecret !== null) {
     confirmationScreen.value = true;
-    managePaymentComplete(clientSecret);
   }
 });
-
-function getIdempotencyKey() {
-  const item = localStorage.getItem(STORAGE_KEY);
-  if (item === null || item === "") {
-    const newKey = nanoid();
-    localStorage.setItem(STORAGE_KEY, newKey);
-    return newKey;
-  } else return item;
-}
-
-function clearIdempotencyKey() {
-  localStorage.removeItem(STORAGE_KEY);
-}
 </script>
 
 <style scoped>
