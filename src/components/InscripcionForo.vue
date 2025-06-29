@@ -238,6 +238,8 @@
         >
       </div>
 
+      <p v-if="error">Error: {{ error }}</p>
+
       <p v-if="unknownError" class="text-red-500">
         Ha habido un error inesperado, por favor intenta de nuevo más tarde o
         <a
@@ -252,7 +254,7 @@
         type="submit"
         :disabled="loading || hasErrors"
         :data-disabled="loading || hasErrors"
-        >Confirmar y pagar</Button
+        >Enviar</Button
       >
     </form></template
   >
@@ -316,6 +318,7 @@ const hasErrors = computed(
 );
 
 const paymentId = ref<string>();
+const error = ref<string>();
 
 async function register() {
   loading.value = true;
@@ -333,10 +336,17 @@ async function register() {
           idNumber: idNumber.value,
         },
       }),
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
     const id = await res.text();
-    paymentId.value = id;
-    confirmationScreen.value = true;
+    if (id.startsWith("{")) {
+      error.value = JSON.parse(id).message;
+    } else {
+      paymentId.value = id;
+      confirmationScreen.value = true;
+    }
   } catch (error: any) {
     unknownError.value = error.toString();
   } finally {
