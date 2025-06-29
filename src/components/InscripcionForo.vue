@@ -334,6 +334,10 @@ async function register() {
           lastName: lastName.value,
           idType: idType.value,
           idNumber: idNumber.value,
+          university: university.value,
+          bachelors: bachelors.value,
+          master: master.value,
+          doctorate: doctorate.value,
         },
       }),
       headers: {
