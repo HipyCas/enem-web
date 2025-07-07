@@ -47,6 +47,11 @@ export const PATRONS: Record<string, Patron[]> = {
         dark: "/2025/img/patrons/bronce/Management Solutions 16.9 oscuro.png",
       },
     },
+    {
+      name: "Cívica",
+      website: "https://civica-soft.com/",
+      logo: "/2025/img/patrons/bronce/Civica.png",
+    },
   ],
   colaboradores: [
     // {
