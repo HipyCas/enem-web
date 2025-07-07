@@ -50,7 +50,10 @@ export const PATRONS: Record<string, Patron[]> = {
     {
       name: "Cívica",
       website: "https://civica-soft.com/",
-      logo: "/2025/img/patrons/bronce/Civica.png",
+      logo: {
+        light: "/2025/img/patrons/bronce/Civica.png",
+        dark: "/2025/img/patrons/bronce/Civica-dark.png",
+      },
     },
   ],
   colaboradores: [
