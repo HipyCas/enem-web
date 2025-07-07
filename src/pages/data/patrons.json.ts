@@ -20,7 +20,7 @@ export const PATRONS: Record<string, Patron[]> = {
     {
       name: "Caja Rural Granada",
       website: "https://www.cajaruralgranada.es/es",
-      logo: "/2025/img/patrons/oro/Caja Rural Granada.png",
+      logo: "/2025/img/patrons/oro/CRG.jpg",
     },
   ],
   plata: [
