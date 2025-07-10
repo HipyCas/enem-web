@@ -55,6 +55,14 @@ export const PATRONS: Record<string, Patron[]> = {
         dark: "/2025/img/patrons/bronce/Civica-dark.png",
       },
     },
+    {
+      name: "PricewaterhouseCoopers",
+      website: "https://www.pwc.es/",
+      logo: {
+        light: "/2025/img/patrons/bronce/pwc.png",
+        dark: "/2025/img/patrons/bronce/pwc-dark.png",
+      },
+    },
   ],
   colaboradores: [
     // {
