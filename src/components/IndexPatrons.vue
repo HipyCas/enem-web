@@ -21,10 +21,10 @@
   <div
     class="marquee wrap before:blur before:absolute before:inset-0 before:z-10"
   >
-    <div class="marquee__group -z-10">
+    <div class="marquee__group -z-10 h-[150px]">
       <img v-for="(item, i) in items" :key="i" :src="item[0]" :alt="item[1]" />
     </div>
-    <div class="marquee__group -z-10" aria-hidden="true">
+    <div class="marquee__group -z-10 h-[150px]" aria-hidden="true">
       <img v-for="(item, i) in items" :key="i" :src="item[0]" :alt="item[1]" />
     </div>
   </div>
