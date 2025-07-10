@@ -82,53 +82,6 @@ export const PATRONS: Record<string, Patron[]> = {
   ],
   colaboradores: [
     {
-      name: "Parque de las Ciencias Granada",
-      website: "https://www.parqueciencias.com/",
-      logo: "/2025/img/patrons/colaboradores/PC.jpg",
-    },
-    {
-      name: "Círculo Tecnológico Granada",
-      website: "https://ctgranada.es/",
-      logo: "/2025/img/patrons/colaboradores/Círculo Tecnológico Granada.jpg",
-    },
-    {
-      name: "Supermercados Coviran",
-      website: "https://www.coviran.es/",
-      logo: "/2025/img/patrons/colaboradores/Coviran.webp",
-    },
-    {
-      name: "Fundación AI Granada Research & Innovation",
-      website: "https://aigranada.com/",
-      logo: {
-        light: "/2025/img/entities/AIgranada_color_horizontal.png..png",
-        dark: "/2025/img/entities/AIgranada_blanco_horizontal.png.png",
-      },
-    },
-    {
-      name: "Facultad de Ciencias de la Universidad de Granada",
-      website: "https://fciencias.ugr.es/",
-      logo: {
-        light: "/2025/img/patrons/colaboradores/fcienciasLogo.png",
-        dark: "/2025/img/patrons/colaboradores/fcienciasLogo-dark.png",
-      },
-    },
-    {
-      name: "Ayuntamiento de Granada",
-      website: "https://www.granada.org/",
-      logo: {
-        light: "/2025/img/patrons/colaboradores/ayto.jpg",
-        dark: "/2025/img/patrons/colaboradores/ayto-dark.webp",
-      },
-    },
-    {
-      name: "Concejalía de Juventud",
-      website: "https://www.granada.org/inet/juventud.nsf/",
-      logo: {
-        light: "/2025/img/patrons/colaboradores/juventud.webp",
-        dark: "/2025/img/patrons/colaboradores/juventud-dark.webp",
-      },
-    },
-    {
       name: "Asociación de Estudiantes de Matemáticas y Estadística de la UGR",
       website: "https://amatugr.es/",
       logo: {
@@ -157,6 +110,14 @@ export const PATRONS: Record<string, Patron[]> = {
       logo: "/2025/img/patrons/colaboradores/seiem.jpg",
     },
     {
+      name: "Consejo de Estudiantes de la Universidad de Granada",
+      website: "https://dge.ugr.es/",
+      logo: {
+        light: "/2025/img/patrons/colaboradores/cge.webp",
+        dark: "/2025/img/patrons/colaboradores/cge-dark.webp",
+      },
+    },
+    {
       name: "Máster en Estadística Aplicada (UGR)",
       website: "https://masteres.ugr.es/estadistica-aplicada/",
       logo: "/2025/img/patrons/colaboradores/masterestadistica.webp",
@@ -182,11 +143,58 @@ export const PATRONS: Record<string, Patron[]> = {
       logo: "/2025/img/patrons/colaboradores/depdidactica.webp",
     },
     {
-      name: "Consejo de Estudiantes de la Universidad de Granada",
-      website: "https://dge.ugr.es/",
+      name: "Ayuntamiento de Granada",
+      website: "https://www.granada.org/",
       logo: {
-        light: "/2025/img/patrons/colaboradores/cge.webp",
-        dark: "/2025/img/patrons/colaboradores/cge-dark.webp",
+        light: "/2025/img/patrons/colaboradores/ayto.jpg",
+        dark: "/2025/img/patrons/colaboradores/ayto-dark.webp",
+      },
+    },
+    {
+      name: "Concejalía de Juventud",
+      website: "https://www.granada.org/inet/juventud.nsf/",
+      logo: {
+        light: "/2025/img/patrons/colaboradores/juventud.webp",
+        dark: "/2025/img/patrons/colaboradores/juventud-dark.webp",
+      },
+    },
+    {
+      name: "Parque de las Ciencias Granada",
+      website: "https://www.parqueciencias.com/",
+      logo: "/2025/img/patrons/colaboradores/PC.jpg",
+    },
+    {
+      name: "Supermercados Coviran",
+      website: "https://www.coviran.es/",
+      logo: "/2025/img/patrons/colaboradores/Coviran.webp",
+    },
+    {
+      name: "Event Experience Organization (EventEX)",
+      website: "https://eventex.es/",
+      logo: {
+        light: "/2025/img/patrons/colaboradores/EventEX.webp",
+        dark: "/2025/img/patrons/colaboradores/EventEX.webp",
+      },
+    },
+    {
+      name: "Círculo Tecnológico Granada",
+      website: "https://ctgranada.es/",
+      logo: "/2025/img/patrons/colaboradores/Círculo Tecnológico Granada.jpg",
+    },
+    {
+      name: "Fundación AI Granada Research & Innovation",
+      website: "https://aigranada.com/",
+      logo: {
+        light: "/2025/img/entities/AIgranada_color_horizontal.png..png",
+        dark: "/2025/img/entities/AIgranada_blanco_horizontal.png.png",
+      },
+    },
+    {
+      name: "Facultad de Ciencias de la Universidad de Granada",
+      website: "https://fciencias.ugr.es/",
+      logo: {
+        light: "/2025/img/patrons/colaboradores/fcienciasLogo.png",
+        dark: "/2025/img/patrons/colaboradores/fcienciasLogo-dark.png",
       },
     },
     {
