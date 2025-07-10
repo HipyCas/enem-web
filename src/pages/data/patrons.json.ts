@@ -173,7 +173,7 @@ export const PATRONS: Record<string, Patron[]> = {
       website: "https://eventex.es/",
       logo: {
         light: "/2025/img/patrons/colaboradores/EventEX.webp",
-        dark: "/2025/img/patrons/colaboradores/EventEX.webp",
+        dark: "/2025/img/patrons/colaboradores/EventEX-dark.webp",
       },
     },
     {
