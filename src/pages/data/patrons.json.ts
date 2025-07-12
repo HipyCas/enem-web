@@ -190,12 +190,17 @@ export const PATRONS: Record<string, Patron[]> = {
       },
     },
     {
-      name: "Facultad de Ciencias de la Universidad de Granada",
+      name: "Facultad de Ciencias (UGR)",
       website: "https://fciencias.ugr.es/",
       logo: {
         light: "/2025/img/patrons/colaboradores/fcienciasLogo.png",
         dark: "/2025/img/patrons/colaboradores/fcienciasLogo-dark.png",
       },
+    },
+    {
+      name: "Escuela Internacional de Posgrado (UGR)",
+      website: "https://escuelaposgrado.ugr.es/",
+      logo: "/2025/img/patrons/colaboradores/EIP.jpeg",
     },
     {
       name: "Delegación de Estudiantes de la Facultad de Ciencias Económicas y Empresariales (UGR)",
