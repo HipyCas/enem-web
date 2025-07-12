@@ -20,7 +20,8 @@ export const HORARIO = {
     },
     {
       name: "Conferencia Inaugural: Cómo enseñarle intuición a tu ordenador (_Clara Grima_)",
-      description: "Describiremos juntos la filosofía que subyace en los algoritmos de la Geometría Computacional, una rama de las matemáticas que vive a medio camino entre las matemáticas y la computación.",
+      description:
+        "Describiremos juntos la filosofía que subyace en los algoritmos de la Geometría Computacional, una rama de las matemáticas que vive a medio camino entre las matemáticas y la computación.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias plenarias",
       start: "18:30",
@@ -28,7 +29,8 @@ export const HORARIO = {
     },
     {
       name: "Acto Inaugural",
-      description: "Autoridades académicas y civiles nos acompañarán en el acto formal que dará comienzo oficialmente al XXVI Encuentro de Nacional de Estudiantes de Matemáticas.",
+      description:
+        "Autoridades académicas y civiles nos acompañarán en el acto formal que dará comienzo oficialmente al XXVI Encuentro de Nacional de Estudiantes de Matemáticas.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "actos_institucionales",
       start: "19:30",
@@ -57,14 +59,16 @@ export const HORARIO = {
       name: "Desayuno",
       description:
         "Comenzaremos la mañana con un desayuno de buffet libre en los alojamientos correspondientes, **A la hora estipulada de finalización del desayuno habrá que estar en la Facultad de Ciencias, no saliendo de los alojamientos.**.",
-      location: "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
+      location:
+        "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
       category: "manutenciones",
       start: "7:30",
       end: "9:00",
     },
     {
       name: "Energizer",
-      description: "Iniciaremos las actividades formativas con una dinámicas breves y un resumen de lo que nos depara la jornada.",
+      description:
+        "Iniciaremos las actividades formativas con una dinámicas breves y un resumen de lo que nos depara la jornada.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "energizer",
       start: "9:00",
@@ -81,7 +85,8 @@ export const HORARIO = {
     },
     {
       name: "Conferencia plenaria: ¿Qué hace una matemática como tú en una IA como esta? (_Anabel Forte_)",
-      description: "Exploraremos cómo las matemáticas juegan un papel fundamental en el desarrollo y funcionamiento de la Inteligencia Artificial (IA). Desde la estadística y el álgebra lineal hasta el cálculo y las teorías de la optimización, las herramientas matemáticas son esenciales para entrenar modelos de IA, procesar datos y tomar decisiones inteligentes. Veremos cómo los conceptos matemáticos que estudiamos en el grado, como las matrices, los algoritmos y la probabilidad, son la base de los sistemas de IA que usamos hoy en día y, con ello, trataremos de entender mejor las oportunidades que ofrecen las matemáticas para avanzar en este campo y cómo en ellas está la clave para hacer que la IA sea más eficiente, ética y comprensible.",
+      description:
+        "Exploraremos cómo las matemáticas juegan un papel fundamental en el desarrollo y funcionamiento de la Inteligencia Artificial (IA). Desde la estadística y el álgebra lineal hasta el cálculo y las teorías de la optimización, las herramientas matemáticas son esenciales para entrenar modelos de IA, procesar datos y tomar decisiones inteligentes. Veremos cómo los conceptos matemáticos que estudiamos en el grado, como las matrices, los algoritmos y la probabilidad, son la base de los sistemas de IA que usamos hoy en día y, con ello, trataremos de entender mejor las oportunidades que ofrecen las matemáticas para avanzar en este campo y cómo en ellas está la clave para hacer que la IA sea más eficiente, ética y comprensible.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "10:30",
@@ -107,7 +112,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia plenaria: _CASIO_",
-      description:"",
+      description: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "13:00",
@@ -116,22 +121,24 @@ export const HORARIO = {
     {
       name: "Comida",
       description: "",
-      location: "Cafetería de la Facultad de Ciencias o Cafetería de la Facultad de Ingeniería de Edificación (según corresponda)",
+      location:
+        "Cafetería de la Facultad de Ciencias o Cafetería de la Facultad de Ingeniería de Edificación (según corresponda)",
       category: "manutenciones",
       start: "14:00",
       end: "15:30",
     },
-        {
+    {
       name: "Conferencia plenaria: ¿Qué es una película de jabón? (_Francisco Torralbo_)",
-      description: "Abordaremos el problema de modelar matemáticamente las películas de jabón. Este problema nos llevará a descubrir el cálculo de variaciones, el concepto de curvatura media y las superficies mínimas. Veremos como distintas ramas de la matemática tienen un nexo común en este tipo de superficies. Finalizaremos hablando del problema de Plateau y su importancia en el desarrollo de la teoría así como aplicaciones de las superficies mínimas.",
+      description:
+        "Abordaremos el problema de modelar matemáticamente las películas de jabón. Este problema nos llevará a descubrir el cálculo de variaciones, el concepto de curvatura media y las superficies mínimas. Veremos como distintas ramas de la matemática tienen un nexo común en este tipo de superficies. Finalizaremos hablando del problema de Plateau y su importancia en el desarrollo de la teoría así como aplicaciones de las superficies mínimas.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "16:00",
       end: "17:00",
     },
-        {
+    {
       name: "Conferencia plenaria: _Instituto Geográfico Nacional_",
-      description:"",
+      description: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "17:00",
@@ -156,7 +163,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia plenaria: BSC",
-      description:"",
+      description: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "19:30",
@@ -180,11 +187,12 @@ export const HORARIO = {
     },
   ],
   "24": [
- {
+    {
       name: "Desayuno",
       description:
         "Comenzaremos la mañana con un desayuno de buffet libre en los alojamientos correspondientes, **A la hora estipulada de finalización del desayuno habrá que estar en la Facultad de Ciencias, no saliendo de los alojamientos.**.",
-      location: "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
+      location:
+        "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
       category: "manutenciones",
       start: "7:30",
       end: "9:00",
@@ -225,7 +233,7 @@ export const HORARIO = {
       start: "9:30",
       end: "11:30",
     },
-     {
+    {
       name: "Seminarios",
       description:
         "Profundizaremos en subáreas concretas de las matemáticas de la mano de distintas eminencias en su campo.",
@@ -243,7 +251,7 @@ export const HORARIO = {
       start: "11:30",
       end: "12:00",
     },
-  {
+    {
       name: "Foro de Empresas y Emprendimiento",
       description:
         "Conoceremos a empresas interesadas en perfiles de ámbito matemático y las salidas profesionales de nuestras titulaciones, conectaremos con profesionales de dicha área del mercado laboral para aumentar nuestra red de contactos y creceremos profesionalmente en esta plataforma de proyección laboral.",
@@ -270,7 +278,7 @@ export const HORARIO = {
       start: "12:00",
       end: "14:00",
     },
-     {
+    {
       name: "Seminarios",
       description:
         "Profundizaremos en subáreas concretas de las matemáticas de la mano de distintas eminencias en su campo.",
@@ -282,7 +290,8 @@ export const HORARIO = {
     {
       name: "Comida",
       description: "",
-      location: "Cafetería de la Facultad de Ciencias o Cafetería de la Facultad de Ingeniería de Edificación (según corresponda)",
+      location:
+        "Cafetería de la Facultad de Ciencias o Cafetería de la Facultad de Ingeniería de Edificación (según corresponda)",
       category: "manutenciones",
       start: "14:00",
       end: "15:30",
@@ -314,7 +323,7 @@ export const HORARIO = {
       start: "16:00",
       end: "18:00",
     },
-     {
+    {
       name: "Seminarios",
       description:
         "Profundizaremos en subáreas concretas de las matemáticas de la mano de distintas eminencias en su campo.",
@@ -343,7 +352,8 @@ export const HORARIO = {
     },
     {
       name: "Conferencia plenaria: Música con Matemáticas: escalas musicales, de Pitágoras a Bach (_José Luis Gámez_)",
-      description: "Analizaremos cómo, históricamente, se ha afrontado el objetivo de que varias notas «suene bien juntas» en la afinación de instrumentos, desde la afinación «armónica» de Pitágoras, a la afinación «temperada» de Bach.",
+      description:
+        "Analizaremos cómo, históricamente, se ha afrontado el objetivo de que varias notas «suene bien juntas» en la afinación de instrumentos, desde la afinación «armónica» de Pitágoras, a la afinación «temperada» de Bach.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "18:30",
@@ -366,7 +376,7 @@ export const HORARIO = {
       start: "16:00",
       end: "18:00",
     },
-      {
+    {
       name: "Cena",
       description: "",
       location: "Cafetería de la Facultad de Ciencias",
@@ -384,18 +394,20 @@ export const HORARIO = {
     },
   ],
   "25": [
-     {
+    {
       name: "Desayuno",
       description:
         "Comenzaremos la mañana con un desayuno de buffet libre en los alojamientos correspondientes, **A la hora estipulada de finalización del desayuno habrá que estar en la Facultad de Ciencias, no saliendo de los alojamientos.**.",
-      location: "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
+      location:
+        "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
       category: "manutenciones",
       start: "7:30",
       end: "9:00",
     },
     {
       name: "Energizer",
-      description: "Iniciaremos las actividades formativas con una dinámicas breves y un resumen de lo que nos depara la jornada.",
+      description:
+        "Iniciaremos las actividades formativas con una dinámicas breves y un resumen de lo que nos depara la jornada.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "energizer",
       start: "9:00",
@@ -403,7 +415,8 @@ export const HORARIO = {
     },
     {
       name: "Conferencia plenaria: Observaciones filosóficas en torno al número ω (_Víctor Aranda_)",
-      description: "Esta charla nos invitará a reflexionar críticamente sobre el modo en que Cantor introdujo el número ω en su emergente teoría de conjuntos, prestando un especial interés a lo que Reichenbach denominó contexto de descubrimiento",
+      description:
+        "Esta charla nos invitará a reflexionar críticamente sobre el modo en que Cantor introdujo el número ω en su emergente teoría de conjuntos, prestando un especial interés a lo que Reichenbach denominó contexto de descubrimiento",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "9:30",
@@ -411,8 +424,7 @@ export const HORARIO = {
     },
     {
       name: "Conferencia plenaria: Federación Española de Sociedades de Profesores de Matemáticas",
-      description:
-        "",
+      description: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "10:30",
@@ -427,7 +439,7 @@ export const HORARIO = {
       start: "11:30",
       end: "12:00",
     },
-  {
+    {
       name: "Charla ANEM",
       description:
         "Presentaremos a la ANEM, la Asociación Nacional de Estudiantes de Matemáticas, y la encargada de dar vida a este evento.",
@@ -443,18 +455,19 @@ export const HORARIO = {
       category: "mesa_redonda",
       start: "12:30",
       end: "14:00",
-    },    {
+    },
+    {
       name: "Comida",
       description: "",
-      location: "Cafetería de la Facultad de Ciencias o Cafetería de la Facultad de Ingeniería de Edificación (según corresponda)",
+      location:
+        "Cafetería de la Facultad de Ciencias o Cafetería de la Facultad de Ingeniería de Edificación (según corresponda)",
       category: "manutenciones",
       start: "14:00",
       end: "15:30",
     },
     {
       name: "Conferencia plenaria: Sociedad de Estadística e Investigación Operativa",
-      description:
-        "",
+      description: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "16:00",
@@ -480,7 +493,8 @@ export const HORARIO = {
     },
     {
       name: "Conferencia de Clausura: Las matemáticas de la Mecánica Cuántica (_Bert Jansen_)",
-      description: "Se nos ilustrará sobre la Mecánica Cuántica, la teoría que describe la física a escala atómica y subatómica. Es una teoría muy exitosa, pero muy contraintuitiva desde el punto de vista de nuestra lógica clásica: cantidades físicas que solo pueden tomar valores discretos, relaciones de incertidumbre, superposición de estados, dualidad onda-partícula, indeterminación cuántica, ... El mundo cuántico es muy extraño para gente que lo encuentra por primera vez. Sin embargo, todo se entiende muy bien, si uno no se fija en la física, sino en las matemáticas detrás: la teoría de espacios de Hilbert.",
+      description:
+        "Se nos ilustrará sobre la Mecánica Cuántica, la teoría que describe la física a escala atómica y subatómica. Es una teoría muy exitosa, pero muy contraintuitiva desde el punto de vista de nuestra lógica clásica: cantidades físicas que solo pueden tomar valores discretos, relaciones de incertidumbre, superposición de estados, dualidad onda-partícula, indeterminación cuántica, ... El mundo cuántico es muy extraño para gente que lo encuentra por primera vez. Sin embargo, todo se entiende muy bien, si uno no se fija en la física, sino en las matemáticas detrás: la teoría de espacios de Hilbert.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "18:30",
@@ -488,14 +502,13 @@ export const HORARIO = {
     },
     {
       name: "Acto de Clausura",
-      description:
-        "Despediremos formalmente el evento en este acto.",
+      description: "Despediremos formalmente el evento en este acto.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "actos_institucionales",
       start: "19:30",
       end: "20:30",
     },
-      {
+    {
       name: "Cena",
       description: "",
       location: "Cafetería de la Facultad de Ciencias",
@@ -513,11 +526,12 @@ export const HORARIO = {
     },
   ],
   "26": [
- {
+    {
       name: "Desayuno",
       description:
         "Comenzaremos la mañana con un desayuno de buffet libre en los alojamientos correspondientes, **A la hora estipulada de finalización del desayuno habrá que estar en las actividades correspondientes, no saliendo de los alojamientos.**.",
-      location: "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
+      location:
+        "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
       category: "manutenciones",
       start: "7:30",
       end: "9:00",
@@ -567,13 +581,14 @@ export const HORARIO = {
       start: "23:00",
       end: "06:00",
     },
-  ],  
+  ],
   "27": [
     {
       name: "Desayuno",
       description:
         "Comenzaremos la mañana con un desayuno de buffet libre en los alojamientos correspondientes, **A la hora estipulada de finalización del desayuno habrá que estar en las actividades correspondientes, no saliendo de los alojamientos.**.",
-      location: "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
+      location:
+        "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
       category: "manutenciones",
       start: "7:30",
       end: "9:00",
@@ -582,10 +597,11 @@ export const HORARIO = {
       name: "Check-out",
       description:
         "Saldremos, con gran lástima pero también un muy buen recuerdo, de nuestros alojamientos.",
-      location: "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
+      location:
+        "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
       category: "check-out",
       start: "9:00",
-      end:"11:30",
+      end: "11:30",
     },
   ],
 };
