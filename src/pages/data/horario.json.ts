@@ -57,14 +57,14 @@ export const HORARIO = {
       descriptionLong:
         `Tras el acto institucional y con el evento formalmente inaugurado, disfrutaremos de una cena formato cóctel en las inmediaciones del Aula Magna de la Facultad de Ciencias. **Recomendamos asistir adecuadamente vestido.**
         El menú de dicho cóctel es:
-        - Salmorejo cordobés;
+        - Emulsión de crema de verduras, pan rústico y aceite de oliva, coronado con virutas de jamón serrano y huevo campero confitado;
         - Tabla de ibéricos compuesta de jamón serrano, lomo embuchado, salchichón y chorizo;
         - Tabla de quesos curados y semi-curados;
         - Ensaladilla rusa de atún o gambas;
-        - Croquetas variadas;
-        - Pincho de tortilla de patatas;
-        - Pincho de carne en salsa;
-        - Pincho de lomo de orza;
+        - Bombas de textura crujiente-cremosa variadas;
+        - Confitura de tubérculo solaneáceo y hortaliza liliácea caramelizada atrapadas en óvulo de campo libre;
+        - Pintxo de estofado de mamífero bovino o porcino;
+        - Pintxo de lomo marinado en una cama de aceite de oliva, hierbas provenzales y pimentón de la Vera.;
         - Canapés dulces;
         - Barra libre de cerveza, vino, tinto de verano y refrescos.`,
       location: "Cafetería de la Facultad de Ciencias",
