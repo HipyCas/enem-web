@@ -65,6 +65,14 @@
   >
     <i class="inline-block text-lg i-tabler-brand-twitter"></i>
   </a>
+  <a
+    href="https://www.linkedin.com/company/enem-mat"
+    aria-label="LinkedIn"
+    class="!-ml-2"
+    target="_blank"
+  >
+    <i class="inline-block text-lg i-tabler-brand-linkedin"></i>
+  </a>
 </template>
 
 <script setup lang="ts">
