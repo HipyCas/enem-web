@@ -60,7 +60,7 @@ export const HORARIO = {
         - Emulsión de crema de verduras, pan rústico y aceite de oliva, coronado con virutas de jamón serrano y huevo campero confitado;
         - Tabla de ibéricos compuesta de jamón serrano, lomo embuchado, salchichón y chorizo;
         - Tabla de quesos curados y semi-curados;
-        - Ensaladilla rusa de atún o gambas;
+        - Fusión suave de crema de embrión de ave, cocción de verduras, hortalizas y tubérculos, finalizada con delicias frescas del mar;
         - Bombas de textura crujiente-cremosa variadas;
         - Confitura de tubérculo solaneáceo y hortaliza liliácea caramelizada atrapadas en óvulo de campo libre;
         - Pintxo de estofado de mamífero bovino o porcino;
