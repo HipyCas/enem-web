@@ -172,8 +172,8 @@ export const PATRONS: Record<string, Patron[]> = {
       name: "Event Experience Organization (EventEX)",
       website: "https://eventex.es/",
       logo: {
-        light: "/2025/img/patrons/colaboradores/EventEX.webp",
-        dark: "/2025/img/patrons/colaboradores/EventEX-dark.webp",
+        light: "/2025/img/patrons/colaboradores/EventEX.png",
+        dark: "/2025/img/patrons/colaboradores/EventEX-dark.png",
       },
     },
     {
