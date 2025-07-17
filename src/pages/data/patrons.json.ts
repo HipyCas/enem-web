@@ -105,6 +105,11 @@ export const PATRONS: Record<string, Patron[]> = {
       logo: "/2025/img/patrons/colaboradores/seio.jpg",
     },
     {
+      name: "IMAG - Instituto de Matemáticas de la Universidad de Granada",
+      website: "https://wpd.ugr.es/~imag/",
+      logo: "/2025/img/patrons/colaboradores/IMAG.jpg",
+    },
+    {
       name: "Sociedad Española de Investigación en Educación Matemática (SEIEM)",
       website: "https://www.seiem.es/",
       logo: "/2025/img/patrons/colaboradores/seiem.jpg",
@@ -211,6 +216,14 @@ export const PATRONS: Record<string, Patron[]> = {
       name: "Delegación de Estudiantes de Ingeniería Informática y de Telecomunicación (UGR)",
       website: "https://deiit.ugr.es/",
       logo: "/2025/img/patrons/colaboradores/DEIIT.png",
+    },
+    {
+      name: "Granada Convention Bureau",
+      website: "https://granadaconventionbureau.org/",
+      logo: {
+        light: "/2025/img/patrons/colaboradores/GranadaConventionBureau.png",
+        dark: "/2025/img/patrons/colaboradores/GranadaConventionBureau-dark.png",
+      },
     },
   ],
 };
