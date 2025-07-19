@@ -19,6 +19,17 @@ export const HORARIO = {
         "La organización del XXVI ENEM lo presentará y explicará cuestiones generales de utilidad para el evento, así como una introducción a la planificación de los próximos días.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "organización",
+      start: "17:30",
+      end: "18:00",
+    },
+    {
+      name: "Charla ANEM",
+      description:
+        "Presentaremos a la ANEM, la Asociación Nacional de Estudiantes de Matemáticas, y la encargada de dar vida a este evento.",
+      descriptionLong:
+        "Presentaremos a la ANEM, la Asociación Nacional de Estudiantes de Matemáticas, y la encargada de dar vida a este evento.",
+      location: "Sala ENEM GRX (Aula Magna)",
+      category: "charlas_varias",
       start: "18:00",
       end: "18:30",
     },
@@ -37,8 +48,7 @@ export const HORARIO = {
       name: "Acto Inaugural",
       description:
         "Autoridades académicas y civiles nos acompañarán en el acto formal que dará comienzo oficialmente al XXVI Encuentro de Nacional de Estudiantes de Matemáticas. **Recomendamos asistir adecuadamente vestido.**",
-      descriptionLong:
-        `Autoridades académicas y civiles nos acompañarán en el acto formal que dará comienzo oficialmente al XXVI Encuentro de Nacional de Estudiantes de Matemáticas. **Recomendamos asistir adecuadamente vestido.**
+      descriptionLong: `Autoridades académicas y civiles nos acompañarán en el acto formal que dará comienzo oficialmente al XXVI Encuentro de Nacional de Estudiantes de Matemáticas. **Recomendamos asistir adecuadamente vestido.**
         Concretamente, la mesa inaugural estará compuesta por:
         D. Juan Luis Benítez Muñoz, Vicerrector de Estudiantes y Vida Universitaria de la Universidad de Granada.
         D. Fernando Parra Moreno, Concejal de Juventud del Excmo. Ayuntamiento de Granada.
@@ -54,8 +64,7 @@ export const HORARIO = {
       name: "Cóctel Inaugural",
       description:
         "Tras el acto institucional y con el evento formalmente inaugurado, disfrutaremos de una cena formato cóctel en las inmediaciones del Aula Magna de la Facultad de Ciencias. **Recomendamos asistir adecuadamente vestido.**",
-      descriptionLong:
-        `Tras el acto institucional y con el evento formalmente inaugurado, disfrutaremos de una cena formato cóctel en las inmediaciones del Aula Magna de la Facultad de Ciencias. **Recomendamos asistir adecuadamente vestido.**
+      descriptionLong: `Tras el acto institucional y con el evento formalmente inaugurado, disfrutaremos de una cena formato cóctel en las inmediaciones del Aula Magna de la Facultad de Ciencias. **Recomendamos asistir adecuadamente vestido.**
         El menú de dicho cóctel es:
         - Emulsión de crema de verduras, pan rústico y aceite de oliva, coronado con virutas de jamón serrano y huevo campero confitado;
         - Tabla de ibéricos compuesta de jamón serrano, lomo embuchado, salchichón y chorizo;
@@ -76,7 +85,7 @@ export const HORARIO = {
       name: "Excursión nocturna por Granada",
       description:
         "Concluiremos nuestro primer día aventurándonos en una excursión nocturna por el centro histórico y algunos de los miradores más bonitos de Granada.",
-       descriptionLong:
+      descriptionLong:
         "Concluiremos nuestro primer día aventurándonos en una excursión nocturna por el centro histórico y algunos de los miradores más bonitos de Granada.",
       location: "Centro de Granada y miradores",
       category: "actividades_lúdico-culturales_y_sociales",
@@ -111,8 +120,6 @@ export const HORARIO = {
       name: "Conferencia plenaria: ¿Las matemáticas nos amueblan bien la cabeza? (_Sociedad Española de Investigación en Educación Matemática_",
       description:
         "Mediante algunas actividades interactivas con los asistentes, _Rafael Ramírez_ tratará la importancia del razonamiento matemático.",
-      description:
-        "Mediante algunas actividades interactivas con los asistentes, _Rafael Ramírez_ tratará la importancia del razonamiento matemático.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "9:30",
@@ -122,8 +129,7 @@ export const HORARIO = {
       name: "Conferencia plenaria: ¿Qué hace una matemática como tú en una IA como esta? (_Anabel Forte_)",
       description:
         "Exploraremos cómo las matemáticas juegan un papel fundamental en el desarrollo y funcionamiento de la Inteligencia Artificial (IA). Desde la estadística y el álgebra lineal hasta el cálculo y las teorías de la optimización, las herramientas matemáticas son esenciales para entrenar modelos de IA, procesar datos y tomar decisiones inteligentes. Veremos cómo los conceptos matemáticos que estudiamos en el grado, como las matrices, los algoritmos y la probabilidad, son la base de los sistemas de IA que usamos hoy en día y, con ello, trataremos de entender mejor las oportunidades que ofrecen las matemáticas para avanzar en este campo y cómo en ellas está la clave para hacer que la IA sea más eficiente, ética y comprensible.",
-      descriptionLong:
-        `Vivimos en un mundo en el que el término Inteligencia Artificial aparece por todas partes, como un reto, como una oportunidad, como una amenaza, pero ¿qué pintamos quienes nos dedicamos a las matemáticas en este campo? ¿Es una nueva oportunidad laboral? ¿Es un campo en el que investigar?
+      descriptionLong: `Vivimos en un mundo en el que el término Inteligencia Artificial aparece por todas partes, como un reto, como una oportunidad, como una amenaza, pero ¿qué pintamos quienes nos dedicamos a las matemáticas en este campo? ¿Es una nueva oportunidad laboral? ¿Es un campo en el que investigar?
         En esta charla exploraremos cómo las matemáticas juegan un papel fundamental en el desarrollo y funcionamiento de la Inteligencia Artificial (IA). Desde la estadística y el álgebra lineal hasta el cálculo y las teorías de la optimización, las herramientas matemáticas son esenciales para entrenar modelos de IA, procesar datos y tomar decisiones inteligentes. Veremos cómo los conceptos matemáticos que estudiamos en el grado, como las matrices, los algoritmos y la probabilidad, son la base de los sistemas de IA que usamos hoy en día y, con ello, trataremos de entender mejor las oportunidades que ofrecen las matemáticas para avanzar en este campo y cómo en ellas está la clave para hacer que la IA sea más eficiente, ética y comprensible.`,
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
@@ -134,7 +140,7 @@ export const HORARIO = {
       name: "Coffee Break",
       description:
         "Una breve pausa para tomar un café, té, infusión, zumo o batido y disfrutar de unos aperitivos.",
-       descriptionLong:
+      descriptionLong:
         "Una breve pausa para tomar un café, té, infusión, zumo o batido y disfrutar de unos aperitivos.",
       location: "Hall Facultad de Ciencias",
       category: "coffee_break",
@@ -145,8 +151,7 @@ export const HORARIO = {
       name: "Conferencia plenaria: Patrones y equilibrios en fluidos incompresibles (_Sociedad Española de Matemática Aplicada_)",
       description:
         "_Claudia García_ nos mostrará cómo usar la teoría abstracta de bifurcación para ver la existencia de diferentes soluciones en la ecuación de Euler: V-estados, soluciones no uniformes que rotan, o soluciones de tipo Karman Vortex Street",
-       descriptionLong:
-        `El movimiento de un fluido uniforme e incompresible se describe mediante las ecuaciones de Navier-Stokes, y en su régimen no viscoso, mediante las ecuaciones de Euler. En el caso bidimensional, las ecuaciones de Euler en formulación voracidad contiene interesantes equilibrios relativos: soluciones estacionarias, que rotan, o que se trasladan. La teoría de bifurcación aparece de manera natural en el estudio de este tipo de soluciones, ya que se caracterizan por una ecuación implícita de la forma
+      descriptionLong: `El movimiento de un fluido uniforme e incompresible se describe mediante las ecuaciones de Navier-Stokes, y en su régimen no viscoso, mediante las ecuaciones de Euler. En el caso bidimensional, las ecuaciones de Euler en formulación voracidad contiene interesantes equilibrios relativos: soluciones estacionarias, que rotan, o que se trasladan. La teoría de bifurcación aparece de manera natural en el estudio de este tipo de soluciones, ya que se caracterizan por una ecuación implícita de la forma
 \begin{equation} 
 F(\lambda,x)=0, 
 \end{equation} 
@@ -447,8 +452,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       name: "Conferencia plenaria: Música con Matemáticas: escalas musicales, de Pitágoras a Bach (_José Luis Gámez_)",
       description:
         "Analizaremos cómo, históricamente, se ha afrontado el objetivo de que varias notas «suene bien juntas» en la afinación de instrumentos, desde la afinación «armónica» de Pitágoras, a la afinación «temperada» de Bach.",
-      descriptionLong:
-        `La construcción de una escala musical consiste en la selección de unas pocas frecuencias (notas) que "suenen bien juntas". Para dar a esa  empresa un enfoque matemático será necesario definir de modo riguroso  (no subjetivo) el significado de "sonar bien". Analizaremos cómo, históricamente, se ha afrontado ese objetivo en la afinación de instrumentos, desde la afinación "armónica" de Pitágoras, a la afinación "temperada" de Bach.`,
+      descriptionLong: `La construcción de una escala musical consiste en la selección de unas pocas frecuencias (notas) que "suenen bien juntas". Para dar a esa  empresa un enfoque matemático será necesario definir de modo riguroso  (no subjetivo) el significado de "sonar bien". Analizaremos cómo, históricamente, se ha afrontado ese objetivo en la afinación de instrumentos, desde la afinación "armónica" de Pitágoras, a la afinación "temperada" de Bach.`,
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
       start: "18:30",
@@ -550,23 +554,12 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       end: "12:00",
     },
     {
-      name: "Charla ANEM",
-      description:
-        "Presentaremos a la ANEM, la Asociación Nacional de Estudiantes de Matemáticas, y la encargada de dar vida a este evento.",
-      descriptionLong:
-        "Presentaremos a la ANEM, la Asociación Nacional de Estudiantes de Matemáticas, y la encargada de dar vida a este evento.",
-      location: "Sala ENEM GRX (Aula Magna)",
-      category: "charlas_varias",
-      start: "12:00",
-      end: "12:30",
-    },
-    {
       name: "Mesa Redonda: Lo sesgos de la inteligencia artificial",
       description: "",
       descriptionLong: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "mesa_redonda",
-      start: "12:30",
+      start: "12:00",
       end: "14:00",
     },
     {
@@ -678,8 +671,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       name: "Comida",
       description:
         "Ofrecermos una comida tipo picnic para recoger en la Residencia Livensa Living y consumir donde prefiramos.",
-      descriptionLong:
-        `Ofrecermos una comida tipo picnic para recoger en la Residencia Livensa Living y consumir donde prefiramos que incluirá:
+      descriptionLong: `Ofrecermos una comida tipo picnic para recoger en la Residencia Livensa Living y consumir donde prefiramos que incluirá:
         - Bocadillo de jamón cocido y queso;
         - Barritas energéticas;
         - Napolitanas;
@@ -706,8 +698,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       name: "Cena de Clausura",
       description:
         "Cerraremos este ENEM 2025 con vistas a la Alhambra y disfrutando de una cena tipo cóctel en la que podremos despedirnos todos. **Es necesario asistir adecuadamente vestido.**",
-      descriptionLong:
-        `Cerraremos este ENEM 2025 con vistas a la Alhambra y disfrutando de una cena tipo cóctel en la que podremos despedirnos todos. *Es necesario asistir adecuadamente vestido.* El menú incluye:
+      descriptionLong: `Cerraremos este ENEM 2025 con vistas a la Alhambra y disfrutando de una cena tipo cóctel en la que podremos despedirnos todos. *Es necesario asistir adecuadamente vestido.* El menú incluye:
         - Jamón serrano reserva;
         - Queso de oveja;
         - Pionono de sobreasada;
@@ -737,8 +728,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       name: "Fiesta de clausura",
       description:
         "Para quien quiera asistir, podremos despedirnos en una de las mejores discotecas de toda Granada que abrirá sus puertas exclusivamente para nosotros.",
-      descriptionLong:
-        `Para quien quiera asistir, podremos despedirnos en una de las mejores discotecas de toda Granada que abrirá sus puertas exclusivamente para nosotros. Las entradas estarán a la venta hasta el viernes 25 a las 23:59 e incluyen:
+      descriptionLong: `Para quien quiera asistir, podremos despedirnos en una de las mejores discotecas de toda Granada que abrirá sus puertas exclusivamente para nosotros. Las entradas estarán a la venta hasta el viernes 25 a las 23:59 e incluyen:
         - Entrada de 9€: Entrada + 1 copa
         - Entrada de 21€: Entrada + 3 copas`,
       location: "Granada 10 Teatro Musical",
