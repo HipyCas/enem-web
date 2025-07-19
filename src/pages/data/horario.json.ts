@@ -58,7 +58,7 @@ export const HORARIO = {
       location: "Sala ENEM GRX (Aula Magna)",
       category: "actos_institucionales",
       start: "19:30",
-      end: "20:30",
+      end: "20:15",
     },
     {
       name: "Cóctel Inaugural",
@@ -89,7 +89,7 @@ export const HORARIO = {
         "Concluiremos nuestro primer día aventurándonos en una excursión nocturna por el centro histórico y algunos de los miradores más bonitos de Granada.",
       location: "Centro de Granada y miradores",
       category: "actividades_lúdico-culturales_y_sociales",
-      start: "22:45",
+      start: "22:30",
     },
   ],
   "23": [
@@ -188,8 +188,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Abordaremos el problema de modelar matemáticamente las películas de jabón. Este problema nos llevará a descubrir el cálculo de variaciones, el concepto de curvatura media y las superficies mínimas. Veremos como distintas ramas de la matemática tienen un nexo común en este tipo de superficies. Finalizaremos hablando del problema de Plateau y su importancia en el desarrollo de la teoría así como aplicaciones de las superficies mínimas.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
-      start: "16:00",
-      end: "17:00",
+      start: "15:30",
+      end: "16:30",
     },
     {
       name: "Conferencia plenaria: _Instituto Geográfico Nacional_",
@@ -197,8 +197,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       descriptionLong: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
-      start: "17:00",
-      end: "18:00",
+      start: "16:30",
+      end: "17:30",
     },
     {
       name: "Coffee Break",
@@ -208,8 +208,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Una breve pausa para tomar un café, té, infusión, zumo o batido y disfrutar de unos aperitivos.",
       location: "Hall Facultad de Ciencias",
       category: "coffee_break",
-      start: "18:00",
-      end: "18:30",
+      start: "17:30",
+      end: "18:00",
     },
     {
       name: "Conferencia plenaria: _ESERO_",
@@ -217,8 +217,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       descriptionLong: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
-      start: "18:30",
-      end: "19:30",
+      start: "18:00",
+      end: "19:00",
     },
     {
       name: "Conferencia plenaria: BSC",
@@ -226,8 +226,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       descriptionLong: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
-      start: "19:30",
-      end: "20:30",
+      start: "19:00",
+      end: "20:00",
     },
     {
       name: "Cena",
@@ -235,7 +235,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       descriptionLong: "Recuperaremos fuerzas con una cena rica y variada.",
       location: "Cafetería de la Facultad de Ciencias",
       category: "manutenciones",
-      start: "20:30",
+      start: "20:00",
       end: "22:00",
     },
     {
@@ -246,7 +246,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Ofreceremos el uso de distintos juegos de mesa para disfrutar conociéndonos y jugando. Paralelamente organizaremos un plan social alternativo en el que exploraremos la animada vida nocturna granadina.",
       location: "Residencia Livensa Living Fuentenueva",
       category: "actividades_lúdico-culturales_y_sociales",
-      start: "22:45",
+      start: "22:30",
     },
   ],
   "24": [
@@ -390,8 +390,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Conoceremos a empresas interesadas en perfiles de ámbito matemático y las salidas profesionales de nuestras titulaciones, conectaremos con profesionales de dicha área del mercado laboral para aumentar nuestra red de contactos y creceremos profesionalmente en esta plataforma de proyección laboral.",
       location: "Hall Facultad de Ciencias",
       category: "dinámicas con empresas",
-      start: "16:00",
-      end: "18:00",
+      start: "15:30",
+      end: "17:30",
     },
     {
       name: "Talleres",
@@ -401,8 +401,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Disfrutaremos y aprenderemos con talleres dinámicos en grupos reducidos de diversos temas de interés.",
       location: "Aulas varias",
       category: "talleres, microcharlas y seminarios",
-      start: "16:00",
-      end: "18:00",
+      start: "15:30",
+      end: "17:30",
     },
     {
       name: "Microcharlas",
@@ -412,8 +412,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Descubriremos temas concretos y variados en las microcharlas de corta duración impartidas por otros asistentes.",
       location: "Aulas varias",
       category: "talleres, microcharlas y seminarios",
-      start: "16:00",
-      end: "18:00",
+      start: "15:30",
+      end: "17:30",
     },
     {
       name: "Seminarios",
@@ -423,19 +423,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Profundizaremos en subáreas concretas de las matemáticas de la mano de distintas eminencias en su campo.",
       location: "Aulas varias",
       category: "talleres, microcharlas y seminarios",
-      start: "16:00",
-      end: "18:00",
-    },
-    {
-      name: "Entrevistas",
-      description:
-        "Aprovecharemos las oportunidades profesionales a entrevistas organizadas por empresas colaboradoras a las que te hayas inscrito durante el Foro de Empresas y Emprendimiento.",
-      descriptionLong:
-        "Aprovecharemos las oportunidades profesionales a entrevistas organizadas por empresas colaboradoras a las que te hayas inscrito durante el Foro de Empresas y Emprendimiento.",
-      location: "Salas varias",
-      category: "dinámicas con empresas",
-      start: "16:00",
-      end: "18:00",
+      start: "15:30",
+      end: "17:30",
     },
     {
       name: "Coffee Break",
@@ -445,8 +434,19 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Una breve pausa para tomar un café, té, infusión, zumo o batido y disfrutar de unos aperitivos.",
       location: "Hall Facultad de Ciencias",
       category: "coffee_break",
+      start: "17:30",
+      end: "18:00",
+    },
+    {
+      name: "Entrevistas",
+      description:
+        "Aprovecharemos las oportunidades profesionales para organizar entrevistas con algunas de las empresas colaboradoras.",
+      descriptionLong:
+        "Aprovecharemos las oportunidades profesionales para organizar entrevistas con algunas de las empresas colaboradoras.",
+      location: "Salas varias",
+      category: "dinámicas con empresas",
       start: "18:00",
-      end: "18:30",
+      end: "20:00",
     },
     {
       name: "Conferencia plenaria: Música con Matemáticas: escalas musicales, de Pitágoras a Bach (_José Luis Gámez_)",
@@ -455,8 +455,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       descriptionLong: `La construcción de una escala musical consiste en la selección de unas pocas frecuencias (notas) que "suenen bien juntas". Para dar a esa  empresa un enfoque matemático será necesario definir de modo riguroso  (no subjetivo) el significado de "sonar bien". Analizaremos cómo, históricamente, se ha afrontado ese objetivo en la afinación de instrumentos, desde la afinación "armónica" de Pitágoras, a la afinación "temperada" de Bach.`,
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
-      start: "18:30",
-      end: "19:30",
+      start: "18:00",
+      end: "19:00",
     },
     {
       name: "Conferencia plenaria: (_Luis José Rodríguez_)",
@@ -464,19 +464,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       descriptionLong: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
-      start: "19:30",
-      end: "20:30",
-    },
-    {
-      name: "Entrevistas",
-      description:
-        "Aprovecharemos las oportunidades profesionales a entrevistas organizadas por empresas colaboradoras a las que te hayas inscrito durante el Foro de Empresas y Emprendimiento.",
-      descriptionLong:
-        "Aprovecharemos las oportunidades profesionales a entrevistas organizadas por empresas colaboradoras a las que te hayas inscrito durante el Foro de Empresas y Emprendimiento.",
-      location: "Aulas varias",
-      category: "dinámicas con empresas",
-      start: "16:00",
-      end: "18:00",
+      start: "19:00",
+      end: "20:00",
     },
     {
       name: "Cena",
@@ -484,7 +473,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       descriptionLong: "Recuperaremos fuerzas con una cena rica y variada.",
       location: "Cafetería de la Facultad de Ciencias",
       category: "manutenciones",
-      start: "20:30",
+      start: "20:00",
       end: "22:00",
     },
     {
@@ -495,7 +484,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Organizaremos un torneo de cubos de rubik así como talleres para aprender a resolverlo con el objetivo disfrutar conociéndonos y jugando. Paralelamente organizaremos un plan social alternativo en el que exploraremos la animada vida nocturna granadina.",
       location: "Residencia Livensa Living Fuentenueva",
       category: "actividades_lúdico-culturales_y_sociales",
-      start: "22:45",
+      start: "22:30",
     },
   ],
   "25": [
@@ -578,8 +567,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       descriptionLong: "",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
-      start: "16:00",
-      end: "17:00",
+      start: "15:30",
+      end: "16:30",
     },
     {
       name: "Conferencia plenaria: Códigos detectores y correctores de errores (_Luis Merino)",
@@ -589,8 +578,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "¿Sirve para algo el Álgebra en el día a día? Dado que una de las aplicaciones más importantes, además de la criptografía, es la de los  códigos detectores y correctores. Sin ellos no funcionarían, por ejemplo, nuestros móviles u ordenadores porque no habría memorias eficientes para ellos. Éstos códigos están basados Álgebra lineal sobre cuerpos finitos y usan también anillos de polinomios y son fundamentales en todo tipo de intercambios de información.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
-      start: "17:00",
-      end: "18:00",
+      start: "16:30",
+      end: "17:30",
     },
     {
       name: "Coffee Break",
@@ -600,8 +589,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Una breve pausa para tomar un café, té, infusión, zumo o batido y disfrutar de unos aperitivos.",
       location: "Hall Facultad de Ciencias",
       category: "coffee_break",
-      start: "18:00",
-      end: "18:30",
+      start: "17:30",
+      end: "18:00",
     },
     {
       name: "Conferencia de Clausura: Las matemáticas de la Mecánica Cuántica (_Bert Jansen_)",
@@ -611,8 +600,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Se nos ilustrará sobre la Mecánica Cuántica, la teoría que describe la física a escala atómica y subatómica. Es una teoría muy exitosa, pero muy contraintuitiva desde el punto de vista de nuestra lógica clásica: cantidades físicas que solo pueden tomar valores discretos, relaciones de incertidumbre, superposición de estados, dualidad onda-partícula, indeterminación cuántica, ... El mundo cuántico es muy extraño para gente que lo encuentra por primera vez. Sin embargo, todo se entiende muy bien, si uno no se fija en la física, sino en las matemáticas detrás: la teoría de espacios de Hilbert.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "conferencias",
-      start: "18:30",
-      end: "19:30",
+      start: "18:00",
+      end: "19:00",
     },
     {
       name: "Acto de Clausura",
@@ -620,8 +609,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       descriptionLong: "Despediremos formalmente el evento en este acto.",
       location: "Sala ENEM GRX (Aula Magna)",
       category: "actos_institucionales",
-      start: "19:30",
-      end: "20:30",
+      start: "19:00",
+      end: "20:00",
     },
     {
       name: "Cena",
@@ -629,7 +618,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       descriptionLong: "Recuperaremos fuerzas con una cena rica y variada.",
       location: "Cafetería de la Facultad de Ciencias",
       category: "manutenciones",
-      start: "20:30",
+      start: "20:00",
       end: "22:00",
     },
     {
@@ -640,7 +629,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Organizaremos un torneo de ajedrez con el objetivo disfrutar conociéndonos y jugando. Paralelamente organizaremos un plan social alternativo en el que exploraremos la animada vida nocturna granadina.",
       location: "Residencia Livensa Living Fuentenueva",
       category: "actividades_lúdico-culturales_y_sociales",
-      start: "22:45",
+      start: "22:30",
     },
   ],
   "26": [
@@ -665,7 +654,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       location: "Granada",
       category: "actividades_lúdico-culturales_y_sociales",
       start: "9:00",
-      end: "14:00",
+      end: "13:00",
     },
     {
       name: "Comida",
@@ -678,9 +667,9 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         - 2 piezas de fruta;
         - Bolsa de snacks;
         - Botella de agua.`,
-      location: "Residencia Livensa Living",
+      location: "Residencia Livensa Living Fuentenueva",
       category: "manutenciones",
-      start: "14:00",
+      start: "13:00",
       end: "15:30",
     },
     {
@@ -721,8 +710,8 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         - Barra libre de manzanilla, vino blanco verdejo, vino tinto ribera crianza, cerveza, cerveza sin alcohol, refrescos y agua mineral.`,
       location: "Palacio de Quinta Alegre",
       category: "cenas_especiales",
-      start: "20:30",
-      end: "22:30",
+      start: "21:00",
+      end: "23:00",
     },
     {
       name: "Fiesta de clausura",
@@ -733,7 +722,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         - Entrada de 21€: Entrada + 3 copas`,
       location: "Granada 10 Teatro Musical",
       category: "actividades_lúdico-culturales_y_sociales",
-      start: "23:00",
+      start: "23:59",
       end: "06:00",
     },
   ],
@@ -760,7 +749,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
         "Hotel Turia Granada o Residencia Universitaria Livensa Living Fuentenueva (según corresponda)",
       category: "check-out",
       start: "9:00",
-      end: "11:30",
+      end: "12:00",
     },
   ],
 };
