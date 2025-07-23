@@ -192,7 +192,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       end: "16:30",
     },
     {
-      name: "Conferencia plenaria: _Instituto Geográfico Nacional_",
+      name: "Conferencia plenaria: _ESERO_",
       description: "",
       descriptionLong: "",
       location: "Sala ENEM GRX (Aula Magna)",
@@ -212,7 +212,7 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       end: "18:00",
     },
     {
-      name: "Conferencia plenaria: _ESERO_",
+      name: "Conferencia plenaria: _Instituto Geográfico Nacional_",
       description: "",
       descriptionLong: "",
       location: "Sala ENEM GRX (Aula Magna)",
