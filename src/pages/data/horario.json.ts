@@ -718,8 +718,9 @@ Donde $\lambda\in\mathbb{R}$ y $x$ pertenece a un espacio de Banach de dimensió
       description:
         "Para quien quiera asistir, podremos despedirnos en una de las mejores discotecas de toda Granada que abrirá sus puertas exclusivamente para nosotros.",
       descriptionLong: `Para quien quiera asistir, podremos despedirnos en una de las mejores discotecas de toda Granada que abrirá sus puertas exclusivamente para nosotros. Las entradas estarán a la venta hasta el viernes 25 a las 23:59 e incluyen:
-        - Entrada de 9€: Entrada + 1 copa
-        - Entrada de 21€: Entrada + 3 copas`,
+        - Entrada de 10€: Entrada + 1 copa
+        - Entrada de 15€: Entrada + 2 copas
+        - Entrada de 20€: Entrada + 3 copas`,
       location: "Granada 10 Teatro Musical",
       category: "actividades_lúdico-culturales_y_sociales",
       start: "23:59",
