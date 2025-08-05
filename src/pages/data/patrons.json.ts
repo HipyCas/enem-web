@@ -79,6 +79,11 @@ export const PATRONS: Record<string, Patron[]> = {
         dark: "/2025/img/patrons/bronce/pwc-dark.png",
       },
     },
+    {
+      name: "NTT DATA Spain",
+      website: "https://es.nttdata.com/",
+      logo: "/2025/img/patrons/bronce/NTT DATA.png",
+    },
   ],
   colaboradores: [
     {
